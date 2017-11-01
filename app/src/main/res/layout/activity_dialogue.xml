@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_lightgrey"
+    tools:context="gr04.cocox.DialogueActivity">
+
+    <ImageButton
+        android:id="@+id/questionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:srcCompat="@drawable/questions"
+        tools:layout_editor_absoluteX="515dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <ImageButton
+        android:id="@+id/answersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:srcCompat="@drawable/answers"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <ImageButton
+        android:id="@+id/painButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:srcCompat="@drawable/pain"
+        tools:layout_editor_absoluteX="765dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <ImageButton
+        android:id="@+id/moodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:srcCompat="@drawable/mood"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <ImageButton
+        android:id="@+id/activitiesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:srcCompat="@drawable/activities"
+        tools:layout_editor_absoluteX="765dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+</android.support.constraint.ConstraintLayout>
