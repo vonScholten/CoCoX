@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Group_return1" />
+        app:srcCompat="@drawable/button_return" />
 
     <ImageButton
         android:id="@+id/home"
@@ -32,7 +32,7 @@
         android:background="@color/Background_lightgrey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton12"
-        app:srcCompat="@drawable/Home" />
+        app:srcCompat="@drawable/home" />
 
     <ImageButton
         android:id="@+id/keyboard"
@@ -45,7 +45,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageButton16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton12"
-        app:srcCompat="@drawable/Keyboard" />
+        app:srcCompat="@drawable/keyboard" />
 
     <ImageButton
         android:id="@+id/call"
