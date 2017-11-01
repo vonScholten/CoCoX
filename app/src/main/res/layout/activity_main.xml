@@ -6,13 +6,95 @@
     android:layout_height="match_parent"
     tools:context="gr04.cocox.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/kald"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:background="#FC0D1B"
+        android:text="Kald"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:textSize="45sp"
+        android:drawableLeft="@drawable/alarm"
+        android:drawableRight="@drawable/alarm"
+        android:paddingLeft="95dp"
+        android:paddingRight="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/spil"
+        android:text="Spil"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:background="@drawable/spilshape"
+        android:shadowColor="#339966"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/kommunikation"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <Button
+        android:id="@+id/kommunikation"
+
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/kommushape"
+
+        android:text="Dialog"
+        android:textColor="#FFFFFF"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginStart="8dp"
+        android:background="@drawable/settingsshape"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.991"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextClock
+        android:id="@+id/clock"
+        android:layout_width="199dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:format12Hour="k:mm \n MMM dd, yyyy"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
 </android.support.constraint.ConstraintLayout>
