@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="155dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/answersButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/background_lightgrey"
@@ -32,7 +32,7 @@
         tools:layout_editor_absoluteY="29dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/painButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/background_lightgrey"
@@ -44,7 +44,7 @@
         tools:layout_editor_absoluteY="31dp" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/moodButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/background_lightgrey"
@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="279dp" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/activitiesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/background_lightgrey"
