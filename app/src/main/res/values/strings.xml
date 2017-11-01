@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CoCoX</string>
+    <color name="background_lightgrey">#EEEDDE</color>
 </resources>
