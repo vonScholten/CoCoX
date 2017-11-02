@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="gr04.cocox.GameActivity">
 
     <ImageButton
         android:id="@+id/tictactoe"
@@ -93,8 +93,8 @@
 
     <ImageButton
         android:id="@+id/retur"
-        android:layout_width="113dp"
-        android:layout_height="113dp"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -110,8 +110,8 @@
 
     <ImageButton
         android:id="@+id/home"
-        android:layout_width="113dp"
-        android:layout_height="113dp"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -143,4 +143,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/reskald" />
+
 </android.support.constraint.ConstraintLayout>
