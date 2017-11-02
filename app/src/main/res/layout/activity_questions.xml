@@ -2,24 +2,23 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Return"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/baggrund"
-    tools:context="gr04.cocox.ActActivity"
+    tools:context="gr04.cocox.questionsActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <ImageButton
         android:id="@+id/imageButton20"
         android:layout_width="0dp"
         android:layout_height="98dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="41dp"
         android:layout_marginEnd="72dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="43dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintBottom_toBottomOf="@+id/been_here"
+        app:layout_constraintEnd_toStartOf="@+id/been_here"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/button_return" />
@@ -32,7 +31,7 @@
         android:layout_marginTop="24dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton12"
+        app:layout_constraintTop_toTopOf="@+id/stuff"
         app:srcCompat="@drawable/home" />
 
     <ImageButton
@@ -43,7 +42,7 @@
         android:layout_marginTop="21dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton16"
+        app:layout_constraintTop_toTopOf="@+id/time"
         app:srcCompat="@drawable/keyboard" />
 
     <ImageButton
@@ -65,37 +64,37 @@
         app:srcCompat="@drawable/call" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/been_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="57dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginTop="6dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+        app:layout_constraintEnd_toStartOf="@+id/doing"
         app:layout_constraintStart_toEndOf="@+id/imageButton20"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/air" />
+        app:srcCompat="@drawable/been_here" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/doing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="51dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginTop="6dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton10"
-        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintEnd_toStartOf="@+id/drink"
+        app:layout_constraintStart_toEndOf="@+id/been_here"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/light" />
+        app:srcCompat="@drawable/doing" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/drink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="42dp"
@@ -104,28 +103,41 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton11"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:layout_constraintEnd_toStartOf="@+id/examination"
+        app:layout_constraintStart_toEndOf="@+id/doing"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/painkiller" />
+        app:srcCompat="@drawable/drink" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/examination"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="215dp"
         android:layout_marginTop="6dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:layout_constraintStart_toEndOf="@+id/drink"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/silence" />
+        app:srcCompat="@drawable/examination" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/stuff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/been_here"
+        app:layout_constraintTop_toBottomOf="@+id/been_here"
+        app:srcCompat="@drawable/stuff" />
+
+    <ImageButton
+        android:id="@+id/plan_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -133,12 +145,25 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton8"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:srcCompat="@drawable/sit" />
+        app:layout_constraintStart_toStartOf="@+id/doing"
+        app:layout_constraintTop_toBottomOf="@+id/doing"
+        app:srcCompat="@drawable/plan_today" />
 
     <ImageButton
-        android:id="@+id/imageButton13"
+        android:id="@+id/rounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/examination"
+        app:layout_constraintTop_toBottomOf="@+id/examination"
+        app:srcCompat="@drawable/rounds" />
+
+    <ImageButton
+        android:id="@+id/say"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -146,86 +171,60 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton9"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-        app:srcCompat="@drawable/sleep" />
+        app:layout_constraintStart_toStartOf="@+id/drink"
+        app:layout_constraintTop_toBottomOf="@+id/drink"
+        app:srcCompat="@drawable/say" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton11"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
-        app:srcCompat="@drawable/suction" />
+        app:layout_constraintStart_toStartOf="@+id/stuff"
+        app:layout_constraintTop_toBottomOf="@+id/stuff"
+        app:srcCompat="@drawable/time" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/where"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton10"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
-        app:srcCompat="@drawable/turn" />
+        app:layout_constraintStart_toStartOf="@+id/plan_today"
+        app:layout_constraintTop_toBottomOf="@+id/plan_today"
+        app:srcCompat="@drawable/where" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/why_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton12"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton12"
-        app:srcCompat="@drawable/tv" />
+        app:layout_constraintStart_toStartOf="@+id/say"
+        app:layout_constraintTop_toBottomOf="@+id/say"
+        app:srcCompat="@drawable/why_here" />
 
     <ImageButton
-        android:id="@+id/imageButton17"
+        android:id="@+id/wrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton13"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton13"
-        app:srcCompat="@drawable/visit" />
-
-    <ImageButton
-        android:id="@+id/imageButton18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton15"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton15"
-        app:srcCompat="@drawable/walk" />
-
-    <ImageButton
-        android:id="@+id/imageButton19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/imageButton14"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton14"
-        app:srcCompat="@drawable/wc" />
+        app:layout_constraintStart_toStartOf="@+id/rounds"
+        app:layout_constraintTop_toBottomOf="@+id/rounds"
+        app:srcCompat="@drawable/wrong" />
 
 </android.support.constraint.ConstraintLayout>
