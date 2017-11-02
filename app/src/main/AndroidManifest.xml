@@ -20,6 +20,7 @@
         <activity android:name=".MoodActivity" />
         <activity android:name=".AnswerActivity"></activity>
         <activity android:name=".questionsActivity"></activity>
+        <activity android:name=".settingsActivity"></activity>
     </application>
 
 </manifest>
