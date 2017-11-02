@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="42dp"
         android:layout_marginTop="6dp"
-        android:background="@color/Background_lightgrey"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
