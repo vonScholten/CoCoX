@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/tictactoe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/tictactoe"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <ImageButton
+        android:id="@+id/memory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/memoryspil"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="357dp" />
+
+    <ImageButton
+        android:id="@+id/puzzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/puzzlespil"
+        tools:layout_editor_absoluteX="606dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <ImageButton
+        android:id="@+id/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/quizspil"
+        tools:layout_editor_absoluteX="946dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <ImageButton
+        android:id="@+id/balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/balloonspil"
+        tools:layout_editor_absoluteX="946dp"
+        tools:layout_editor_absoluteY="357dp" />
+</android.support.constraint.ConstraintLayout>
