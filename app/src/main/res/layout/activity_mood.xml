@@ -2,27 +2,28 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Return"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background_lightgrey"
-    tools:context="gr04.cocox.ActActivity"
-    tools:layout_editor_absoluteY="89dp">
+    tools:context="gr04.cocox.MoodActivity">
+
 
     <ImageButton
         android:id="@+id/imageButton20"
         android:layout_width="0dp"
         android:layout_height="98dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="41dp"
         android:layout_marginEnd="72dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="43dp"
         android:background="@color/Background_lightgrey"
-        app:layout_constraintBottom_toBottomOf="@+id/air"
-        app:layout_constraintEnd_toStartOf="@+id/air"
+        app:layout_constraintBottom_toBottomOf="@+id/bored"
+        app:layout_constraintEnd_toStartOf="@+id/bored"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/group_return1" />
+
 
     <ImageButton
         android:id="@+id/home"
@@ -32,70 +33,70 @@
         android:layout_marginTop="24dp"
         android:background="@color/Background_lightgrey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sit"
+        app:layout_constraintTop_toTopOf="@+id/happy"
         app:srcCompat="@drawable/home" />
 
     <ImageButton
         android:id="@+id/keyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="21dp"
         android:background="@color/Background_lightgrey"
-        app:layout_constraintBottom_toBottomOf="@+id/tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sit"
+        app:layout_constraintTop_toTopOf="@+id/worried"
         app:srcCompat="@drawable/keyboard" />
 
     <ImageButton
         android:id="@+id/call"
         android:layout_width="0dp"
         android:layout_height="84dp"
+        android:layout_marginBottom="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="34dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="1.90"
         android:scaleY="1.60"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/walk"
+        app:layout_constraintTop_toBottomOf="@+id/breath"
         app:srcCompat="@drawable/call" />
 
     <ImageButton
-        android:id="@+id/air"
+        android:id="@+id/bored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="57dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginTop="6dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintEnd_toStartOf="@+id/light"
+        app:layout_constraintEnd_toStartOf="@+id/cold"
         app:layout_constraintStart_toEndOf="@+id/imageButton20"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/air" />
+        app:srcCompat="@drawable/bored" />
 
     <ImageButton
-        android:id="@+id/light"
+        android:id="@+id/cold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="51dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginTop="6dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintEnd_toStartOf="@+id/painkillers"
-        app:layout_constraintStart_toEndOf="@+id/air"
+        app:layout_constraintEnd_toStartOf="@+id/content"
+        app:layout_constraintStart_toEndOf="@+id/bored"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/light" />
+        app:srcCompat="@drawable/cold" />
 
     <ImageButton
-        android:id="@+id/painkillers"
+        android:id="@+id/content"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="42dp"
@@ -103,29 +104,68 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintBottom_toBottomOf="@+id/silence"
-        app:layout_constraintEnd_toStartOf="@+id/silence"
-        app:layout_constraintStart_toEndOf="@+id/light"
-        app:layout_constraintTop_toTopOf="@+id/silence"
-        app:srcCompat="@drawable/painkiller" />
+        app:layout_constraintBottom_toBottomOf="@+id/frustrated"
+        app:layout_constraintEnd_toStartOf="@+id/frustrated"
+        app:layout_constraintStart_toEndOf="@+id/cold"
+        app:layout_constraintTop_toTopOf="@+id/frustrated"
+        app:srcCompat="@drawable/content" />
 
     <ImageButton
-        android:id="@+id/silence"
+        android:id="@+id/frustrated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="215dp"
         android:layout_marginTop="6dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/painkillers"
+        app:layout_constraintStart_toEndOf="@+id/content"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/silence" />
+        app:srcCompat="@drawable/frustrated" />
 
     <ImageButton
-        android:id="@+id/sit"
+        android:id="@+id/happy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/Background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/bored"
+        app:layout_constraintTop_toBottomOf="@+id/bored"
+        app:srcCompat="@drawable/happy" />
+
+    <ImageButton
+        android:id="@+id/scared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/Background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/cold"
+        app:layout_constraintTop_toBottomOf="@+id/cold"
+        app:srcCompat="@drawable/scared" />
+
+    <ImageButton
+        android:id="@+id/sore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/Background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/frustrated"
+        app:layout_constraintTop_toBottomOf="@+id/frustrated"
+        app:srcCompat="@drawable/sore" />
+
+    <ImageButton
+        android:id="@+id/tired"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -133,12 +173,25 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/air"
-        app:layout_constraintTop_toBottomOf="@+id/air"
-        app:srcCompat="@drawable/sit" />
+        app:layout_constraintStart_toStartOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:srcCompat="@drawable/tired" />
 
     <ImageButton
-        android:id="@+id/sleep"
+        android:id="@+id/worried"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:background="@color/Background_lightgrey"
+        android:scaleType="fitCenter"
+        android:scaleX="0.90"
+        android:scaleY="0.90"
+        app:layout_constraintStart_toStartOf="@+id/happy"
+        app:layout_constraintTop_toBottomOf="@+id/happy"
+        app:srcCompat="@drawable/worried" />
+
+    <ImageButton
+        android:id="@+id/varm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -146,86 +199,35 @@
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/light"
-        app:layout_constraintTop_toBottomOf="@+id/light"
-        app:srcCompat="@drawable/sleep" />
+        app:layout_constraintStart_toStartOf="@+id/scared"
+        app:layout_constraintTop_toBottomOf="@+id/scared"
+        app:srcCompat="@drawable/warm" />
 
     <ImageButton
-        android:id="@+id/suction"
+        android:id="@+id/thirsty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/silence"
-        app:layout_constraintTop_toBottomOf="@+id/silence"
-        app:srcCompat="@drawable/suction" />
+        app:layout_constraintStart_toStartOf="@+id/tired"
+        app:layout_constraintTop_toBottomOf="@+id/tired"
+        app:srcCompat="@drawable/thirsty" />
 
     <ImageButton
-        android:id="@+id/turn"
+        android:id="@+id/breath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:background="@color/Background_lightgrey"
         android:scaleType="fitCenter"
         android:scaleX="0.90"
         android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/painkillers"
-        app:layout_constraintTop_toBottomOf="@+id/painkillers"
-        app:srcCompat="@drawable/turn" />
-
-    <ImageButton
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/Background_lightgrey"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/sit"
-        app:layout_constraintTop_toBottomOf="@+id/sit"
-        app:srcCompat="@drawable/tv" />
-
-    <ImageButton
-        android:id="@+id/visit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/Background_lightgrey"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/sleep"
-        app:layout_constraintTop_toBottomOf="@+id/sleep"
-        app:srcCompat="@drawable/visit" />
-
-    <ImageButton
-        android:id="@+id/walk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/Background_lightgrey"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/turn"
-        app:layout_constraintTop_toBottomOf="@+id/turn"
-        app:srcCompat="@drawable/walk" />
-
-    <ImageButton
-        android:id="@+id/wc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/Background_lightgrey"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintStart_toStartOf="@+id/suction"
-        app:layout_constraintTop_toBottomOf="@+id/suction"
-        app:srcCompat="@drawable/wc" />
+        app:layout_constraintStart_toStartOf="@+id/sore"
+        app:layout_constraintTop_toBottomOf="@+id/sore"
+        app:srcCompat="@drawable/breath" />
 
 </android.support.constraint.ConstraintLayout>
+
