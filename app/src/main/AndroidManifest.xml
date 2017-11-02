@@ -18,6 +18,7 @@
         <activity android:name=".DialogueActivity"></activity>
         <activity android:name=".ActActivity"></activity>
         <activity android:name=".MoodActivity"></activity>
+        <activity android:name=".questionsActivity"></activity>
     </application>
 
 </manifest>
