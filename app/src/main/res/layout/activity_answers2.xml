@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.02"
-        app:srcCompat="@drawable/yes" />
+        app:srcCompat="@drawable/nyyes" />
 
     <ImageButton
         android:id="@+id/thanks"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.745"
-        app:srcCompat="@drawable/thanks" />
+        app:srcCompat="@drawable/nytak" />
 
     <ImageButton
         android:id="@+id/idontknow"
@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.377"
-        app:srcCompat="@drawable/idontknow" />
+        app:srcCompat="@drawable/nyvedikke" />
 
     <ImageButton
         android:id="@+id/no"
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.02"
-        app:srcCompat="@drawable/no" />
+        app:srcCompat="@drawable/nynej" />
 
     <ImageButton
         android:id="@+id/later"
@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.745"
-        app:srcCompat="@drawable/later" />
+        app:srcCompat="@drawable/nysenere" />
 
     <ImageButton
         android:id="@+id/retur"
@@ -106,7 +106,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.136"
-        app:srcCompat="@drawable/button_return" />
+        app:srcCompat="@drawable/nyretur" />
 
     <ImageButton
         android:id="@+id/home"
@@ -123,7 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.412"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/nyhome" />
 
     <ImageButton
         android:id="@+id/kald"
@@ -142,7 +142,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/reskald" />
+        app:srcCompat="@drawable/nykaldbar" />
 
     <ImageButton
         android:id="@+id/keyboard"
@@ -159,6 +159,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535"
-        app:srcCompat="@drawable/keyboard" />
+        app:srcCompat="@drawable/nykeyboard" />
 
 </android.support.constraint.ConstraintLayout>

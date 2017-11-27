@@ -17,7 +17,7 @@
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button_return" />
+        app:srcCompat="@drawable/nyretur" />
 
     <ImageButton
         android:id="@+id/home"
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toTopOf="@+id/keyboard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton20"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/nyhome" />
 
     <ImageButton
         android:id="@+id/keyboard"
@@ -41,7 +41,7 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/call"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/keyboard" />
+        app:srcCompat="@drawable/nykeyboard" />
 
     <ImageButton
         android:id="@+id/call"
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/call" />
+        app:srcCompat="@drawable/nykaldbar" />
 
     <ImageButton
         android:id="@+id/questionButton"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/questions" />
+        app:srcCompat="@drawable/nyquestion" />
 
     <ImageButton
         android:id="@+id/answersButton"
@@ -89,7 +89,7 @@
         android:scaleY="0.9"
         app:layout_constraintEnd_toStartOf="@+id/questionButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/answers" />
+        app:srcCompat="@drawable/nysvar" />
 
     <ImageButton
         android:id="@+id/painButton"
@@ -103,7 +103,7 @@
         android:scaleY="0.9"
         app:layout_constraintStart_toEndOf="@+id/questionButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pain" />
+        app:srcCompat="@drawable/nysmerte" />
 
     <ImageButton
         android:id="@+id/moodButton"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toStartOf="@+id/questionButton"
         app:layout_constraintTop_toBottomOf="@+id/answersButton"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mood" />
+        app:srcCompat="@drawable/nymood" />
 
     <ImageButton
         android:id="@+id/activitiesButton"
@@ -137,6 +137,6 @@
         app:layout_constraintStart_toEndOf="@+id/questionButton"
         app:layout_constraintTop_toBottomOf="@+id/painButton"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/activities" />
+        app:srcCompat="@drawable/nyaktivitet" />
 
 </android.support.constraint.ConstraintLayout>

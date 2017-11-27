@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toStartOf="@+id/bored"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_return1" />
+        app:srcCompat="@drawable/nyretur" />
 
 
     <ImageButton
@@ -34,7 +34,7 @@
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/happy"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/nyhome" />
 
     <ImageButton
         android:id="@+id/keyboard"
@@ -45,7 +45,7 @@
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/worried"
-        app:srcCompat="@drawable/keyboard" />
+        app:srcCompat="@drawable/nykeyboard" />
 
     <ImageButton
         android:id="@+id/call"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breath"
-        app:srcCompat="@drawable/call" />
+        app:srcCompat="@drawable/nykaldbar" />
 
     <ImageButton
         android:id="@+id/bored"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toStartOf="@+id/cold"
         app:layout_constraintStart_toEndOf="@+id/imageButton20"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bored" />
+        app:srcCompat="@drawable/nykedersig" />
 
     <ImageButton
         android:id="@+id/cold"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toStartOf="@+id/content"
         app:layout_constraintStart_toEndOf="@+id/bored"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cold" />
+        app:srcCompat="@drawable/nykold" />
 
     <ImageButton
         android:id="@+id/content"
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toStartOf="@+id/frustrated"
         app:layout_constraintStart_toEndOf="@+id/cold"
         app:layout_constraintTop_toTopOf="@+id/frustrated"
-        app:srcCompat="@drawable/content" />
+        app:srcCompat="@drawable/nytilpas" />
 
     <ImageButton
         android:id="@+id/frustrated"
@@ -123,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/content"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/frustrated" />
+        app:srcCompat="@drawable/nyfrustreret" />
 
     <ImageButton
         android:id="@+id/happy"
@@ -136,7 +136,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/bored"
         app:layout_constraintTop_toBottomOf="@+id/bored"
-        app:srcCompat="@drawable/happy" />
+        app:srcCompat="@drawable/nyglad" />
 
     <ImageButton
         android:id="@+id/scared"
@@ -149,7 +149,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/cold"
         app:layout_constraintTop_toBottomOf="@+id/cold"
-        app:srcCompat="@drawable/scared" />
+        app:srcCompat="@drawable/nybange" />
 
     <ImageButton
         android:id="@+id/sore"
@@ -162,7 +162,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/frustrated"
         app:layout_constraintTop_toBottomOf="@+id/frustrated"
-        app:srcCompat="@drawable/sore" />
+        app:srcCompat="@drawable/nysmerte" />
 
     <ImageButton
         android:id="@+id/tired"
@@ -175,7 +175,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/content"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/tired" />
+        app:srcCompat="@drawable/nytired" />
 
     <ImageButton
         android:id="@+id/worried"
@@ -188,7 +188,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/happy"
         app:layout_constraintTop_toBottomOf="@+id/happy"
-        app:srcCompat="@drawable/worried" />
+        app:srcCompat="@drawable/nybekymret" />
 
     <ImageButton
         android:id="@+id/varm"
@@ -201,7 +201,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/scared"
         app:layout_constraintTop_toBottomOf="@+id/scared"
-        app:srcCompat="@drawable/warm" />
+        app:srcCompat="@drawable/nyvarm" />
 
     <ImageButton
         android:id="@+id/thirsty"
@@ -214,7 +214,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/tired"
         app:layout_constraintTop_toBottomOf="@+id/tired"
-        app:srcCompat="@drawable/thirsty" />
+        app:srcCompat="@drawable/nythirst" />
 
     <ImageButton
         android:id="@+id/breath"
@@ -227,7 +227,7 @@
         android:scaleY="0.90"
         app:layout_constraintStart_toStartOf="@+id/sore"
         app:layout_constraintTop_toBottomOf="@+id/sore"
-        app:srcCompat="@drawable/breath" />
+        app:srcCompat="@drawable/nyluft" />
 
 </android.support.constraint.ConstraintLayout>
 

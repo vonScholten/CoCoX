@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/resspil" />
+        app:srcCompat="@drawable/nyspil" />
 
     <ImageButton
         android:id="@+id/kommunikation"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/reskom" />
+        app:srcCompat="@drawable/nydialog" />
 
     <ImageButton
         android:id="@+id/settings"
@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ressettings" />
+        app:srcCompat="@drawable/nysetting" />
 
     <ImageButton
         android:id="@+id/kald"
@@ -103,6 +103,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/reskald" />
+        app:srcCompat="@drawable/nykaldbar" />
 
 </android.support.constraint.ConstraintLayout>
