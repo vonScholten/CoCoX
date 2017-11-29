@@ -56,7 +56,7 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.moodButton: startActivity(new Intent(this, MoodActivity.class));
                 break;
-            case R.id.questionButton: startActivity(new Intent(this, MainActivity.class));
+            case R.id.questionButton: startActivity(new Intent(this, questionsActivity.class));
                 break;
             case R.id.activitiesButton: startActivity(new Intent(this, ActActivity.class));
                 break;
