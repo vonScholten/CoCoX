@@ -8,21 +8,22 @@
     tools:context="gr04.cocox.DialogueActivity"
     tools:layout_editor_absoluteY="89dp">
 
+
     <ImageButton
         android:id="@+id/retur"
-        android:layout_width="110dp"
-        android:layout_height="98dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
+        app:layout_constraintVertical_bias="0.089"
         app:srcCompat="@drawable/nyretur" />
 
 
@@ -37,10 +38,10 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404"
+        app:layout_constraintVertical_bias="0.075"
         app:srcCompat="@drawable/nyhome" />
 
 
@@ -78,10 +79,10 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087"
+        app:layout_constraintVertical_bias="0.100000024"
         app:srcCompat="@drawable/nysvar" />
 
     <ImageButton
@@ -98,10 +99,9 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087"
+        app:layout_constraintVertical_bias="0.100000024"
         app:srcCompat="@drawable/nykeyboard" />
 
     <ImageButton
@@ -118,10 +118,10 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087"
+        app:layout_constraintVertical_bias="0.100000024"
         app:srcCompat="@drawable/nysmerte" />
 
 
@@ -139,10 +139,10 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603"
+        app:layout_constraintVertical_bias="0.68"
         app:srcCompat="@drawable/nymood" />
 
     <ImageButton
@@ -159,10 +159,9 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603"
+        app:layout_constraintVertical_bias="0.68"
         app:srcCompat="@drawable/nyquestion" />
 
 
@@ -180,10 +179,12 @@
         android:scaleY="0.90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603"
+        app:layout_constraintVertical_bias="0.68"
         app:srcCompat="@drawable/nyaktivitet" />
+
+
 
 </android.support.constraint.ConstraintLayout>
