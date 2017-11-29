@@ -5,7 +5,7 @@
     android:id="@+id/Return"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/baggrund"
+    android:background="@color/background"
     tools:context="gr04.cocox.ActActivity"
     tools:layout_editor_absoluteY="89dp">
 
@@ -64,6 +64,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/nykaldbar" />
+
+    <Button
+        android:id="@+id/angry_btn"
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/comm_inactive"
+        android:drawableTop="@drawable/cat_inactive"
+        android:text="@string/cat_da"
+        android:textColor="@color/inactiveText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/visit"
