@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context="gr04.cocox.GameActivity">
 
-    <ImageButton
-        android:id="@+id/tictactoe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017"
-        app:srcCompat="@drawable/tictactoe" />
 
     <ImageButton
         android:id="@+id/memory"
@@ -34,11 +18,11 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintHorizontal_bias="0.284"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.663"
-        app:srcCompat="@drawable/memoryspil" />
+        app:srcCompat="@drawable/nymemory" />
 
     <ImageButton
         android:id="@+id/puzzle"
@@ -51,11 +35,11 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.284"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663"
-        app:srcCompat="@drawable/puzzlespil" />
+        app:layout_constraintVertical_bias="0.106"
+        app:srcCompat="@drawable/nypuzzle" />
 
     <ImageButton
         android:id="@+id/quiz"
@@ -68,11 +52,11 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017"
-        app:srcCompat="@drawable/quizspil" />
+        app:layout_constraintVertical_bias="0.106"
+        app:srcCompat="@drawable/nyquiz" />
 
     <ImageButton
         android:id="@+id/balloon"
@@ -85,11 +69,11 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        app:srcCompat="@drawable/balloonspil" />
+        app:layout_constraintVertical_bias="0.663"
+        app:srcCompat="@drawable/nyballon" />
 
     <ImageButton
         android:id="@+id/retur"
@@ -105,8 +89,8 @@
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083"
-        app:srcCompat="@drawable/button_return" />
+        app:layout_constraintVertical_bias="0.136"
+        app:srcCompat="@drawable/nyretur" />
 
     <ImageButton
         android:id="@+id/home"
@@ -122,26 +106,27 @@
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425"
-        app:srcCompat="@drawable/home" />
+        app:layout_constraintVertical_bias="0.412"
+        app:srcCompat="@drawable/nyhome" />
 
     <ImageButton
-        android:id="@+id/kald"
-        android:layout_width="1258dp"
-        android:layout_height="64dp"
+        android:id="@+id/call"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        android:scaleX="2.7"
-        android:scaleY="1.7"
+        android:scaleX="1.90"
+        android:scaleY="1.60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/reskald" />
+        app:srcCompat="@drawable/nykaldbar" />
 
 </android.support.constraint.ConstraintLayout>
