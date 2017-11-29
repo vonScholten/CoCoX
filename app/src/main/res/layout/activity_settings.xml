@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button_return" />
+        app:srcCompat="@drawable/nyretur" />
 
     <ImageButton
         android:id="@+id/home"
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/nyhome" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toEndOf="@+id/imageButton20"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/input" />
+        app:srcCompat="@drawable/nyinput" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/reset" />
+        app:srcCompat="@drawable/nyreset" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton5"
-        app:srcCompat="@drawable/sound" />
+        app:srcCompat="@drawable/nysound" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -75,7 +75,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton5"
-        app:srcCompat="@drawable/font" />
+        app:srcCompat="@drawable/nyfont" />
 
     <ImageButton
         android:id="@+id/imageButton5"
@@ -86,6 +86,6 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:srcCompat="@drawable/language" />
+        app:srcCompat="@drawable/nysprog" />
 
 </android.support.constraint.ConstraintLayout>
