@@ -18,7 +18,9 @@
         <activity android:name=".DialogueActivity" />
         <activity android:name=".ActActivity" />
         <activity android:name=".MoodActivity" />
-        <activity android:name=".AnswersActivity"></activity>
+        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".questionsActivity"></activity>
+        <activity android:name=".settingsActivity"></activity>
     </application>
 
 </manifest>

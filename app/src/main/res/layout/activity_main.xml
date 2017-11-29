@@ -88,7 +88,7 @@
 
     <ImageButton
         android:id="@+id/kald"
-        android:layout_width="587dp"
+        android:layout_width="1255dp"
         android:layout_height="39dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -96,8 +96,8 @@
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        android:scaleX="1.7"
-        android:scaleY="1.7"
+        android:scaleX="3.9"
+        android:scaleY="2.7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
