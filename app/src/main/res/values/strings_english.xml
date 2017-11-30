@@ -1,0 +1,70 @@
+<resources>
+    <string name="retur_en">Back</string>
+    <string name="home_en">Home</string>
+
+    <string name="answer_en">Aswer</string>
+    <string name="activities_en">Activities</string>
+    <string name="mood_en">Mood</string>
+    <string name="questions_en">Questions</string>
+    <string name="keyboard_en">Keyboard</string>
+    <string name="pain_en">Pain</string>
+
+    <string name="visit_en">I want visit</string>
+    <string name="air_en">I need air</string>
+    <string name="light_en">I want light</string>
+    <string name="walk_en">I need a walk </string>
+    <string name="sleep_e">I need to sleep</string>
+    <string name="painkillers_en">I want painkillers</string>
+    <string name="silence_en">I need silence</string>
+    <string name="sit_de">I want to sit</string>
+    <string name="turning_en">I need to be turned</string>
+    <string name="suction_en">I need suction</string>
+    <string name="tv_en">I want to watch TV</string>
+    <string name="toilet_en">I need to use the WC</string>
+
+    <string name="content_en">I am content</string>
+    <string name="happy_en">I am happy</string>
+    <string name="bored_en">I am bored</string>
+    <string name="tired_en">I am tired</string>
+    <string name="frustrated_en">I am frustrated</string>
+    <string name="scared_en">I am scared</string>
+    <string name="worried_en">I am worried</string>
+    <string name="warm_en">I am warm</string>
+    <string name="cold_en">I am cold</string>
+    <string name="thirsty_en">I am thirsty</string>
+    <string name="sore_en">I am sore</string>
+
+    <string name="yes_en">Yes</string>
+    <string name="thanks_en">Thank you</string>
+    <string name="dontknow_en">I dont know</string>
+    <string name="no_en">No</string>
+    <string name="later_en">Later</string>
+
+    <string name="doing_en">What are you doing?</string>
+    <string name="time_en">What time is it?</string>
+    <string name="whendrink_en">When can I eat/drink?</string>
+    <string name="rounds_en">When are there rounds?</string>
+    <string name="what_en">What did you say?</string>
+    <string name="wrong_en">What is wrong with me?</string>
+    <string name="why_en">Why am I here?</string>
+    <string name="examination_en">When is my examination?</string>
+    <string name="beenhere_en">How long have I been here?</string>
+    <string name="plan_en">Whats the plan today?</string>
+    <string name="where_en">Where am I?</string>
+    <string name="stuff_en">Where are my stuff?</string>
+
+    <string name="memory_en">Memory</string>
+    <string name="quiz_en">Quiz</string>
+    <string name="puzzle_en">Puzzle</string>
+    <string name="balloon_en">Baloon pop</string>
+
+    <string name="input_en">Input</string>
+    <string name="reset_en">Reset</string>
+    <string name="language_en">Language</string>
+    <string name="font_en">Font size</string>
+    <string name="sound_en">Sound</string>
+
+    <string name="games_en">Games</string>
+    <string name="dialogue_en">Dialogue</string>
+    <string name="call_en">Call</string>
+</resources>

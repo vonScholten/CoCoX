@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/baggrund"
+    android:background="@color/background"
     tools:context="gr04.cocox.MainActivity">
-
-
 
 
     <TextClock
         android:id="@+id/clock"
-        android:layout_width="199dp"
-        android:layout_height="42dp"
+        android:layout_width="302dp"
+        android:layout_height="134dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:format12Hour="k:mm \n MMM dd, yyyy"
         android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#666666"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,43 +28,43 @@
 
     <ImageButton
         android:id="@+id/spil"
-        android:layout_width="183dp"
-        android:layout_height="183dp"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.9"
         android:scaleY="0.9"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/resspil" />
+        app:layout_constraintVertical_bias="0.389"
+        app:srcCompat="@drawable/nyspil" />
 
     <ImageButton
         android:id="@+id/kommunikation"
-        android:layout_width="183dp"
-        android:layout_height="183dp"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="0.9"
         android:scaleY="0.9"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/reskom" />
+        app:layout_constraintVertical_bias="0.389"
+        app:srcCompat="@drawable/nydialog" />
 
     <ImageButton
         android:id="@+id/settings"
@@ -74,35 +74,36 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="1.0"
         android:scaleY="1.0"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/kald"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ressettings" />
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/nysetting" />
 
     <ImageButton
-        android:id="@+id/kald"
-        android:layout_width="1255dp"
-        android:layout_height="39dp"
+        android:id="@+id/call"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        android:scaleX="3.9"
-        android:scaleY="2.7"
+        android:scaleX="1.90"
+        android:scaleY="1.60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/reskald" />
+        app:srcCompat="@drawable/nykaldbar" />
 
 </android.support.constraint.ConstraintLayout>
