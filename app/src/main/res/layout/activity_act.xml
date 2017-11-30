@@ -68,22 +68,24 @@
     <Button
         android:id="@+id/angry_btn"
 
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="8dp"
 
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/comm_inactive"
-        android:drawableTop="@drawable/cat_inactive"
-        android:text="@string/cat_da"
+        android:drawableTop="@drawable/newlight"
+        android:text="@string/light_da"
         android:textColor="@color/inactiveText"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029999971" />
 
     <ImageButton
         android:id="@+id/visit"
@@ -126,26 +128,6 @@
         app:srcCompat="@drawable/nyluft" />
 
     <ImageButton
-        android:id="@+id/light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="0.90"
-        android:scaleY="0.90"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014"
-        app:srcCompat="@drawable/nylys" />
-
-    <ImageButton
         android:id="@+id/walk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,7 +150,7 @@
     <ImageButton
         android:id="@+id/sleep"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="175dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

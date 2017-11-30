@@ -53,14 +53,14 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
             System.out.println("state is inactive");
             cat.setBackground(getDrawable(R.drawable.comm_active)); // set background to "active.xml"
             cat.setTextColor(getColor(R.color.activeText)); // set text color
-            cat.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cat_active, 0, 0); // set cat
+            cat.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.light_active, 0, 0); // set cat
             active = true; // set state to active
             System.out.println("state is now active");
         } else {
             System.out.println("state is active");
             cat.setBackground(getDrawable(R.drawable.comm_inactive));
             cat.setTextColor(getColor(R.color.inactiveText));
-            cat.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cat_inactive, 0, 0);
+            cat.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.newlight, 0, 0);
             active = false;
             System.out.println("state is now inactive");
         }

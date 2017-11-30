@@ -1,3 +1,70 @@
 <resources>
-    <string name="cat_da">meow</string>
+    <string name="retur_da">Tilbage</string>
+    <string name="home_da">Hjem</string>
+
+    <string name="answer_da">Svar</string>
+    <string name="activities_da">Aktiviteter</string>
+    <string name="mood_da">Humør</string>
+    <string name="questions_da">Spørgsmål</string>
+    <string name="keyboard_da">Tastatur</string>
+    <string name="pain_da">Smerte</string>
+
+    <string name="visit_da">Jeg vil gerne have besøg</string>
+    <string name="air_da">Jeg har brug for luft</string>
+    <string name="light_da">Jeg vil gerne have lys</string>
+    <string name="walk_da">Jeg vil gerne gå en tur</string>
+    <string name="sleep_da">Jeg vil gerne sove</string>
+    <string name="painkillers_da">Jeg vil gerne have smertestillende</string>
+    <string name="silence_da">Jeg vil gerne have stilhed</string>
+    <string name="sit_da">Jeg vil gerne sidde</string>
+    <string name="turning_da">Jeg vil gerne vendes</string>
+    <string name="suction_da">Jeg vil gerne suges</string>
+    <string name="tv_da">Jeg vil gerne se tv</string>
+    <string name="toilet_da">Jeg skal på toilet</string>
+
+    <string name="content_da">Jeg er tilfreds</string>
+    <string name="happy_da">Jeg er glad</string>
+    <string name="bored_da">Jeg keder mig</string>
+    <string name="tired_da">Jeg er træt</string>
+    <string name="frustrated_da">Jeg er frustreret</string>
+    <string name="scared_da">Jeg er bange</string>
+    <string name="worried_da">Jeg er bekymret</string>
+    <string name="warm_da">Jeg har det varmt</string>
+    <string name="cold_da">Jeg fryser</string>
+    <string name="thirsty_da">Jeg er tørstig</string>
+    <string name="sore_da">Jeg er øm</string>
+
+    <string name="yes_da">Ja</string>
+    <string name="thanks_da">Tak</string>
+    <string name="dontknow_da">Det ved jeg ikke</string>
+    <string name="no_da">Nej</string>
+    <string name="later_da">Senere</string>
+
+    <string name="doing_da">Hvad laver du?</string>
+    <string name="time_da">Hvad er klokken?</string>
+    <string name="whendrink_da">Hvornår kan jeg drikke/spise?</string>
+    <string name="rounds_da">Hvornår er der stuegang?</string>
+    <string name="what_da">Hvad sagde du?</string>
+    <string name="wrong_da">Hvad er der galt med mig?</string>
+    <string name="why_da">Hvorfor er jeg her?</string>
+    <string name="examination_da">Hvornår skal jeg undersøges?</string>
+    <string name="beenhere_da">Hvor længe har jeg været her?</string>
+    <string name="plan_da">Hvad er planen for i dag?</string>
+    <string name="where_da">Hvor er jeg?</string>
+    <string name="stuff_da">Hvor er mine ting?</string>
+
+    <string name="memory_da">Huskespil</string>
+    <string name="quiz_da">Quiz</string>
+    <string name="puzzle_da">Puzzlespil</string>
+    <string name="balloon_da">Pop balloner</string>
+
+    <string name="input_da">Input</string>
+    <string name="reset_da">Reset</string>
+    <string name="language_da">Sprog</string>
+    <string name="font_da">Tekststørrelse</string>
+    <string name="sound_da">Lyd</string>
+
+    <string name="games_da">Spil</string>
+    <string name="dialogue_da">Dialog</string>
+    <string name="call_da">Kald</string>
 </resources>

@@ -8,18 +8,18 @@
     tools:context="gr04.cocox.MainActivity">
 
 
-
-
     <TextClock
         android:id="@+id/clock"
-        android:layout_width="199dp"
-        android:layout_height="42dp"
+        android:layout_width="302dp"
+        android:layout_height="134dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:format12Hour="k:mm \n MMM dd, yyyy"
         android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#666666"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:scaleY="0.9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.389"
@@ -60,7 +60,7 @@
         android:scaleY="0.9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.389"
@@ -74,16 +74,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:scaleX="1.0"
         android:scaleY="1.0"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/kald"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.03"
         app:srcCompat="@drawable/nysetting" />
 
     <ImageButton
