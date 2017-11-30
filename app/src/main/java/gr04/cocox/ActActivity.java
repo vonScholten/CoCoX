@@ -24,7 +24,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
-        cat = findViewById(R.id.angry_btn);
+        cat = findViewById(R.id.light);
         cat.setOnClickListener(this);
     }
 
@@ -38,7 +38,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
                 finish();
                 startActivity(new Intent(this, MainActivity.class));
                 break;
-            case R.id.angry_btn: // til test
+            case R.id.light: // til test
                 update();
                 break;
         }
