@@ -5,13 +5,13 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="background">#EEEDDE</color>
+    <color name="colorBackground">#EEEDDE</color>
 
     <color name="inactiveSolid">#1C87B0</color>
     <color name="inactiveStroke">#1C87B0</color>
-    <color name="inactiveText">#FFFFFF</color>
+    <color name="inactiveText">#EEEDDE</color>
 
-    <color name="activeSolid">#FFFFFF</color>
+    <color name="activeSolid">#EEEDDE</color>
     <color name="activeStroke">#1C87B0</color>
     <color name="activeText">#1C87B0</color>
 </resources>

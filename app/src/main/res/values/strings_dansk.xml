@@ -14,10 +14,10 @@
     <string name="light_da">Jeg vil gerne have lys</string>
     <string name="walk_da">Jeg vil gerne gå en tur</string>
     <string name="sleep_da">Jeg vil gerne sove</string>
-    <string name="painkillers_da">Jeg vil gerne have smertestillende</string>
+    <string name="painkillers_da">Jeg har brug for smertestillende</string>
     <string name="silence_da">Jeg vil gerne have stilhed</string>
     <string name="sit_da">Jeg vil gerne sidde</string>
-    <string name="turning_da">Jeg vil gerne vendes</string>
+    <string name="turn_da">Jeg vil gerne vendes</string>
     <string name="suction_da">Jeg vil gerne suges</string>
     <string name="tv_da">Jeg vil gerne se tv</string>
     <string name="toilet_da">Jeg skal på toilet</string>
