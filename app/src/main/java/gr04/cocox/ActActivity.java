@@ -62,8 +62,8 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         }
 
         else if (view == home) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
         }
 
         else {

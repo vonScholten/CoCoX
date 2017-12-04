@@ -28,7 +28,7 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.retur: finish();
                 break;
             case R.id.home: finish();
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 break;
         }
 

@@ -26,8 +26,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
         else if (view == home){
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
 
     }

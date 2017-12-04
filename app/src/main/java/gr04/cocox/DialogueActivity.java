@@ -46,7 +46,7 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
             case R.id.retur: finish();
                 break;
             case R.id.home: finish();
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 break;
             case R.id.answersButton: startActivity(new Intent(this, AnswerActivity.class));
                 break;
