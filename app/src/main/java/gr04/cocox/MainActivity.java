@@ -33,20 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (view == spil){
-            startActivity(new Intent(this, GameActivity.class));
-        }
-        else
-            if (view == dialog){
+        switch (view.getId()) {
+            case R.id.spil:
+                startActivity(new Intent(this, GameActivity.class));
+                break;
+            case R.id.kommunikation:
                 startActivity(new Intent(this, DialogueActivity.class));
-            }
-            else
-                if (view == settings){
+                break;
+            case R.id.settings: startActivity(new Intent(this, settingsActivity.class));
+        }
 
-                }
-                else {
-
-                }
 
     }
 }
