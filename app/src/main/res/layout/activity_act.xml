@@ -8,10 +8,11 @@
     tools:context="gr04.cocox.ActActivity"
     tools:layout_editor_absoluteY="89dp">
 
+
     <ImageButton
         android:id="@+id/retur"
-        android:layout_width="110dp"
-        android:layout_height="98dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="48dp"
@@ -19,17 +20,21 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".096"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".12"
         app:srcCompat="@drawable/nyretur" />
 
 
     <ImageButton
         android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -37,32 +42,35 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".127"
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06999999"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".12"
         app:srcCompat="@drawable/nyhome" />
 
-
-    <ImageButton
+    <Button
         android:id="@+id/call"
-        android:layout_width="0dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="1.90"
-        android:scaleY="1.60"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="628dp"
+        android:background="@color/callcolor"
+        android:drawableLeft="@drawable/bell"
+        android:drawableRight="@drawable/bell"
+        android:paddingLeft="180dp"
+        android:paddingRight="180dp"
+        android:text="@string/call_da"
+        android:textColor="@color/inactiveText"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/nykaldbar" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -87,7 +95,7 @@
             android:drawableTop="@drawable/cat_inactive"
             android:text="@string/visit_da"
             android:textColor="@color/inactiveText"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
         <Button
             android:id="@+id/silence"
@@ -243,5 +251,6 @@
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
     </GridLayout>
+
 
 </android.support.constraint.ConstraintLayout>
