@@ -1,7 +1,6 @@
 package gr04.cocox;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.kommunikation:
                 startActivity(new Intent(this, DialogueActivity.class));
                 break;
-            case R.id.settings: startActivity(new Intent(this, settingsActivity.class));
+            case R.id.settings: startActivity(new Intent(this, SettingsActivity.class));
         }
 
 

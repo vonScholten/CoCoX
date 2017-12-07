@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class questionsActivity extends AppCompatActivity implements View.OnClickListener {
+public class QuestionsActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton retur;
     ImageButton home;
