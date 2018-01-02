@@ -10,6 +10,8 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
     ImageButton retur;
     ImageButton home;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
