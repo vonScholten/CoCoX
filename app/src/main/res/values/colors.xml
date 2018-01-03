@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#000000</color>
 
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorBackground">#EEEDDE</color>
@@ -16,5 +16,5 @@
     <color name="activeText">#1C87B0</color>
     <color name="callcolor">#CF3C3A</color>
 
-    <color name="shadowborder">#3e4241</color>
+    <color name="shadowborder">#605e48</color>
 </resources>
