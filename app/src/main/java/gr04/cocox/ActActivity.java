@@ -85,8 +85,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
 
         selected.setBackground(getDrawable(R.drawable.dialogue_active)); // set background to "activeIndex.xml"
         selected.setTextColor(getColor(R.color.activeText)); // set text color
-        //selected.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.light_active, 0, 0); // set cat
-        selected.setSelected(true);
+        selected.setSelected(true); //Set button selected state as true
         inactive.remove(activeIndex);
 
         for (int id : btn_ID) {
@@ -94,8 +93,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
                 refresh = findViewById(id);
                 refresh.setBackground(getDrawable(R.drawable.dialogue_inactive));
                 refresh.setTextColor(getColor(R.color.inactiveText));
-                refresh.setSelected(false);
-                //refresh.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cat_inactive, 0, 0);
+                refresh.setSelected(false); //Set button selected state as false
             }
         }
     }

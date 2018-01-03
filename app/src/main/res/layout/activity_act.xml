@@ -92,7 +92,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/visit_icon_selector"
+            android:drawableTop="@drawable/act_visit_selector"
             android:text="@string/visit_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp"/>
@@ -106,7 +106,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/silence"
+            android:drawableTop="@drawable/act_silence_selector"
             android:text="@string/silence_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -120,7 +120,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/toilet"
+            android:drawableTop="@drawable/act_toilet_selector"
             android:text="@string/toilet_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -134,7 +134,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/tv"
+            android:drawableTop="@drawable/act_tv_selector"
             android:text="@string/tv_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -148,7 +148,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/air"
+            android:drawableTop="@drawable/act_air_selector"
             android:text="@string/air_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -162,7 +162,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/light_inactive"
+            android:drawableTop="@drawable/act_light_selector"
             android:text="@string/light_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -176,7 +176,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/walk"
+            android:drawableTop="@drawable/act_walk_selector"
             android:text="@string/walk_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -190,7 +190,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/sleep"
+            android:drawableTop="@drawable/act_sleep_selector"
             android:text="@string/sleep_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -204,7 +204,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/sit"
+            android:drawableTop="@drawable/act_sit_selector"
             android:text="@string/sit_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -218,7 +218,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/turned"
+            android:drawableTop="@drawable/act_turn_selector"
             android:text="@string/turn_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -232,7 +232,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/painkiller"
+            android:drawableTop="@drawable/act_painkiller_selector"
             android:text="@string/painkillers_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
@@ -246,7 +246,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/suction"
+            android:drawableTop="@drawable/act_suction_selctor"
             android:text="@string/suction_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
