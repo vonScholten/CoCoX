@@ -15,4 +15,6 @@
     <color name="activeStroke">#1C87B0</color>
     <color name="activeText">#1C87B0</color>
     <color name="callcolor">#CF3C3A</color>
+
+    <color name="shadowborder">#3e4241</color>
 </resources>

@@ -91,7 +91,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         for (int id : btn_ID) {
             if(inactive.contains(findViewById(id))) {
                 refresh = findViewById(id);
-                refresh.setBackground(getDrawable(R.drawable.dialogue_inactive));
+                refresh.setBackground(getDrawable(R.drawable.dialogue_inactive_shadow));
                 refresh.setTextColor(getColor(R.color.inactiveText));
                 refresh.setSelected(false); //Set button selected state as false
             }
