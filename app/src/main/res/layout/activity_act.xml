@@ -92,7 +92,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive"
-            android:drawableTop="@drawable/visit"
+            android:drawableTop="@drawable/visit_icon_selector"
             android:text="@string/visit_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp"/>
