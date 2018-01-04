@@ -4,7 +4,7 @@
 
     <item android:drawable="@drawable/shadow"/>
     <item
-        android:drawable="@drawable/dialogue_inactive"
+        android:drawable="@drawable/button_inactive"
         android:bottom="4dp" />
 
 </layer-list>
