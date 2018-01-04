@@ -84,7 +84,7 @@
 
 
         <Button
-            android:id="@+id/visit"
+            android:id="@+id/content"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -92,14 +92,14 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_visit_selector"
+            android:drawableTop="@drawable/mood_content_selector"
             android:text="@string/content_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
 
         <Button
-            android:id="@+id/silence"
+            android:id="@+id/happy"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -107,13 +107,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_silence_selector"
+            android:drawableTop="@drawable/mood_happy_selector"
             android:text="@string/happy_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/toilet"
+            android:id="@+id/bored"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -121,13 +121,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_toilet_selector"
+            android:drawableTop="@drawable/mood_bored_selector"
             android:text="@string/bored_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/tv"
+            android:id="@+id/tired"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -135,13 +135,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_tv_selector"
+            android:drawableTop="@drawable/mood_tired_selector"
             android:text="@string/tired_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/air"
+            android:id="@+id/breathe"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -150,12 +150,12 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/act_air_selector"
-            android:text="@string/air_da"
+            android:text="@string/breathe_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/light"
+            android:id="@+id/frustrated"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -163,13 +163,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_light_selector"
+            android:drawableTop="@drawable/mood_frustrated_selector"
             android:text="@string/frustrated_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/walk"
+            android:id="@+id/scared"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -177,13 +177,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_walk_selector"
+            android:drawableTop="@drawable/mood_scared_selector"
             android:text="@string/scared_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/sleep"
+            android:id="@+id/worried"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -191,13 +191,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_sleep_selector"
+            android:drawableTop="@drawable/mood_worried_selector"
             android:text="@string/worried_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/sit"
+            android:id="@+id/warm"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -205,13 +205,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_sit_selector"
+            android:drawableTop="@drawable/mood_warm_selector"
             android:text="@string/warm_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/turn"
+            android:id="@+id/cold"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -219,13 +219,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_turn_selector"
+            android:drawableTop="@drawable/mood_cold_selector"
             android:text="@string/cold_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/painkillers"
+            android:id="@+id/thirsty"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -233,13 +233,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_painkiller_selector"
+            android:drawableTop="@drawable/mood_thirsty_selector"
             android:text="@string/thirsty_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/suction"
+            android:id="@+id/sore"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="12dp"
@@ -247,7 +247,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
-            android:drawableTop="@drawable/act_suction_selector"
+            android:drawableTop="@drawable/mood_sore_selector"
             android:text="@string/sore_da"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
