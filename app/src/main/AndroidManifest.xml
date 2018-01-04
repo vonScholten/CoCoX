@@ -21,6 +21,10 @@
         <activity android:name=".AnswerActivity"/>
         <activity android:name=".QuestionsActivity"/>
         <activity android:name=".SettingsActivity"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1d3ae5d9be4ced2b0b327f2f3505f7f569e93faf" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
