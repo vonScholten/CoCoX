@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">CoCoX</string>
+
+    <string name="retur">Tilbage</string>
+    <string name="home">Hjem</string>
+
+    <string name="answer">Svar</string>
+    <string name="activities">Aktiviteter</string>
+    <string name="mood">Humør</string>
+    <string name="questions">Spørgsmål</string>
+    <string name="keyboard">Tastatur</string>
+    <string name="pain">Smerte</string>
+
+    <string name="visit">Jeg vil gerne have besøg</string>
+    <string name="air">Jeg har brug for luft</string>
+    <string name="light">Jeg vil gerne have lys</string>
+    <string name="walk">Jeg vil gerne gå en tur</string>
+    <string name="sleep">Jeg vil gerne sove</string>
+    <string name="painkillers">Jeg har brug for smertestillende</string>
+    <string name="silence">Jeg vil gerne have stilhed</string>
+    <string name="sit">Jeg vil gerne sidde</string>
+    <string name="turn">Jeg vil gerne vendes</string>
+    <string name="suction">Jeg vil gerne suges</string>
+    <string name="tv">Jeg vil gerne se tv</string>
+    <string name="toilet">Jeg skal på toilet</string>
+
+    <string name="content">Jeg er tilfreds</string>
+    <string name="happy">Jeg er glad</string>
+    <string name="bored">Jeg keder mig</string>
+    <string name="tired">Jeg er træt</string>
+    <string name="frustrated">Jeg er frustreret</string>
+    <string name="scared">Jeg er bange</string>
+    <string name="worried">Jeg er bekymret</string>
+    <string name="breathe">Jeg kan ikke få luft</string>
+    <string name="warm">Jeg har det varmt</string>
+    <string name="cold">Jeg fryser</string>
+    <string name="thirsty">Jeg er tørstig</string>
+    <string name="sore">Jeg er øm</string>
+
+    <string name="yes">Ja</string>
+    <string name="thanks">Tak</string>
+    <string name="dontknow">Det ved jeg ikke</string>
+    <string name="no">Nej</string>
+    <string name="later">Senere</string>
+
+    <string name="doing">Hvad laver du?</string>
+    <string name="time">Hvad er klokken?</string>
+    <string name="whendrink">Hvornår kan jeg drikke/spise?</string>
+    <string name="rounds">Hvornår er der stuegang?</string>
+    <string name="what">Hvad sagde du?</string>
+    <string name="wrong">Hvad er der galt med mig?</string>
+    <string name="why">Hvorfor er jeg her?</string>
+    <string name="examination">Hvornår skal jeg undersøges?</string>
+    <string name="beenhere">Hvor længe har jeg været her?</string>
+    <string name="plan">Hvad er planen for i dag?</string>
+    <string name="where">Hvor er jeg?</string>
+    <string name="stuff">Hvor er mine ting?</string>
+
+    <string name="memory">Huskespil</string>
+    <string name="quiz">Quiz</string>
+    <string name="puzzle">Puzzlespil</string>
+    <string name="balloon">Pop balloner</string>
+
+    <string name="input">Input</string>
+    <string name="reset">Reset</string>
+    <string name="language">Sprog</string>
+    <string name="font">Tekststørrelse</string>
+    <string name="sound">Lyd</string>
+
+    <string name="games">Spil</string>
+    <string name="dialogue">Dialog</string>
+    <string name="call">Kald</string>
+</resources>

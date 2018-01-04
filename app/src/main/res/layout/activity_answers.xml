@@ -84,7 +84,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/dialogue_inactive_shadow"
         android:drawableTop="@drawable/selector_answer_yes"
-        android:text="@string/yes_da"
+        android:text="@string/yes"
         android:textColor="@color/inactiveText"
         android:textSize="20sp" />
 
@@ -99,7 +99,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/dialogue_inactive_shadow"
         android:drawableTop="@drawable/selector_answer_no"
-        android:text="@string/no_da"
+        android:text="@string/no"
         android:textColor="@color/inactiveText"
         android:textSize="20sp" />
 
@@ -113,7 +113,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/dialogue_inactive_shadow"
         android:drawableTop="@drawable/selector_answer_dontknow"
-        android:text="@string/dontknow_da"
+        android:text="@string/dontknow"
         android:textColor="@color/inactiveText"
         android:textSize="16sp" />
 
@@ -127,7 +127,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/dialogue_inactive_shadow"
         android:drawableTop="@drawable/selector_answer_thanks"
-        android:text="@string/thanks_da"
+        android:text="@string/thanks"
         android:textColor="@color/inactiveText"
         android:textSize="20sp" />
 
@@ -141,14 +141,10 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/dialogue_inactive_shadow"
         android:drawableTop="@drawable/selector_answer_later"
-        android:text="@string/later_da"
+        android:text="@string/later"
         android:textColor="@color/inactiveText"
         android:textSize="20sp" />
+
     </GridLayout>
-
-
-
-
-
 
 </android.support.constraint.ConstraintLayout>

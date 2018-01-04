@@ -61,7 +61,7 @@
         android:drawableRight="@drawable/bell"
         android:paddingLeft="180dp"
         android:paddingRight="180dp"
-        android:text="@string/call_da"
+        android:text="@string/call"
         android:textColor="@color/inactiveText"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +93,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_content_selector"
-            android:text="@string/content_da"
+            android:text="@string/content"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -108,7 +108,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_happy_selector"
-            android:text="@string/happy_da"
+            android:text="@string/happy"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -122,7 +122,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_bored_selector"
-            android:text="@string/bored_da"
+            android:text="@string/bored"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -136,7 +136,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_tired_selector"
-            android:text="@string/tired_da"
+            android:text="@string/tired"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -150,7 +150,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/act_air_selector"
-            android:text="@string/breathe_da"
+            android:text="@string/breathe"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -164,7 +164,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_frustrated_selector"
-            android:text="@string/frustrated_da"
+            android:text="@string/frustrated"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -178,7 +178,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_scared_selector"
-            android:text="@string/scared_da"
+            android:text="@string/scared"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -192,7 +192,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_worried_selector"
-            android:text="@string/worried_da"
+            android:text="@string/worried"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -206,7 +206,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_warm_selector"
-            android:text="@string/warm_da"
+            android:text="@string/warm"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -220,7 +220,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_cold_selector"
-            android:text="@string/cold_da"
+            android:text="@string/cold"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -234,7 +234,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_thirsty_selector"
-            android:text="@string/thirsty_da"
+            android:text="@string/thirsty"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -248,7 +248,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/mood_sore_selector"
-            android:text="@string/sore_da"
+            android:text="@string/sore"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 

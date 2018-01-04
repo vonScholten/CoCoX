@@ -83,7 +83,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_doing"
-            android:text="@string/doing_da"
+            android:text="@string/doing"
             android:textColor="@color/inactiveText"
             android:textSize="16sp"/>
 
@@ -99,7 +99,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_time"
-            android:text="@string/time_da"
+            android:text="@string/time"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -113,7 +113,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_drink"
-            android:text="@string/whendrink_da"
+            android:text="@string/whendrink"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -127,7 +127,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_rounds"
-            android:text="@string/rounds_da"
+            android:text="@string/rounds"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -141,7 +141,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_what"
-            android:text="@string/what_da"
+            android:text="@string/what"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -155,7 +155,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_wrong"
-            android:text="@string/wrong_da"
+            android:text="@string/wrong"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -169,7 +169,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_why"
-            android:text="@string/why_da"
+            android:text="@string/why"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -183,7 +183,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_questions_examination"
-            android:text="@string/examination_da"
+            android:text="@string/examination"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -197,7 +197,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_beenhere"
-            android:text="@string/beenhere_da"
+            android:text="@string/beenhere"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -211,7 +211,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_plan"
-            android:text="@string/plan_da"
+            android:text="@string/plan"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -225,7 +225,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_where"
-            android:text="@string/where_da"
+            android:text="@string/where"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
@@ -239,7 +239,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/dialogue_inactive_shadow"
             android:drawableTop="@drawable/selector_question_stuff"
-            android:text="@string/stuff_da"
+            android:text="@string/stuff"
             android:textColor="@color/inactiveText"
             android:textSize="16sp" />
 
