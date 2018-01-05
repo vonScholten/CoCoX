@@ -42,25 +42,25 @@
         app:srcCompat="@drawable/nyhome" />
 
 
-    <ImageButton
+    <Button
         android:id="@+id/call"
-        android:layout_width="0dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="1.80"
-        android:scaleY="1.60"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="628dp"
+        android:background="@color/callcolor"
+        android:drawableLeft="@mipmap/bell"
+        android:drawableRight="@mipmap/bell"
+        android:paddingLeft="180dp"
+        android:paddingRight="180dp"
+        android:text="@string/call"
+        android:textColor="@color/inactiveText"
+        android:textSize="55sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/nykaldbar" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <GridLayout
         android:layout_width="wrap_content"
