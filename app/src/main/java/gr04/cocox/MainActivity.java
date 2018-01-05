@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button games;
     Button dialogue;
     ImageButton settings;
-    ImageButton call;
+    Button call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialogue.setOnClickListener(this);
         settings = (ImageButton) findViewById(R.id.settings);
         settings.setOnClickListener(this);
-        call = (ImageButton) findViewById(R.id.call);
+        call = (Button) findViewById(R.id.call);
         call.setOnClickListener(this);
 
 
