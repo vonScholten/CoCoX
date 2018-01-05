@@ -4,30 +4,31 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageButton spil;
-    ImageButton dialog;
+    Button games;
+    Button dialogue;
     ImageButton settings;
-    ImageButton kald;
+    ImageButton call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
-        spil = (ImageButton) findViewById(R.id.spil);
-        spil.setOnClickListener(this);
-        dialog = (ImageButton) findViewById(R.id.kommunikation);
-        dialog.setOnClickListener(this);
+        games = (Button) findViewById(R.id.games);
+        games.setOnClickListener(this);
+        dialogue = (Button) findViewById(R.id.dialogue);
+        dialogue.setOnClickListener(this);
         settings = (ImageButton) findViewById(R.id.settings);
         settings.setOnClickListener(this);
-        kald = (ImageButton) findViewById(R.id.call);
-        kald.setOnClickListener(this);
+        call = (ImageButton) findViewById(R.id.call);
+        call.setOnClickListener(this);
 
 
 
@@ -36,13 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.spil:
+            case R.id.games:
                 startActivity(new Intent(this, GameActivity.class));
                 break;
-            case R.id.kommunikation:
+            case R.id.dialogue:
                 startActivity(new Intent(this, DialogueActivity.class));
                 break;
             case R.id.settings: startActivity(new Intent(this, SettingsActivity.class));
+
         }
 
 
