@@ -6,6 +6,198 @@
     android:layout_height="match_parent"
     tools:context="gr04.cocox.PainActivity">
 
+    <Button
+        android:id="@+id/leftupperarmshoulder"
+        android:layout_width="44dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toStartOf="@+id/chest"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <Button
+        android:id="@+id/rightupperarmshoulder"
+        android:layout_width="44dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/chest"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/leftlowerarm"
+        android:layout_width="68dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="132dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toStartOf="@+id/stomach"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront" />
+
+    <Button
+        android:id="@+id/rightlowerarm"
+        android:layout_width="68dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="132dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/stomach"
+        app:layout_constraintTop_toBottomOf="@+id/rightupperarmshoulder"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/lefthand"
+        android:layout_width="68dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toStartOf="@+id/leftupperleg"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront" />
+
+    <Button
+        android:id="@+id/righthand"
+        android:layout_width="68dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/rightupperleg" />
+
+    <Button
+        android:id="@+id/head"
+        android:layout_width="117dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/chest"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/neck"
+        android:layout_width="117dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/chest"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/chest"
+        android:layout_width="117dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/stomach"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/stomach"
+        android:layout_width="117dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/abdomen"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/rightupperleg"
+        android:layout_width="58dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftlowerleg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rightlowerleg"
+        android:layout_width="45dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftfoot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/rightfoot"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/bodyfront"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront" />
+
     <ImageView
         android:id="@+id/bodyfront"
         android:layout_width="414dp"
@@ -19,7 +211,7 @@
         app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.494"
+        app:layout_constraintVertical_bias="0.236"
         app:srcCompat="@drawable/bodyfront" />
 
     <Button
@@ -29,14 +221,11 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/bodyfront"
         app:layout_constraintEnd_toEndOf="@+id/bodyfront"
         app:layout_constraintHorizontal_bias="0.413"
-        app:layout_constraintStart_toStartOf="@+id/bodyfront"
-        app:layout_constraintTop_toTopOf="@+id/bodyfront"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="@+id/bodyfront" />
 
     <Button
         android:id="@+id/leftlowerleg"
@@ -50,6 +239,35 @@
         app:layout_constraintBottom_toTopOf="@+id/leftfoot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront"
+        app:layout_constraintTop_toTopOf="@+id/bodyfront"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/leftupperleg"
+        android:layout_width="64dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftlowerleg"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.386"
+        app:layout_constraintStart_toStartOf="@+id/bodyfront" />
+
+    <Button
+        android:id="@+id/abdomen"
+        android:layout_width="117dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/leftupperleg"
+        app:layout_constraintEnd_toEndOf="@+id/bodyfront"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/bodyfront"
         app:layout_constraintTop_toTopOf="@+id/bodyfront"
         app:layout_constraintVertical_bias="1.0" />
