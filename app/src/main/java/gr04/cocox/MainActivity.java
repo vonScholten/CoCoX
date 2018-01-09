@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
+
         games = (Button) findViewById(R.id.games);
         games.setOnClickListener(this);
         dialogue = (Button) findViewById(R.id.dialogue);
@@ -29,9 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         settings.setOnClickListener(this);
         call = (Button) findViewById(R.id.call);
         call.setOnClickListener(this);
-
-
-
     }
 
     @Override
