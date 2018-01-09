@@ -53,7 +53,7 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.keyboard: startActivity(new Intent(this, MainActivity.class));
                 break;
-            case R.id.pain: startActivity(new Intent(this, MainActivity.class));
+            case R.id.pain: startActivity(new Intent(this, PainActivity.class));
                 break;
             case R.id.mood: startActivity(new Intent(this, MoodActivity.class));
                 break;
