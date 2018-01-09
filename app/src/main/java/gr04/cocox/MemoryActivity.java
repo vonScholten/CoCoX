@@ -20,32 +20,24 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public ImageButton home;
     public ImageButton retur;
-    public Button selected;
-    public Button refresh;
 
+    int clicked_1;
+    int clicked_2;
 
-    int[] btn_ID = {
+    int[] set_1 = {
             R.id.mem1,
             R.id.mem2,
-            R.id.mem3,
-            R.id.mem4,
-            R.id.mem5,
-            R.id.mem6,
+            R.id.mem3
     };
 
-    int activeIndex;
+    int[] set_2 = {
+            R.id.mem4,
+            R.id.mem5,
+            R.id.mem6
+    };
 
-    ArrayList<Button> cards = new ArrayList<>(btn_ID.length);
-
-    Integer[] cardsArray = {1, 2, 3, 11, 22, 33};
-
-    int memcar1, memcat2, memtree3, memcar11, memcar22, memcar33;
-
-    int card1, card2;
-    int clickedFirst, clickedSecond;
-    int cardnumber = 1;
-
-
+    ArrayList<Integer> array_1 = new ArrayList<>(set_1.length);
+    ArrayList<Integer> array_2 = new ArrayList<>(set_2.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,95 +62,88 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         cardmem5.setOnClickListener(this);
         cardmem6.setOnClickListener(this);
 
-
- /*       for (int id : btn_ID){
-            Button card = findViewById(id);
-            card.setOnClickListener(this);
-            cards.add(card);
-        }
-        */
-
     }
 
     @Override
     public void onClick(View view) {
 
-     /*   for (int id : btn_ID){
-
-            if(id == view.getId()){
-                cards.add(selected);
-                selected = findViewById(id);
-            }
-        }
-        */
-
-
-
         switch (view.getId()) {
             case R.id.mem1:
-                System.out.println("1");
-                if (!cardmem1.isSelected()) {
-                    System.out.println("2");
-                    cardmem1.setSelected(true);
+                cardmem1.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
                 }
-                else cardmem1.setSelected(false);
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem2:
-                if (!cardmem2.isSelected()) {
-                    cardmem2.setSelected(true);
+                cardmem2.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
                 }
-                else cardmem2.setSelected(false);
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem3:
-                if (!cardmem3.isSelected()) {
-                    cardmem3.setSelected(true);
+                cardmem3.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
                 }
-                else cardmem3.setSelected(false);
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem4:
-                if (!cardmem4.isSelected()) {
-                    cardmem4.setSelected(true);
+                cardmem4.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
                 }
-                else cardmem4.setSelected(false);
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem5:
-                if (!cardmem5.isSelected()) {
-                    cardmem5.setSelected(true);
+                cardmem5.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
                 }
-                else cardmem5.setSelected(false);
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem6:
-                if (!cardmem6.isSelected()) {
-                    cardmem6.setSelected(true);
-                } else cardmem6.setSelected(false);
+                cardmem6.setSelected(true);
+                if(clicked_1 != 0){
+                    clicked_1 = R.id.mem1;
+                }
+                else if(clicked_2 != 0){
+                    clicked_2 = R.id.mem1;
+                }
+                check(clicked_1, clicked_2);
                 break;
         }
-
     }
 
-/*    public void update() {
+    public void check(int first, int second){
 
-        int i;
-        while(i<2) {
-            i++;
-            selected.setSelected(true); //Set button selected state as true
+        if(array_1.indexOf(first) == array_2.indexOf(second)){
+            System.out.println("yEAEea!");
         }
 
-        i = 0;
-
-        for (int id : btn_ID) {
-            if(cards.contains(findViewById(id))) {
-                refresh = findViewById(id);
-                refresh.setSelected(false); //Set button selected state as false
-            }
-        }
-        */
     }
+}
 
 
 
