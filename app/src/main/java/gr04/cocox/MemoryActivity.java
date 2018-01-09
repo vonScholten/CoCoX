@@ -23,10 +23,12 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     public ImageButton home;
     public ImageButton retur;
 
-    public Button selected;
+    public ImageButton selected;
 
-    int clicked_1;
-    int clicked_2;
+    ImageButton clicked_1;
+    ImageButton clicked_2;
+    int indexOfFirst;
+    int indexOfSecond;
 
     int[] set_1 = {
             R.id.mem1,
@@ -40,8 +42,8 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             R.id.mem6
     };
 
-    ArrayList<Button> array_1 = new ArrayList<>(set_1.length);
-    ArrayList<Button> array_2 = new ArrayList<>(set_2.length);
+    ArrayList<ImageButton> array_1 = new ArrayList<ImageButton>(set_1.length);
+    ArrayList<ImageButton> array_2 = new ArrayList<ImageButton>(set_2.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,15 +72,18 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         */
 
         for (int id : set_1){
-            Button card = findViewById(id);
-            card.setOnClickListener(this);
-            array_1.add(card);
+            ImageButton button = findViewById(id);
+            button.setOnClickListener(this);
+            array_1.add(button);
+            System.out.println(array_1.indexOf(button));
         }
         for (int id : set_2){
-            Button card = findViewById(id);
-            card.setOnClickListener(this);
-            array_2.add(card);
+            ImageButton button = findViewById(id);
+            button.setOnClickListener(this);
+            array_2.add(button);
+            System.out.println(array_2.indexOf(button));
         }
+
 
     }
 
@@ -86,80 +91,104 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
 
         selected = findViewById(view.getId());
+        System.out.println(view.getId());
 
         switch (view.getId()) {
             case R.id.mem1:
-
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem2:
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem3:
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem4:
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem5:
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
 
             case R.id.mem6:
                 selected.setSelected(true);
-                if(clicked_1 != 0){
-                    clicked_1 = R.id.mem1;
+                if(clicked_1 == null){
+                    clicked_1 = selected;
                 }
-                else if(clicked_2 != 0){
-                    clicked_2 = R.id.mem1;
+                else if(clicked_2 == null){
+                    clicked_2 = selected;
                 }
+                System.out.println(clicked_1 + ", " + clicked_2);
                 check(clicked_1, clicked_2);
                 break;
         }
     }
 
-    public void check(int first, int second){
+    public void check(ImageButton first, ImageButton second){
 
-        if(array_1.indexOf(first) == array_2.indexOf(second)){
+        if(array_1.contains(first)){
+            indexOfFirst = array_1.indexOf(first);
+            System.out.println(indexOfFirst);
+        }
+        else if(array_2.contains(first)){
+            indexOfFirst = array_1.indexOf(first);
+            System.out.println(indexOfFirst);
+        }
+
+        if(array_1.contains(second)){
+            indexOfSecond = array_1.indexOf(second);
+            System.out.println(indexOfSecond);
+        }
+        else if(array_2.contains(second)){
+            indexOfSecond = array_1.indexOf(second);
+            System.out.println(indexOfSecond);
+        }
+
+        if(indexOfFirst == indexOfSecond){
             System.out.println("yEAEea!");
         }
 
