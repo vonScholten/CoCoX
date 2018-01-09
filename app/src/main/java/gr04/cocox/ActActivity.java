@@ -1,6 +1,7 @@
 package gr04.cocox;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,10 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
     Button refresh;
 
     int activeIndex;
+    int myColor = Color.parseColor("#3F51B5");
+
+    int activeColor;
+    int inactiveColor;
 
     int[] btn_ID = {
             R.id.visit,
@@ -45,6 +50,9 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
+        int inactiveColor = Color.parseColor("#EEEDDE");
+        int activeColor = Color.parseColor("#1C87B0");
 
         for (int id : btn_ID){
             Button button = findViewById(id);
@@ -84,7 +92,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         activeIndex = inactive.indexOf(selected);
 
         selected.setBackground(getDrawable(R.drawable.button_active)); // set background to "activeIndex.xml"
-        selected.setTextColor(getColor(R.color.activeText)); // set text color
+        selected.setTextColor(activeColor); // set text color
         selected.setSelected(true); //Set button selected state as true
         inactive.remove(activeIndex);
 
@@ -92,7 +100,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
             if(inactive.contains(findViewById(id))) {
                 refresh = findViewById(id);
                 refresh.setBackground(getDrawable(R.drawable.button_inactive_shadow));
-                refresh.setTextColor(getColor(R.color.inactiveText));
+                refresh.setTextColor(inactiveColor);
                 refresh.setSelected(false); //Set button selected state as false
             }
         }
