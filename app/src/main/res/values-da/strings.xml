@@ -3,6 +3,9 @@
 
     <string name="retur">Tilbage</string>
     <string name="home">Hjem</string>
+    <string name="call">Kald</string>
+
+    <string name="callmessage">Tryk igen for kald</string>
 
     <string name="answer">Svar</string>
     <string name="activities">Aktiviteter</string>
@@ -69,5 +72,5 @@
 
     <string name="games">Spil</string>
     <string name="dialogue">Dialog</string>
-    <string name="call">Kald</string>
+
 </resources>

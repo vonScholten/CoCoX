@@ -3,6 +3,9 @@
 
     <string name="retur">Back</string>
     <string name="home">Home</string>
+    <string name="call">Call</string>
+
+    <string name="callmessage">Tap icon for call</string>
 
     <string name="answer">Answer</string>
     <string name="activities">Activities</string>
@@ -69,5 +72,5 @@
 
     <string name="games">Games</string>
     <string name="dialogue">Dialogue</string>
-    <string name="call">Call</string>
+
 </resources>
