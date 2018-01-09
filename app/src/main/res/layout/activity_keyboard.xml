@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.060000002"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent=".12"
-        app:srcCompat="@drawable/nyretur" />
+        app:srcCompat="@drawable/back_btn" />
 
 
     <ImageButton
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.06999999"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent=".12"
-        app:srcCompat="@drawable/nyhome" />
+        app:srcCompat="@drawable/home" />
 
 <!-- A keyboard
     <GridLayout

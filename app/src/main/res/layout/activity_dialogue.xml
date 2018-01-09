@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089"
-        app:srcCompat="@drawable/nyretur" />
+        app:srcCompat="@drawable/back_btn" />
 
 
     <ImageButton
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.075"
-        app:srcCompat="@drawable/nyhome" />
+        app:srcCompat="@drawable/home" />
 
 
     <Button

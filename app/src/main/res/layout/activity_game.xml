@@ -7,73 +7,85 @@
     tools:context="gr04.cocox.GameActivity">
 
 
-    <ImageButton
+    <Button
         android:id="@+id/memory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/button_games_shadow"
+        android:drawableTop="@drawable/games_memory"
+        android:text="@string/memory"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68"
-        app:srcCompat="@drawable/nymemory" />
+        app:layout_constraintVertical_bias="0.66" />
 
-    <ImageButton
+    <Button
         android:id="@+id/puzzle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/button_games_shadow"
+        android:drawableTop="@drawable/games_puzzle"
+        android:text="@string/puzzle"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106"
-        app:srcCompat="@drawable/nypuzzle" />
+        app:layout_constraintVertical_bias="0.103" />
 
-    <ImageButton
+    <Button
         android:id="@+id/quiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/button_games_shadow"
+        android:drawableTop="@drawable/games_memory"
+        android:text="@string/quiz"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106"
-        app:srcCompat="@drawable/nyquiz" />
+        app:layout_constraintVertical_bias="0.103" />
 
-    <ImageButton
+    <Button
         android:id="@+id/balloon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/button_games_shadow"
+        android:drawableTop="@drawable/games_balloon"
+        android:text="@string/memory"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68"
-        app:srcCompat="@drawable/nyballon" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <ImageButton
         android:id="@+id/retur"
@@ -90,7 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002"
-        app:srcCompat="@drawable/nyretur" />
+        app:srcCompat="@drawable/back_btn" />
 
     <ImageButton
         android:id="@+id/home"
@@ -107,7 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002"
-        app:srcCompat="@drawable/nyhome" />
+        app:srcCompat="@drawable/home" />
 
     <Button
         android:id="@+id/call"
