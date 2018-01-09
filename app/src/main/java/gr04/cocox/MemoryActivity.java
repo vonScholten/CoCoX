@@ -11,15 +11,19 @@ import java.util.ArrayList;
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
 
 
+    /*
     public ImageButton cardmem1;
     public ImageButton cardmem2;
     public ImageButton cardmem3;
     public ImageButton cardmem4;
     public ImageButton cardmem5;
     public ImageButton cardmem6;
+    */
 
     public ImageButton home;
     public ImageButton retur;
+
+    public Button selected;
 
     int clicked_1;
     int clicked_2;
@@ -36,40 +40,57 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             R.id.mem6
     };
 
-    ArrayList<Integer> array_1 = new ArrayList<>(set_1.length);
-    ArrayList<Integer> array_2 = new ArrayList<>(set_2.length);
+    ArrayList<Button> array_1 = new ArrayList<>(set_1.length);
+    ArrayList<Button> array_2 = new ArrayList<>(set_2.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory);
 
-
+        /*
         cardmem1 = (ImageButton) findViewById(R.id.mem1);
         cardmem2 = (ImageButton) findViewById(R.id.mem2);
         cardmem3 = (ImageButton) findViewById(R.id.mem3);
         cardmem4 = (ImageButton) findViewById(R.id.mem4);
         cardmem5 = (ImageButton) findViewById(R.id.mem5);
         cardmem6 = (ImageButton) findViewById(R.id.mem6);
+        */
 
         home = (ImageButton) findViewById(R.id.home);
         retur = (ImageButton) findViewById(R.id.retur);
 
+        /*
         cardmem1.setOnClickListener(this);
         cardmem2.setOnClickListener(this);
         cardmem3.setOnClickListener(this);
         cardmem4.setOnClickListener(this);
         cardmem5.setOnClickListener(this);
         cardmem6.setOnClickListener(this);
+        */
+
+        for (int id : set_1){
+            Button card = findViewById(id);
+            card.setOnClickListener(this);
+            array_1.add(card);
+        }
+        for (int id : set_2){
+            Button card = findViewById(id);
+            card.setOnClickListener(this);
+            array_2.add(card);
+        }
 
     }
 
     @Override
     public void onClick(View view) {
 
+        selected = findViewById(view.getId());
+
         switch (view.getId()) {
             case R.id.mem1:
-                cardmem1.setSelected(true);
+
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
@@ -80,7 +101,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.mem2:
-                cardmem2.setSelected(true);
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
@@ -91,7 +112,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.mem3:
-                cardmem3.setSelected(true);
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
@@ -102,7 +123,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.mem4:
-                cardmem4.setSelected(true);
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
@@ -113,7 +134,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.mem5:
-                cardmem5.setSelected(true);
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
@@ -124,7 +145,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.mem6:
-                cardmem6.setSelected(true);
+                selected.setSelected(true);
                 if(clicked_1 != 0){
                     clicked_1 = R.id.mem1;
                 }
