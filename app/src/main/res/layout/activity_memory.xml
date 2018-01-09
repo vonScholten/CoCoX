@@ -53,6 +53,19 @@
 
 
         <ImageButton
+            android:id="@+id/mem4"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem4_selector"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <ImageButton
             android:id="@+id/mem1"
             android:layout_width="230dp"
             android:layout_height="230dp"
@@ -62,19 +75,6 @@
             android:layout_marginTop="12dp"
             android:background="#339966"
             app:srcCompat="@drawable/mem1_selector"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="442dp" />
-
-        <ImageButton
-            android:id="@+id/mem2"
-            android:layout_width="230dp"
-            android:layout_height="230dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:background="#339966"
-            app:srcCompat="@drawable/mem2_selector"
             tools:layout_editor_absoluteX="852dp"
             tools:layout_editor_absoluteY="442dp" />
 
@@ -92,7 +92,7 @@
             tools:layout_editor_absoluteY="179dp" />
 
         <ImageButton
-            android:id="@+id/mem4"
+            android:id="@+id/mem6"
             android:layout_width="230dp"
             android:layout_height="230dp"
             android:layout_marginBottom="12dp"
@@ -100,9 +100,22 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="#339966"
-            app:srcCompat="@drawable/mem4_selector"
+            app:srcCompat="@drawable/mem6_selector"
             tools:layout_editor_absoluteX="525dp"
             tools:layout_editor_absoluteY="442dp" />
+
+        <ImageButton
+            android:id="@+id/mem2"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem2_selector"
+            tools:layout_editor_absoluteX="525dp"
+            tools:layout_editor_absoluteY="179dp" />
 
         <ImageButton
             android:id="@+id/mem5"
@@ -114,19 +127,6 @@
             android:layout_marginTop="12dp"
             android:background="#339966"
             app:srcCompat="@drawable/mem5_selector"
-            tools:layout_editor_absoluteX="525dp"
-            tools:layout_editor_absoluteY="179dp" />
-
-        <ImageButton
-            android:id="@+id/mem6"
-            android:layout_width="230dp"
-            android:layout_height="230dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:background="#339966"
-            app:srcCompat="@drawable/mem6_selector"
             tools:layout_editor_absoluteX="852dp"
             tools:layout_editor_absoluteY="179dp" />
     </GridLayout>
