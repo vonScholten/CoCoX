@@ -25,11 +25,6 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public ImageButton selected;
 
-    ImageButton clicked_1;
-    ImageButton clicked_2;
-    int indexOfFirst;
-    int indexOfSecond;
-
     int[] set_1 = {
             R.id.mem1,
             R.id.mem2,
@@ -44,6 +39,11 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     ArrayList<ImageButton> array_1 = new ArrayList<ImageButton>(set_1.length);
     ArrayList<ImageButton> array_2 = new ArrayList<ImageButton>(set_2.length);
+
+    int indexOf;
+    int first = set_1.length;
+    int second = set_2.length;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,13 +71,13 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         cardmem6.setOnClickListener(this);
         */
 
-        for (int id : set_1){
+        for (int id : set_1) {
             ImageButton button = findViewById(id);
             button.setOnClickListener(this);
             array_1.add(button);
             System.out.println(array_1.indexOf(button));
         }
-        for (int id : set_2){
+        for (int id : set_2) {
             ImageButton button = findViewById(id);
             button.setOnClickListener(this);
             array_2.add(button);
@@ -90,108 +90,86 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
-        selected = findViewById(view.getId());
+        count = count + 1;
+
         System.out.println(view.getId());
+        selected = findViewById(view.getId());
 
         switch (view.getId()) {
             case R.id.mem1:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
 
             case R.id.mem2:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
 
             case R.id.mem3:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
 
             case R.id.mem4:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
 
             case R.id.mem5:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
 
             case R.id.mem6:
-                selected.setSelected(true);
-                if(clicked_1 == null){
-                    clicked_1 = selected;
-                }
-                else if(clicked_2 == null){
-                    clicked_2 = selected;
-                }
-                System.out.println(clicked_1 + ", " + clicked_2);
-                check(clicked_1, clicked_2);
+                logic(index(selected));
                 break;
+        }
+
+        if (count == 2) {
+            update();
+            count = 0;
         }
     }
 
-    public void check(ImageButton first, ImageButton second){
+    public int index(ImageButton ib) {
+        if (array_1.contains(ib)) {
+            indexOf = array_1.indexOf(ib);
+        }
+        else if (array_2.contains(ib)) {
+            indexOf = array_2.indexOf(ib);
+        }
+        System.out.println(indexOf);
+        return indexOf;
+    }
 
-        if(array_1.contains(first)){
-            indexOfFirst = array_1.indexOf(first);
-            System.out.println(indexOfFirst);
+    public void logic(int i) {
+        selected.setSelected(true);
+        if (first == set_1.length) {
+            first = i;
+        } else if (second == set_2.length) {
+            second = i;
         }
-        else if(array_2.contains(first)){
-            indexOfFirst = array_1.indexOf(first);
-            System.out.println(indexOfFirst);
-        }
+        check(first, second);
+    }
 
-        if(array_1.contains(second)){
-            indexOfSecond = array_1.indexOf(second);
-            System.out.println(indexOfSecond);
-        }
-        else if(array_2.contains(second)){
-            indexOfSecond = array_1.indexOf(second);
-            System.out.println(indexOfSecond);
-        }
+    public void check(int i, int j) {
+        System.out.println(i + ", " + j);
 
-        if(indexOfFirst == indexOfSecond){
+        if (i == j) {
             System.out.println("yEAEea!");
+            array_1.remove(i);
+            array_2.remove(i);
         }
 
+    }
+
+    public void update() {
+
+        for (int i = 0; i < array_1.size(); i++) {
+            array_1.get(i).setSelected(false);
+        }
+        for (int i = 0; i < array_2.size(); i++) {
+            array_2.get(i).setSelected(false);
+        }
+
+        first = set_1.length;
+        second = set_2.length;
     }
 }
 
