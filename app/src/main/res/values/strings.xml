@@ -1,3 +1,73 @@
 <resources>
     <string name="app_name">CoCoX</string>
+
+    <string name="retur">Back</string>
+    <string name="home">Home</string>
+
+    <string name="answer">Answer</string>
+    <string name="activities">Activities</string>
+    <string name="mood">Mood</string>
+    <string name="questions">Questions</string>
+    <string name="keyboard">Keyboard</string>
+    <string name="pain">Pain</string>
+
+    <string name="visit">I want visit \n</string>
+    <string name="air">I need air \n</string>
+    <string name="light">I want light \n</string>
+    <string name="walk">I need a walk \n</string>
+    <string name="sleep">I need to sleep\n</string>
+    <string name="painkillers">I want painkillers \n</string>
+    <string name="silence">I need silence \n</string>
+    <string name="sit">I want to sit \n</string>
+    <string name="turn">I need to be turned</string>
+    <string name="suction">I need suction \n</string>
+    <string name="tv">I want to watch TV</string>
+    <string name="toilet">I need to use the WC</string>
+
+    <string name="content">I am content \n</string>
+    <string name="happy">I am happy \n</string>
+    <string name="bored">I am bored \n</string>
+    <string name="breathe">I can't breathe \n</string>
+    <string name="tired">I am tired \n</string>
+    <string name="frustrated">I am frustrated \n</string>
+    <string name="scared">I am scared \n</string>
+    <string name="worried">I am worried \n</string>
+    <string name="warm">I am warm \n</string>
+    <string name="cold">I am cold \n</string>
+    <string name="thirsty">I am thirsty \n</string>
+    <string name="sore">I am sore \n</string>
+
+    <string name="yes">Yes \n</string>
+    <string name="thanks">Thank you \n</string>
+    <string name="dontknow">I dont know \n</string>
+    <string name="no">No \n</string>
+    <string name="later">Later \n</string>
+
+    <string name="doing">What are you doing?</string>
+    <string name="time">What time is it? \n</string>
+    <string name="whendrink">When can I eat/drink?</string>
+    <string name="rounds">When are there rounds?</string>
+    <string name="what">What did you say? \n</string>
+    <string name="wrong">What is wrong with me?</string>
+    <string name="why">Why am I here? \n</string>
+    <string name="examination">When is my examination?</string>
+    <string name="beenhere">How long have I been here?</string>
+    <string name="plan">Whats the plan today?</string>
+    <string name="where">Where am I? \n</string>
+    <string name="stuff">Where are my stuff?</string>
+
+    <string name="memory">Memory</string>
+    <string name="quiz">Quiz</string>
+    <string name="puzzle">Puzzle</string>
+    <string name="balloon">Baloon pop</string>
+
+    <string name="input">Input</string>
+    <string name="reset">Reset</string>
+    <string name="language">Language</string>
+    <string name="font">Font size</string>
+    <string name="sound">Sound</string>
+
+    <string name="games">Games</string>
+    <string name="dialogue">Dialogue</string>
+    <string name="call">Call</string>
 </resources>
