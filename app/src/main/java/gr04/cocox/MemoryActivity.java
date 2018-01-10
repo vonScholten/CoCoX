@@ -4,22 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
-
-
-    /*
-    public ImageButton cardmem1;
-    public ImageButton cardmem2;
-    public ImageButton cardmem3;
-    public ImageButton cardmem4;
-    public ImageButton cardmem5;
-    public ImageButton cardmem6;
-    */
 
     public ImageButton home;
     public ImageButton retur;
@@ -41,67 +30,70 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     ArrayList<ImageButton> array_1 = new ArrayList<ImageButton>(set_1.length);
     ArrayList<ImageButton> array_2 = new ArrayList<ImageButton>(set_2.length);
 
-    int indexOf;
-    int first = set_1.length;
-    int second = set_2.length;
-    int count = 0;
+    int i0;
+    int i1;
+    int i2;
+    int flipCount;
+    int matchCount;
+    int winningNbr;
+
+    boolean isSet_i1;
+    boolean isSet_i2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory);
 
-        /*
-        cardmem1 = (ImageButton) findViewById(R.id.mem1);
-        cardmem2 = (ImageButton) findViewById(R.id.mem2);
-        cardmem3 = (ImageButton) findViewById(R.id.mem3);
-        cardmem4 = (ImageButton) findViewById(R.id.mem4);
-        cardmem5 = (ImageButton) findViewById(R.id.mem5);
-        cardmem6 = (ImageButton) findViewById(R.id.mem6);
-        */
+        System.out.println("----------------------|MemoryGame|---------------------- \n started");
 
         home = (ImageButton) findViewById(R.id.home);
         retur = (ImageButton) findViewById(R.id.retur);
 
-        /*
-        cardmem1.setOnClickListener(this);
-        cardmem2.setOnClickListener(this);
-        cardmem3.setOnClickListener(this);
-        cardmem4.setOnClickListener(this);
-        cardmem5.setOnClickListener(this);
-        cardmem6.setOnClickListener(this);
-        */
+        System.out.println("INITIAL SETUP");
 
-        for (int id : set_1) {
-            ImageButton button = findViewById(id);
-            button.setOnClickListener(this);
-            array_1.add(button);
-            System.out.println(array_1.indexOf(button));
-        }
-        for (int id : set_2) {
-            ImageButton button = findViewById(id);
-            button.setOnClickListener(this);
-            array_2.add(button);
-            System.out.println(array_2.indexOf(button));
-        }
+        i1 = set_1.length+1;
+        isSet_i1 = false;
+        i2 = set_1.length+1;
+        isSet_i2 = false;
+        flipCount = 0;
+        matchCount = 0;
+        winningNbr = set_1.length;
 
-
+        setCards();
     }
 
     @Override
     public void onClick(View view) {
-
         if(view == retur) {
             finish();
         }
         else if (view == home) {
-            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            finish();
+            this.startActivity(new Intent(this,MainActivity.class));
         }
+        else { game(view); }
+    }
 
-        count = count + 1;
+    public void setCards(){
+        System.out.println("setCards ");
+        for (int id : set_1) {
+            ImageButton card = findViewById(id);
+            card.setOnClickListener(this);
+            array_1.add(card);
+            System.out.println("ADDED -> card nr: " + array_1.indexOf(card) + " in set 1");
+        }
+        for (int id : set_2) {
+            ImageButton card = findViewById(id);
+            card.setOnClickListener(this);
+            array_2.add(card);
+            System.out.println("ADDED -> card nr: " + array_2.indexOf(card) + " in set 2");
+        }
+    }
 
-        System.out.println(view.getId());
+    public void game (View view){
+        System.out.println("view id: " + view.getId());
+
         selected = findViewById(view.getId());
 
         switch (view.getId()) {
@@ -130,50 +122,69 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
 
-        if (count == 2) {
-            try {
-                wait(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        if (flipCount == 2) {
+            System.out.println("update on flip nr 3");
             update();
-            count = 0;
         }
     }
 
     public int index(ImageButton ib) {
+        System.out.println("INDEX -> ");
         if (array_1.contains(ib)) {
-            indexOf = array_1.indexOf(ib);
+            i0 = array_1.indexOf(ib);
+            System.out.println("is " + i0 + " in array 1");
         }
         else if (array_2.contains(ib)) {
-            indexOf = array_2.indexOf(ib);
+            i0 = array_2.indexOf(ib);
+            System.out.println("is " + i0 + " in array 2");
         }
-        System.out.println(indexOf);
-        return indexOf;
+        return i0;
     }
 
     public void logic(int i) {
-        selected.setSelected(true);
-        if (first == set_1.length) {
-            first = i;
-        } else if (second == set_2.length) {
-            second = i;
+        System.out.println("LOGIC -> ");
+        System.out.println("flip nr: " + flipCount);
+        if (!selected.isSelected()) {
+            flipCount = flipCount + 1;
+            selected.setSelected(true);
+            if (!isSet_i1) {
+                i1 = i;
+                isSet_i1 = true;
+                System.out.println("i1 ");
+            } else if (!isSet_i2) {
+                i2 = i;
+                isSet_i2 = true;
+                System.out.println("i2 ");
+            }
+            check(i1, i2);
         }
-        check(first, second);
+        else { System.out.println("is selected"); }
     }
 
     public void check(int i, int j) {
-        System.out.println(i + ", " + j);
+        System.out.println("CHECK -> " +
+                "\n array size: " + array_1.size() + " & " + array_2.size());
 
-        if (i == j) {
-            System.out.println("yEAEea!");
-            array_1.remove(i);
-            array_2.remove(i);
+        if (isSet_i1 && isSet_i2) {
+            System.out.println("index: " + i  + " & " + j);
+            if (i == j) {
+                matchCount = matchCount + 1;
+                System.out.println("MATCH nr " + matchCount + " found");
+
+                array_1.remove(i);
+                System.out.println("REMOVE -> card nr: " + i + " in array 1");
+                array_2.remove(j);
+                System.out.println("REMOVE -> card nr: " + j + " in array 2");
+
+                update();
+
+                if (matchCount == winningNbr){ gameWon(); }
+            }
         }
-
     }
 
     public void update() {
+        System.out.println("UPDATE -> ");
 
         for (int i = 0; i < array_1.size(); i++) {
             array_1.get(i).setSelected(false);
@@ -182,8 +193,15 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             array_2.get(i).setSelected(false);
         }
 
-        first = set_1.length;
-        second = set_2.length;
+        i1 = set_1.length+1;
+        isSet_i1 = false;
+        i2 = set_1.length+1;
+        isSet_i2 = false;
+        flipCount = 0;
+    }
+
+    public void gameWon() {
+        System.out.println("GAME WON \n ----------------------|MemoryGame|----------------------");
     }
 }
 
