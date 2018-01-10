@@ -1,14 +1,21 @@
 package gr04.cocox;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.GridLayout.LayoutParams;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public GridLayout grid;
 
     public ImageButton home;
     public ImageButton retur;
@@ -40,6 +47,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     boolean isSet_i1;
     boolean isSet_i2;
 
+    Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +56,10 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
         System.out.println("----------------------|MemoryGame|---------------------- \n started");
 
-        home = (ImageButton) findViewById(R.id.home);
-        retur = (ImageButton) findViewById(R.id.retur);
+        grid = (GridLayout) findViewById(R.id.board);
+
+        home = (ImageButton) findViewById(R.id.back_home);
+        retur = (ImageButton) findViewById(R.id.back);
 
         System.out.println("INITIAL SETUP");
 
@@ -81,12 +91,14 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             ImageButton card = findViewById(id);
             card.setOnClickListener(this);
             array_1.add(card);
+            //card.setLayoutParams(new LayoutParams(GridLayout.spec(0),GridLayout.spec(rand.nextInt(2))));
             System.out.println("ADDED -> card nr: " + array_1.indexOf(card) + " in set 1");
         }
         for (int id : set_2) {
             ImageButton card = findViewById(id);
             card.setOnClickListener(this);
             array_2.add(card);
+            //card.setLayoutParams(new LayoutParams(GridLayout.spec(1),GridLayout.spec(rand.nextInt(2))));
             System.out.println("ADDED -> card nr: " + array_2.indexOf(card) + " in set 2");
         }
     }
@@ -122,7 +134,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
 
-        if (flipCount == 2) {
+        if (flipCount == 3) {
             System.out.println("update on flip nr 3");
             update();
         }
@@ -171,8 +183,10 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                 matchCount = matchCount + 1;
                 System.out.println("MATCH nr " + matchCount + " found");
 
+                array_1.get(i).setBackgroundColor(Color.GRAY);
                 array_1.remove(i);
                 System.out.println("REMOVE -> card nr: " + i + " in array 1");
+                array_2.get(i).setBackgroundColor(Color.GRAY);
                 array_2.remove(j);
                 System.out.println("REMOVE -> card nr: " + j + " in array 2");
 
