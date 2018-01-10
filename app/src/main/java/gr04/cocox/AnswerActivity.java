@@ -31,7 +31,7 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answers);
+        setContentView(R.layout.activity_answer);
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);

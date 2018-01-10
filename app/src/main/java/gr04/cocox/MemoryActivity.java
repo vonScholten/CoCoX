@@ -1,5 +1,6 @@
 package gr04.cocox;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -90,6 +91,14 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
+        if(view == retur) {
+            finish();
+        }
+        else if (view == home) {
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            finish();
+        }
+
         count = count + 1;
 
         System.out.println(view.getId());
@@ -122,6 +131,11 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (count == 2) {
+            try {
+                wait(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             update();
             count = 0;
         }
