@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         settings.setOnClickListener(this);
         call = (Button) findViewById(R.id.call);
         call.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -41,10 +43,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dialogue:
                 startActivity(new Intent(this, DialogueActivity.class));
                 break;
-            case R.id.settings: startActivity(new Intent(this, SettingsActivity.class));
+            case R.id.settings:
+                startActivity(new Intent(this, SettingsActivity.class));
 
         }
 
 
     }
+
+
+
+
+
+
 }
