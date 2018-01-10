@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gr04.cocox.MemoryActivity">
+
+    <ImageButton
+        android:id="@+id/retur"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089"
+        app:srcCompat="@drawable/back_btn" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:srcCompat="@drawable/home" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageButton
+            android:id="@+id/mem4"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem4_selector"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <ImageButton
+            android:id="@+id/mem1"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem1_selector"
+            tools:layout_editor_absoluteX="852dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <ImageButton
+            android:id="@+id/mem3"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem3_selector"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <ImageButton
+            android:id="@+id/mem6"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem6_selector"
+            tools:layout_editor_absoluteX="525dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <ImageButton
+            android:id="@+id/mem2"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem2_selector"
+            tools:layout_editor_absoluteX="525dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <ImageButton
+            android:id="@+id/mem5"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#339966"
+            app:srcCompat="@drawable/mem5_selector"
+            tools:layout_editor_absoluteX="852dp"
+            tools:layout_editor_absoluteY="179dp" />
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>

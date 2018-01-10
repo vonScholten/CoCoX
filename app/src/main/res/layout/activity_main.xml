@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     tools:context="gr04.cocox.MainActivity">
 
 
@@ -26,45 +25,57 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
 
-    <ImageButton
-        android:id="@+id/spil"
-        android:layout_width="370dp"
-        android:layout_height="370dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="0.9"
-        android:scaleY="0.9"
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <Button
+        android:id="@+id/games"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:background="@drawable/button_games_shadow"
+
+        android:text="@string/games"
+        android:textColor="@color/inactiveText"
+        android:textSize="40sp"
+        android:paddingTop="30dp"
+        android:paddingBottom="90dp"
+        android:layout_marginEnd="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389"
-        app:srcCompat="@drawable/nyspil" />
+        app:layout_constraintVertical_bias="0.389" />
 
-    <ImageButton
-        android:id="@+id/kommunikation"
-        android:layout_width="370dp"
-        android:layout_height="370dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="0.9"
-        android:scaleY="0.9"
+
+    <Button
+        android:id="@+id/dialogue"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:background="@drawable/button_inactive_shadow"
+        android:drawableTop="@mipmap/dialogue"
+        android:text="@string/dialogue"
+        android:textColor="@color/inactiveText"
+        android:textSize="40sp"
+        android:paddingTop="30dp"
+        android:paddingBottom="90dp"
+        android:layout_marginStart="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389"
-        app:srcCompat="@drawable/nydialog" />
+        app:layout_constraintVertical_bias="0.389" />
+
+    </GridLayout>
 
     <ImageButton
         android:id="@+id/settings"
@@ -84,26 +95,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="@drawable/nysetting" />
+        app:srcCompat="@drawable/setting" />
 
-    <ImageButton
+    <Button
         android:id="@+id/call"
-        android:layout_width="0dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:scaleX="1.90"
-        android:scaleY="1.60"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="628dp"
+        android:background="@color/callcolor"
+        android:drawableStart="@mipmap/bell"
+        android:drawableEnd="@mipmap/bell"
+        android:paddingLeft="180dp"
+        android:paddingRight="180dp"
+        android:text="@string/call"
+        android:textColor="@color/inactiveText"
+        android:textSize="55sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/nykaldbar" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
