@@ -31,7 +31,8 @@
             android:name="io.fabric.ApiKey"
             android:value="1d3ae5d9be4ced2b0b327f2f3505f7f569e93faf" />
 
-        <activity android:name=".PainActivity"></activity>
+        <activity android:name=".PainActivity" />
+        <activity android:name=".LaguageActivity"></activity>
     </application>
 
 </manifest>
