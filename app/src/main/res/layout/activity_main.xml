@@ -41,7 +41,7 @@
         android:layout_width="330dp"
         android:layout_height="330dp"
         android:background="@drawable/button_games_shadow"
-
+        android:drawableTop="@drawable/games_icon"
         android:text="@string/games"
         android:textColor="@color/inactiveText"
         android:textSize="40sp"
