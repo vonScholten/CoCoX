@@ -7,7 +7,7 @@
     tools:context="gr04.cocox.MemoryActivity">
 
     <ImageButton
-        android:id="@+id/back"
+        android:id="@+id/memory_back"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginBottom="8dp"
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/back_btn" />
 
     <ImageButton
-        android:id="@+id/back_home"
+        android:id="@+id/memory_home"
         android:layout_width="137dp"
         android:layout_height="137dp"
         android:layout_marginBottom="16dp"

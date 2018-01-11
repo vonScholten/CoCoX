@@ -5,9 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.GridLayout.LayoutParams;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -17,8 +15,8 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public GridLayout grid;
 
-    public ImageButton home;
-    public ImageButton retur;
+    public ImageButton backHome;
+    public ImageButton back;
 
     public ImageButton selected;
 
@@ -58,8 +56,11 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
         grid = (GridLayout) findViewById(R.id.board);
 
-        home = (ImageButton) findViewById(R.id.back_home);
-        retur = (ImageButton) findViewById(R.id.back);
+        backHome = (ImageButton) findViewById(R.id.memory_back);
+        backHome.setOnClickListener(this);
+        back = (ImageButton) findViewById(R.id.memory_home);
+        backHome.setOnClickListener(this);
+        
 
         System.out.println("INITIAL SETUP");
 
@@ -76,11 +77,12 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        if(view == retur) {
+        if(view == back) {
             finish();
         }
-        else if (view == home) {
+        else if (view == backHome) {
             this.startActivity(new Intent(this,MainActivity.class));
+            finish();
         }
         else { game(view); }
     }
