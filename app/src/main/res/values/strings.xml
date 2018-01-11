@@ -70,4 +70,7 @@
     <string name="games">Games</string>
     <string name="dialogue">Dialogue</string>
     <string name="call">Call</string>
+
+    <string name="english">English</string>
+    <string name="danish">Danish</string>
 </resources>

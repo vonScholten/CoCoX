@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
+        LanguageActivity lan = new LanguageActivity();
+
 
         games = (Button) findViewById(R.id.games);
         games.setOnClickListener(this);

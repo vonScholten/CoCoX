@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import static android.app.PendingIntent.getActivity;
 
-public class ActActivity extends AppCompatActivity implements View.OnClickListener {
+public class ActActivity extends AppCompatActivity implements View.OnClickListener, Runnable {
 
     ImageButton retur;
     ImageButton home;
@@ -138,8 +138,11 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
     }
 
 
-
- }
+    @Override
+    public void run() {
+        //Her skal stå noget kode
+    }
+}
 
 
 
