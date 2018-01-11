@@ -70,7 +70,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/games_balloon"
-        android:text="@string/memory"
+        android:text="@string/balloon"
         android:textColor="@color/inactiveText"
         android:textSize="16sp" />
 

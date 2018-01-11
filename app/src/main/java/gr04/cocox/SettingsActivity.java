@@ -20,6 +20,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     ImageButton retur;
     ImageButton home;
     Button language;
+    Button reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,43 +32,31 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         home.setOnClickListener(this);
         language = findViewById(R.id.language);
         language.setOnClickListener(this);
+        reset = findViewById(R.id.reset);
+        reset.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.retur: finish();
+                startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 break;
             case R.id.home: finish();
                 startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 break;
             case R.id.language:
                 startActivity(new Intent(this, LanguageActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
-                //setupLanguage();
+                break;
+            case R.id.reset:
+                setupLanguage();
+                recreate();
                 break;
         }
 
     }
- /*   void setupLanguage() {
-        Toast.makeText(this, "opdaterer sprog", Toast.LENGTH_SHORT).show();
-
-        Resources resources = this.getApplicationContext().getResources();
-        Configuration overrideConfiguration = resources.getConfiguration();
-        Locale overrideLocale = new Locale("da");
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            overrideConfiguration.setLocale(overrideLocale);
-        } else {
-            overrideConfiguration.locale = overrideLocale;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            this.getApplicationContext().createConfigurationContext(overrideConfiguration);
-        } else {
-            resources.updateConfiguration(overrideConfiguration, null);
-        }
-
+    void setupLanguage() {
+        Toast.makeText(this, "Resetter tablet", Toast.LENGTH_SHORT).show();
 
         Locale locale = new Locale("da", "DK");
         Resources res = getResources();
@@ -77,7 +66,5 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         res.updateConfiguration(conf, dm);
         //startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
 
-    }*/
-
-
+    }
 }

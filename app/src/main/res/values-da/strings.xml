@@ -73,4 +73,7 @@
     <string name="games">Spil</string>
     <string name="dialogue">Dialog</string>
 
+    <string name="english">Engelsk</string>
+    <string name="danish">Dansk</string>
+
 </resources>
