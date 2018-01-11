@@ -14,6 +14,8 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageView bodyfront;
     ImageView bodyback;
+    Button retur;
+    Button home;
 
 
     int[]btn_id = {
@@ -34,7 +36,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.rightupperarmshoulder,
             R.id.neck,
             R.id.head,
-            /*R.id.bleftfoot,
+            R.id.bleftfoot,
             R.id.bleftlowerleg,
             R.id.bleftupperleg,
             R.id.brightfoot,
@@ -49,7 +51,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.brightlowerarm,
             R.id.brightupperarmshoulder,
             R.id.bneck,
-            R.id.bhead*/
+            R.id.bodyfront
     };
 
     ArrayList<Button> buttons = new ArrayList<>(btn_id.length);
@@ -97,7 +99,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
                 bodyfront.setImageResource(R.drawable.leftupperleg);
                 break;
             case R.id.rightfoot:
-                bodyfront.setImageResource(R.drawable.righthand);
+                bodyfront.setImageResource(R.drawable.rightfoot);
                 break;
             case R.id.rightlowerleg:
                 bodyfront.setImageResource(R.drawable.rightlowerleg);
@@ -138,7 +140,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.head:
                 bodyfront.setImageResource(R.drawable.head);
                 break;
-            /*case R.id.bleftfoot:
+            case R.id.bleftfoot:
                 bodyback.setImageResource(R.drawable.bleftfoot);
                 break;
             case R.id.bleftlowerleg:
@@ -183,10 +185,9 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bneck:
                 bodyback.setImageResource(R.drawable.bneck);
                 break;
-            case R.id.bhead:
+            case R.id.bodyfront:
                 bodyback.setImageResource(R.drawable.bhead);
-                break;*/
-
+                break;
         }
     }
 }
