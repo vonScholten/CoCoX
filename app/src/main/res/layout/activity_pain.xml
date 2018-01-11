@@ -201,7 +201,7 @@
     <Button
         android:id="@+id/neck"
         android:layout_width="117dp"
-        android:layout_height="15dp"
+        android:layout_height="28dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -209,7 +209,7 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/chest"
         app:layout_constraintEnd_toEndOf="@+id/bodyfront"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/bodyfront"
         app:layout_constraintTop_toTopOf="@+id/bodyfront"
         app:layout_constraintVertical_bias="1.0" />
@@ -217,7 +217,7 @@
     <Button
         android:id="@+id/bneck"
         android:layout_width="117dp"
-        android:layout_height="15dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
@@ -261,11 +261,13 @@
     <Button
         android:id="@+id/bupperback"
         android:layout_width="117dp"
-        android:layout_height="138dp"
+        android:layout_height="132dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/bodyback"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/bodyback"
         app:layout_constraintTop_toBottomOf="@+id/bneck" />
 
@@ -457,7 +459,7 @@
     <Button
         android:id="@+id/buttocks"
         android:layout_width="117dp"
-        android:layout_height="68dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/transparent"

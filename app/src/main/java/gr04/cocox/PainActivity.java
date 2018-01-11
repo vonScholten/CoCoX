@@ -51,7 +51,8 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.brightlowerarm,
             R.id.brightupperarmshoulder,
             R.id.bneck,
-            R.id.bodyfront
+            R.id.bhead,
+            R.id.buttocks
     };
 
     ArrayList<Button> buttons = new ArrayList<>(btn_id.length);
@@ -185,8 +186,11 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bneck:
                 bodyback.setImageResource(R.drawable.bneck);
                 break;
-            case R.id.bodyfront:
+            case R.id.bhead:
                 bodyback.setImageResource(R.drawable.bhead);
+                break;
+            case R.id.buttocks:
+                bodyback.setImageResource(R.drawable.buttocks);
                 break;
         }
     }
