@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -14,8 +15,8 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageView bodyfront;
     ImageView bodyback;
-    Button retur;
-    Button home;
+    ImageButton retur;
+    ImageButton home;
 
 
     int[]btn_id = {
@@ -84,7 +85,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
         else if (view == home) {
-            this.startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
         else { pain(view); } }
 
