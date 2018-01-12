@@ -64,6 +64,11 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_pain);
 
         addListenerOnButton();
+
+        retur = findViewById(R.id.retur);
+        retur.setOnClickListener(this);
+        home = findViewById(R.id.home);
+        home.setOnClickListener(this);
     }
 
     public void addListenerOnButton() {
