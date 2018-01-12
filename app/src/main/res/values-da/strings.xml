@@ -77,4 +77,5 @@
     <string name="english">Engelsk</string>
     <string name="danish">Dansk</string>
 
+    <string name="keyboard_hint">Skriv din besked her</string>
 </resources>

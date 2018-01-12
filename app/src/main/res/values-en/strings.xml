@@ -30,7 +30,7 @@
     <string name="content">I am content \n</string>
     <string name="happy">I am happy \n</string>
     <string name="bored">I am bored \n</string>
-    <string name="breathe">I can't breathe \n</string>
+    <string name="breathe">I can\'t breathe \n</string>
     <string name="tired">I am tired \n</string>
     <string name="frustrated">I am frustrated \n</string>
     <string name="scared">I am scared \n</string>
@@ -77,4 +77,5 @@
     <string name="english">English</string>
     <string name="danish">Danish</string>
 
+    <string name="keyboard_hint">Write your message here</string>
 </resources>

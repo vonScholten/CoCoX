@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton back;
-    ImageButton backHome;
+    ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,8 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
 
         back = (ImageButton) findViewById(R.id.keyboard_back);
         back.setOnClickListener(this);
-        backHome = (ImageButton) findViewById(R.id.keyboard_home);
-        backHome.setOnClickListener(this);
+        home = (ImageButton) findViewById(R.id.keyboard_home);
+        home.setOnClickListener(this);
 
 
     }
@@ -30,7 +30,7 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
         if (view == back){
             finish();
         }
-        else if (view == backHome){
+        else if (view == home){
             startActivity(new Intent(this,MainActivity.class));
             finish();
         }
