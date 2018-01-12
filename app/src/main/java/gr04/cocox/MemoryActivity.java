@@ -78,6 +78,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if(view == back) {
+            this.startActivity(new Intent(this, GameActivity.class));
             finish();
         }
         else if (view == backHome) {
