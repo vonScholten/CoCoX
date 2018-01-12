@@ -144,6 +144,20 @@
         android:textColor="@color/inactiveText"
         android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/maybe"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_inactive_shadow"
+            android:drawableTop="@drawable/answer_maybe"
+            android:text="@string/maybe"
+            android:textColor="@color/inactiveText"
+            android:textSize="20sp" />
+
     </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

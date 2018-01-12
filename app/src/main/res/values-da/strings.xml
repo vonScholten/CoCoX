@@ -45,6 +45,7 @@
     <string name="dontknow">Det ved jeg ikke \n</string>
     <string name="no">Nej \n</string>
     <string name="later">Senere \n</string>
+    <string name="maybe">Måske \n</string>
 
     <string name="doing">Hvad laver du? \n</string>
     <string name="time">Hvad er klokken? \n</string>

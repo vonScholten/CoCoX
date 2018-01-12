@@ -42,6 +42,7 @@
     <string name="dontknow">I dont know \n</string>
     <string name="no">No \n</string>
     <string name="later">Later \n</string>
+    <string name="maybe">Maybe \n</string>
 
     <string name="doing">What are you doing?</string>
     <string name="time">What time is it? \n</string>
