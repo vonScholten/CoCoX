@@ -2,10 +2,10 @@ package gr04.cocox;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
-import android.provider.Settings;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,11 +23,17 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     ImageButton home;
     Button language;
     Button reset;
+    Button sound;
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
@@ -36,6 +42,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         language.setOnClickListener(this);
         reset = findViewById(R.id.reset);
         reset.setOnClickListener(this);
+        sound = findViewById(R.id.sound);
+        sound.setOnClickListener(this);
     }
 
     @Override
@@ -57,7 +65,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                setupLanguage();
+                                resetPref();
+                                resetLanguage();
                                 recreate();
 
                             }
@@ -73,12 +82,13 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
                 builder.show();
                 break;
-
-
+            case R.id.sound:
+                startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                break;
         }
     }
 
-    void setupLanguage() {
+    public void resetLanguage() {
         Toast.makeText(this, "Resetter tablet", Toast.LENGTH_SHORT).show();
 
         Locale locale = new Locale("da", "DK");
@@ -87,7 +97,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         Configuration conf = res.getConfiguration();
         conf.locale = locale;
         res.updateConfiguration(conf, dm);
-        //startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
+    }
 
+    public void resetPref(){
+        sharedPreferences.edit().putString("lang","da").apply();
+        sharedPreferences.edit().putInt("currentSound",1).apply();
     }
 }

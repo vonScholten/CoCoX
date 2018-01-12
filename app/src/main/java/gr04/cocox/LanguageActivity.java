@@ -1,13 +1,10 @@
 package gr04.cocox;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,10 +23,17 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
     ImageButton home;
     static int check = 0;
 
+    SharedPreferences sharedLang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
+
+        sharedLang = PreferenceManager.getDefaultSharedPreferences(this);
+
+        changeLang(loadLocale());
+
         danish = findViewById(R.id.danish);
         danish.setOnClickListener(this);
         english = findViewById(R.id.english);
@@ -38,8 +42,6 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
-        loadLocale();
-
     }
 
 
@@ -58,68 +60,24 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         else
             if (view == danish) {
             Toast.makeText(this, "opdaterer sprog", Toast.LENGTH_SHORT).show();
-            loadLocale();
+
             changeLang(dk);
             saveLocale(dk);
         }
         else
             if(view == english){
             Toast.makeText(this, "opdaterer sprog", Toast.LENGTH_SHORT).show();
-            loadLocale();
+
             changeLang(en);
             saveLocale(en);
         }
-        //setupLanguage(view);
         recreate();
-
     }
 
-    //void setupLanguage(View v) {
-    //   Toast.makeText(this, "opdaterer sprog", Toast.LENGTH_SHORT).show();
-
-/*
-        Resources resources = this.getApplicationContext().getResources();
-        Configuration overrideConfiguration = resources.getConfiguration();
-        Locale overrideLocale = new Locale("da");
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            overrideConfiguration.setLocale(overrideLocale);
-        } else {
-            overrideConfiguration.locale = overrideLocale;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            this.getApplicationContext().createConfigurationContext(overrideConfiguration);
-        } else {
-            resources.updateConfiguration(overrideConfiguration, null);
-        }
-        */
-       /* if (v == danish){
-
-        Locale locale = new Locale("da", "DK");
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = locale;
-        res.updateConfiguration(conf, dm);
-        //startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
-        }
-        else if(v == english){
-            Locale locale = new Locale("en", "US");
-            Resources res = getResources();
-            DisplayMetrics dm = res.getDisplayMetrics();
-            Configuration conf = res.getConfiguration();
-            conf.locale = locale;
-            res.updateConfiguration(conf, dm);
-        }*/
-
-
-    public void loadLocale() {
-        String langPref = "Language";
-        SharedPreferences prefs = getSharedPreferences("CommonPrefs",
-                Activity.MODE_PRIVATE);
-        String language = prefs.getString(langPref, "");
-        changeLang(language);
+    public String loadLocale() {
+        String lang = sharedLang.getString("lang", "da");
+        System.out.println("lang: " + lang + " loaded");
+        return lang;
     }
 
     public void changeLang(String lang) {
@@ -131,19 +89,17 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         android.content.res.Configuration config = new android.content.res.Configuration();
         config.locale = myLocale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
     }
 
     public void saveLocale(String lang) {
-        String langPref = "Language";
-        SharedPreferences prefs = getSharedPreferences("CommonPrefs",
-                Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(langPref, lang);
-        editor.apply();
+        sharedLang.edit().putString("lang",lang).apply();
+        System.out.println("lang: " + lang + " saved");
     }
 
-
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        changeLang(loadLocale());
+    }
 }
 

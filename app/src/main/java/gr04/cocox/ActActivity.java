@@ -1,10 +1,10 @@
 package gr04.cocox;
 
-import android.app.DialogFragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.graphics.Color;
@@ -19,13 +19,17 @@ import java.util.ArrayList;
 
 import static android.app.PendingIntent.getActivity;
 
-public class ActActivity extends AppCompatActivity implements View.OnClickListener, Runnable {
+public class ActActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton retur;
     ImageButton home;
     Button call;
     ImageView callmessage;
-    MediaPlayer alertsound;
+    MediaPlayer alertsound1;
+    MediaPlayer alertsound2;
+    MediaPlayer alertsound3;
+
+    SoundActivity soundActivity = new SoundActivity();
 
     Button selected;
     Button refresh;
@@ -34,6 +38,8 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
 
     int activeColor;
     int inactiveColor;
+
+    int currentSound;
 
     int[] btn_ID = {
             R.id.visit,
@@ -57,13 +63,16 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act);
 
+
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
-        alertsound = MediaPlayer.create(this, R.raw.alert);
+        alertsound1 = MediaPlayer.create(this, R.raw.sweet_sms);
+        alertsound2 = MediaPlayer.create (this, R.raw.alert);
+        alertsound3 = MediaPlayer.create (this, R.raw.galaxy_note);
 
         int inactiveColor = Color.parseColor("#EEEDDE");
         int activeColor = Color.parseColor("#1C87B0");
@@ -73,6 +82,9 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
             button.setOnClickListener(this);
             inactive.add(button);
         }
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        currentSound = sharedPreferences.getInt("currentSound",1);
 
     }
 
@@ -94,7 +106,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
                     .setPositiveButton(R.string.callmessage, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    alertsound.start();
+                    playSound();
 
                 }
 
@@ -138,9 +150,23 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
     }
 
 
-    @Override
-    public void run() {
-        //Her skal stå noget kode
+
+
+    public void playSound(){
+
+        if (currentSound == 1){
+            alertsound1.start();
+
+        }
+        else if (currentSound == 2){
+            alertsound2.start();
+
+        }
+        else if (currentSound == 3){
+            alertsound3.start();
+
+        }
+
     }
 }
 
