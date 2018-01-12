@@ -23,7 +23,8 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
             R.id.no,
             R.id.dontknow,
             R.id.thanks,
-            R.id.later
+            R.id.later,
+            R.id.maybe
     };
 
     ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
