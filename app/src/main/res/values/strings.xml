@@ -76,4 +76,6 @@
     <string name="danish">Danish</string>
 
     <string name="keyboard_hint">Write your message here</string>
+
+    <string name="resetbtn">"Are you sure you want to reset all settings</string>
 </resources>
