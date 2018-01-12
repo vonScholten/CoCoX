@@ -61,7 +61,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/setting_input"
-        android:text="@string/input"/>
+        android:text="@string/input"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/reset"
@@ -73,7 +75,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/setting_reset"
-        android:text="@string/reset"/>
+        android:text="@string/reset"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/sound"
@@ -85,7 +89,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/setting_sound"
-        android:text="@string/sound"/>
+        android:text="@string/sound"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/font"
@@ -97,7 +103,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/setting_font"
-        android:text="@string/font"/>
+        android:text="@string/font"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/language"
@@ -109,7 +117,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_games_shadow"
         android:drawableTop="@drawable/setting_language"
-        android:text="@string/language"/>
+        android:text="@string/language"
+        android:textColor="@color/inactiveText"
+        android:textSize="16sp" />
 
     </GridLayout>
 
