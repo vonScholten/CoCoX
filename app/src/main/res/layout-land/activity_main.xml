@@ -99,7 +99,6 @@
         android:id="@+id/call"
         android:layout_width="match_parent"
         android:layout_height="115dp"
-        android:layout_marginTop="628dp"
         android:background="@color/callcolor"
         android:drawableStart="@mipmap/bell"
         android:drawableEnd="@mipmap/bell"
