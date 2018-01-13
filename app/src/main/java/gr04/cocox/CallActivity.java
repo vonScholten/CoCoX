@@ -63,4 +63,20 @@ public class CallActivity extends Activity implements View.OnClickListener {
         }
 
     }
+
+    public void onDestroy() {
+        super.onDestroy();
+        if (currentSound == 1){
+            alertsound1.stop();
+
+        }
+        else if (currentSound == 2){
+            alertsound2.stop();
+
+        }
+        else if (currentSound == 3){
+            alertsound3.stop();
+
+        }
+    }
 }

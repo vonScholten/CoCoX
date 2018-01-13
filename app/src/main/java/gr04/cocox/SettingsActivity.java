@@ -31,11 +31,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     Button language;
     Button reset;
     Button sound;
+    Button font;
+    Button input;
 
     SharedPreferences sharedPreferences;
 
     AlertDialog selectLocal;
     AlertDialog selectSound;
+    AlertDialog selectSize;
+    AlertDialog selectInput;
 
     Locale myLocale;
 
@@ -52,14 +56,24 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
         language = findViewById(R.id.language);
         language.setOnClickListener(this);
+
         reset = findViewById(R.id.reset);
         reset.setOnClickListener(this);
+
         sound = findViewById(R.id.sound);
         sound.setOnClickListener(this);
+
+        font = findViewById(R.id.font);
+        font.setOnClickListener(this);
+
+        input = findViewById(R.id.input);
+        input.setOnClickListener(this);
 
         defualt = MediaPlayer.create(this, R.raw.sweet_sms);
         s1 = MediaPlayer.create(this, R.raw.alert);
@@ -79,21 +93,16 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 finish();
                 break;
-            case R.id.language:
-                //startActivity(new Intent(this, LanguageActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-                selectLocal();
-                break;
             case R.id.reset:
                 AlertDialog.Builder builder = new AlertDialog.Builder(SettingsActivity.this);
                 builder.setTitle("Reset");
-                builder.setMessage(R.string.resetbtn)
+                builder.setMessage(R.string.reset_btn)
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 resetPref();
                                 resetLocal();
                                 recreate();
-
                             }
 
                         })
@@ -107,9 +116,19 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
                 builder.show();
                 break;
+            case R.id.language:
+                //startActivity(new Intent(this, LanguageActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                selectLocal();
+                break;
             case R.id.sound:
                 //startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 selectSound();
+                break;
+            case R.id.font:
+                selectFont();
+                break;
+            case R.id.input:
+                selectInput();
                 break;
         }
     }
@@ -253,6 +272,104 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         defualt.stop();
         s1.stop();
         s2.stop();
+    }
+
+    /** Font
+     * Some methods is missing
+     */
+
+    public void selectFont(){
+        selectSize = new AlertDialog.Builder(this).create();
+        selectSize.setCancelable(true);
+        selectSize.setTitle(getString(R.string.select_font));
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        ListView listView = new ListView(this);
+
+        //The array containing strings of available sizes for ui (full name)
+        final String[] size = {
+                getString(R.string.size_small),
+                getString(R.string.size_default),
+                getString(R.string.size_large)
+        };
+
+        //Uses ints as id
+        final int[] sizeId = {
+                1,
+                2,
+                3
+        };
+
+        final ArrayList<Integer> listSound = new ArrayList<Integer>();
+        for (int id : sizeId) { listSound.add(id); }
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, size);
+        listView.setAdapter(adapter);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+
+        layout.addView(listView);
+        selectSize.setView(layout);
+        selectSize.show();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                //TODO: make some methode to font
+                selectSize.dismiss();
+            }
+        });
+    }
+
+    /** Input
+     * Some methods is missing
+     */
+
+    public void selectInput(){
+        selectInput = new AlertDialog.Builder(this).create();
+        selectInput.setCancelable(true);
+        selectInput.setTitle(getString(R.string.select_input));
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        ListView listView = new ListView(this);
+
+        //The array containing strings of available input methods for ui (full name)
+        final String[] size = {
+                getString(R.string.input_touch),
+                getString(R.string.input_head),
+        };
+
+        //Uses ints as id
+        final int[] inputId = {
+                1,
+                2
+        };
+
+        final ArrayList<Integer> listSound = new ArrayList<Integer>();
+        for (int id : inputId) { listSound.add(id); }
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, size);
+        listView.setAdapter(adapter);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+
+        layout.addView(listView);
+        selectInput.setView(layout);
+        selectInput.show();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                //TODO: make some methode to font
+                selectInput.dismiss();
+            }
+        });
     }
 
     /** Reset
