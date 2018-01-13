@@ -144,6 +144,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
 
         if (currentSound == 1){
             alertsound1.start();
+            alertsound1.stop();
 
         }
         else if (currentSound == 2){
