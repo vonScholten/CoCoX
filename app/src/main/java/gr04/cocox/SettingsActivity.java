@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,9 +34,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     SharedPreferences sharedPreferences;
 
-    AlertDialog selectLang;
+    AlertDialog selectLocal;
+    AlertDialog selectSound;
 
     Locale myLocale;
+
+    MediaPlayer defualt;
+    MediaPlayer s1;
+    MediaPlayer s2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +60,24 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         reset.setOnClickListener(this);
         sound = findViewById(R.id.sound);
         sound.setOnClickListener(this);
+
+        defualt = MediaPlayer.create(this, R.raw.sweet_sms);
+        s1 = MediaPlayer.create(this, R.raw.alert);
+        s2 = MediaPlayer.create(this, R.raw.galaxy_note);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.retur: finish();
+            case R.id.retur:
+                stopSound();
                 startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                finish();
                 break;
-            case R.id.home: finish();
+            case R.id.home:
+                stopSound();
                 startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                finish();
                 break;
             case R.id.language:
                 //startActivity(new Intent(this, LanguageActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
@@ -94,22 +108,27 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 builder.show();
                 break;
             case R.id.sound:
-                startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                //startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                selectSound();
                 break;
         }
     }
 
+    /** Select local / language
+     *
+     */
+
     public void selectLocal() {
-        selectLang = new AlertDialog.Builder(this).create();
-        selectLang.setCancelable(true);
-        selectLang.setTitle(getString(R.string.select_lang));
+        selectLocal = new AlertDialog.Builder(this).create();
+        selectLocal.setCancelable(true);
+        selectLocal.setTitle(getString(R.string.select_lang));
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
 
         ListView listView = new ListView(this);
 
-        //The array containing strings of available languages (full name)
+        //The array containing strings of available languages for ui (full name)
         final String[] language = {
                 "Dansk",
                 "English"
@@ -131,14 +150,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 LinearLayout.LayoutParams.MATCH_PARENT);
 
         layout.addView(listView);
-        selectLang.setView(layout);
-        selectLang.show();
+        selectLocal.setView(layout);
+        selectLocal.show();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
                 setLocal(listLocal.get(pos));
-                selectLang.dismiss();
+                selectLocal.dismiss();
                 recreate();
             }
         });
@@ -168,6 +187,77 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         sharedPreferences.edit().putString("lang",lang).apply();
         System.out.println("lang: " + lang + " saved");
     }
+
+    /** Select sound
+     *
+     */
+
+    public void selectSound(){
+        selectSound = new AlertDialog.Builder(this).create();
+        selectSound.setCancelable(true);
+        selectSound.setTitle(getString(R.string.select_lang));
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        ListView listView = new ListView(this);
+
+        //The array containing strings of available sound for ui (full name)
+        final String[] sound = {
+                "default",
+                "sound 1",
+                "sound 2"
+        };
+
+        //Uses ints as id
+        final int[] soundId = {
+                1,
+                2,
+                3
+        };
+
+        final ArrayList<Integer> listSound = new ArrayList<Integer>();
+        for (int id : soundId) { listSound.add(id); }
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, sound);
+        listView.setAdapter(adapter);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+
+        layout.addView(listView);
+        selectSound.setView(layout);
+        selectSound.show();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+
+                if(pos == 0) {defualt.start(); }
+                else if(pos == 1) {s1.start(); }
+                else if(pos == 2) {s2.start(); }
+
+                saveSound(listSound.get(pos));
+            }
+        });
+    }
+
+    public void saveSound(int cs){
+        SharedPreferences sharedSound = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedSound.edit().putInt("currentSound",cs).apply();
+
+        System.out.println("sound " + sharedSound.getInt("currentSound",1));
+    }
+
+    public void stopSound(){
+        defualt.stop();
+        s1.stop();
+        s2.stop();
+    }
+
+    /** Reset
+     *
+     */
 
     public void resetLocal() {
         Toast.makeText(this, "Resetter tablet", Toast.LENGTH_SHORT).show();
