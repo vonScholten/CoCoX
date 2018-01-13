@@ -80,4 +80,6 @@
     <string name="keyboard_hint">Write your message here</string>
 
     <string name="resetbtn">"Are you sure you want to reset all settings</string>
+    <string name="select_lang">Select language</string>
+
 </resources>

@@ -80,4 +80,6 @@
     <string name="keyboard_hint">Skriv din besked her</string>
 
     <string name="resetbtn">"Er du sikker på at du vil resette alle indstillinger?</string>
+    <string name="select_lang">Vælg Sprog</string>
+
 </resources>
