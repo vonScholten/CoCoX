@@ -20,11 +20,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/call"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text=""
+            android:text="@string/callmessage"
+            android:textColor="@color/inactiveText"
+            android:textSize="50sp"
             android:drawableTop="@drawable/bigbell"
             android:background="@android:color/transparent"/>
     </LinearLayout>

@@ -1,14 +1,23 @@
 package gr04.cocox;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 
-/**
- * Created by Tardis on 13-01-2018.
- */
 
-public class CallActivity extends Activity{
+public class CallActivity extends Activity implements View.OnClickListener {
+
+    Button call;
+    int currentSound;
+    MediaPlayer alertsound1;
+    MediaPlayer alertsound2;
+    MediaPlayer alertsound3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +31,36 @@ public class CallActivity extends Activity{
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width*.6), (int) (height*.8));
+
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
+        alertsound1 = MediaPlayer.create(this, R.raw.sweet_sms);
+        alertsound2 = MediaPlayer.create (this, R.raw.alert);
+        alertsound3 = MediaPlayer.create (this, R.raw.galaxy_note);
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        currentSound = sharedPreferences.getInt("currentSound",1);
+    }
+
+    @Override
+    public void onClick(View view) {
+        playSound();
+    }
+
+    public void playSound(){
+
+        if (currentSound == 1){
+            alertsound1.start();
+
+        }
+        else if (currentSound == 2){
+            alertsound2.start();
+
+        }
+        else if (currentSound == 3){
+            alertsound3.start();
+
+        }
+
     }
 }
