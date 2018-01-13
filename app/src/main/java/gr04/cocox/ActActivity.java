@@ -101,19 +101,7 @@ public class ActActivity extends AppCompatActivity implements View.OnClickListen
         }
 
         else if(view==call){
-            AlertDialog.Builder builder = new AlertDialog.Builder(ActActivity.this);
-            builder.setTitle("Kald Sygeplejersken")
-                    .setPositiveButton(R.string.callmessage, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    playSound();
-
-                }
-
-            });
-
-            builder.setIcon(R.mipmap.callmessage);
-            builder.show();
+            startActivity(new Intent(this, CallActivity.class));
 
         }
 

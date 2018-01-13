@@ -11,4 +11,11 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="CallTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        
+    </style>
+
 </resources>
