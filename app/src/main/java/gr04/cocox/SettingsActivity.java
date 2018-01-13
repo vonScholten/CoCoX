@@ -32,12 +32,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     Button reset;
     Button sound;
     Button font;
+    Button input;
 
     SharedPreferences sharedPreferences;
 
     AlertDialog selectLocal;
     AlertDialog selectSound;
     AlertDialog selectSize;
+    AlertDialog selectInput;
 
     Locale myLocale;
 
@@ -70,6 +72,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         font = findViewById(R.id.font);
         font.setOnClickListener(this);
 
+        input = findViewById(R.id.input);
+        input.setOnClickListener(this);
+
         defualt = MediaPlayer.create(this, R.raw.sweet_sms);
         s1 = MediaPlayer.create(this, R.raw.alert);
         s2 = MediaPlayer.create(this, R.raw.galaxy_note);
@@ -98,7 +103,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                                 resetPref();
                                 resetLocal();
                                 recreate();
-
                             }
 
                         })
@@ -122,6 +126,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.font:
                 selectFont();
+                break;
+            case R.id.input:
+                selectInput();
                 break;
         }
     }
@@ -268,7 +275,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /** Font
-     *
+     * Some methods is missing
      */
 
     public void selectFont(){
@@ -312,6 +319,55 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
                 //TODO: make some methode to font
+                selectSize.dismiss();
+            }
+        });
+    }
+
+    /** Input
+     * Some methods is missing
+     */
+
+    public void selectInput(){
+        selectInput = new AlertDialog.Builder(this).create();
+        selectInput.setCancelable(true);
+        selectInput.setTitle(getString(R.string.select_input));
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        ListView listView = new ListView(this);
+
+        //The array containing strings of available input methods for ui (full name)
+        final String[] size = {
+                getString(R.string.input_touch),
+                getString(R.string.input_head),
+        };
+
+        //Uses ints as id
+        final int[] inputId = {
+                1,
+                2
+        };
+
+        final ArrayList<Integer> listSound = new ArrayList<Integer>();
+        for (int id : inputId) { listSound.add(id); }
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, size);
+        listView.setAdapter(adapter);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+
+        layout.addView(listView);
+        selectInput.setView(layout);
+        selectInput.show();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                //TODO: make some methode to font
+                selectInput.dismiss();
             }
         });
     }

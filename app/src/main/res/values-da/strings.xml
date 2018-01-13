@@ -87,6 +87,9 @@
     <string name="size_small">Lille</string>
     <string name="size_default">Standard</string>
     <string name="size_large">Stor</string>
+    <string name="select_input">Vælg input metode</string>
+    <string name="input_touch">Touch</string>
+    <string name="input_head">Hovedestyring</string>
     <!--settings-->
 
 </resources>
