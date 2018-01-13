@@ -195,7 +195,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     public void selectSound(){
         selectSound = new AlertDialog.Builder(this).create();
         selectSound.setCancelable(true);
-        selectSound.setTitle(getString(R.string.select_lang));
+        selectSound.setTitle(getString(R.string.select_sound));
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
