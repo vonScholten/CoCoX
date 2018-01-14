@@ -1,6 +1,7 @@
 package gr04.cocox;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -83,7 +84,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         activeIndex = inactive.indexOf(selected);
 
         selected.setBackground(getDrawable(R.drawable.button_active)); // set background to "activeIndex.xml"
-        selected.setTextColor(getColor(R.color.activeText)); // set text color
+        selected.setTextColor(ContextCompat.getColor(this, R.color.activeText)); // set text color
         selected.setSelected(true); //Set button selected state as true
         inactive.remove(activeIndex);
 
@@ -91,7 +92,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
             if(inactive.contains(findViewById(id))) {
                 refresh = findViewById(id);
                 refresh.setBackground(getDrawable(R.drawable.button_inactive_shadow));
-                refresh.setTextColor(getColor(R.color.inactiveText));
+                refresh.setTextColor(ContextCompat.getColor(this, R.color.inactiveText));
                 refresh.setSelected(false); //Set button selected state as false
             }
         }
