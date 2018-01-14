@@ -91,6 +91,8 @@
     <string name="input_touch">Touch</string>
     <string name="input_head">Hovedestyring</string>
     <string name="found_match">Juhuu! Du fandt et sæt!</string>
+    <string name="game_won">Du vandt!</string>
+    <string name="game_won_message">Yea! Du fandt dem alle! Vil du spille igen?</string>
     <!--settings-->
 
 </resources>

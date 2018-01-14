@@ -1,7 +1,9 @@
 package gr04.cocox;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -208,9 +210,8 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 }
 
-                update();
-
-                if (matchCount == winningNbr){ gameWon(); }
+                if(matchCount == winningNbr) { gameWon(); }
+                else { update(); }
             }
         }
     }
@@ -231,6 +232,24 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public void gameWon() {
         System.out.println("GAME WON \n ----------------------|MemoryGame|----------------------");
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle(R.string.game_won);
+        dialog.setMessage(R.string.game_won_message)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        recreate();
+                    }
+
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+
+                });
+        dialog.show();
     }
 }
 
