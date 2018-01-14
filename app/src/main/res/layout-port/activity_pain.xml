@@ -79,12 +79,12 @@
         android:layout_height="106dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="96dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toStartOf="@+id/bupperback"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/bodyback"
-        app:layout_constraintTop_toTopOf="@+id/bupperback" />
+        app:layout_constraintTop_toTopOf="@+id/bodyback" />
 
     <Button
         android:id="@+id/rightupperarmshoulder"
@@ -102,15 +102,15 @@
     <Button
         android:id="@+id/brightupperarmshoulder"
         android:layout_width="44dp"
-        android:layout_height="106dp"
+        android:layout_height="125dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="84dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/bodyback"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/bupperback"
-        app:layout_constraintTop_toTopOf="@+id/bupperback" />
+        app:layout_constraintTop_toTopOf="@+id/bodyback" />
 
     <Button
         android:id="@+id/leftlowerarm"
@@ -153,7 +153,7 @@
     <Button
         android:id="@+id/brightlowerarm"
         android:layout_width="68dp"
-        android:layout_height="94dp"
+        android:layout_height="67dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
@@ -297,8 +297,8 @@
 
     <Button
         android:id="@+id/bupperback"
-        android:layout_width="117dp"
-        android:layout_height="132dp"
+        android:layout_width="106dp"
+        android:layout_height="94dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
@@ -374,7 +374,7 @@
         android:id="@+id/bleftfoot"
         android:layout_width="50dp"
         android:layout_height="37dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/bodyback"
@@ -412,8 +412,8 @@
     <Button
         android:id="@+id/brightlowerleg"
         android:layout_width="45dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="164dp"
+        android:layout_height="102dp"
+        android:layout_marginEnd="128dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/bodyback"
         app:layout_constraintTop_toBottomOf="@+id/brightupperleg" />
@@ -421,8 +421,8 @@
     <Button
         android:id="@+id/bleftlowerleg"
         android:layout_width="45dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="156dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="124dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/bodyback"
         app:layout_constraintTop_toBottomOf="@+id/bleftupperleg" />
@@ -444,7 +444,7 @@
         android:id="@+id/bleftupperleg"
         android:layout_width="64dp"
         android:layout_height="118dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="112dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/bodyback"
         app:layout_constraintTop_toBottomOf="@+id/buttocks" />
@@ -453,12 +453,9 @@
         android:id="@+id/brightupperleg"
         android:layout_width="59dp"
         android:layout_height="118dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="120dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/bodyback"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/bleftupperleg"
         app:layout_constraintTop_toBottomOf="@+id/buttocks" />
 
     <Button
