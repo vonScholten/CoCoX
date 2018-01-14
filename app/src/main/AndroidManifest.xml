@@ -33,11 +33,11 @@
 
         <activity android:name=".PainActivity" />
         <activity android:name=".LanguageActivity" />
-        <activity android:name=".SoundActivity"/>
-        <activity android:name=".CallActivity"
-            android:theme="@style/CallTheme">
-
-        </activity>
+        <activity android:name=".SoundActivity" />
+        <activity
+            android:name=".CallActivity"
+            android:theme="@style/CallTheme"></activity>
+        <activity android:name=".JigsawPuzzelActivity"></activity>
     </application>
 
 </manifest>
