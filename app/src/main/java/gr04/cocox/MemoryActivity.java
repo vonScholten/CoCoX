@@ -13,7 +13,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
+
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
 
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -54,7 +57,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     boolean isSet_i1;
     boolean isSet_i2;
 
-    Random rand = new Random();
+    KonfettiView konfetti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,13 +66,15 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
         System.out.println("----------------------|MemoryGame|---------------------- \n started");
 
+        konfetti = findViewById(R.id.konfettiView);
+
         grid = (GridLayout) findViewById(R.id.board);
+
+        back = (ImageButton) findViewById(R.id.memory_home);
+        back.setOnClickListener(this);
 
         backHome = (ImageButton) findViewById(R.id.memory_back);
         backHome.setOnClickListener(this);
-        back = (ImageButton) findViewById(R.id.memory_home);
-        backHome.setOnClickListener(this);
-        
 
         System.out.println("INITIAL SETUP");
 
@@ -232,6 +237,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public void gameWon() {
         System.out.println("GAME WON \n ----------------------|MemoryGame|----------------------");
+
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle(R.string.game_won);
         dialog.setMessage(R.string.game_won_message)
@@ -250,6 +256,17 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
                 });
         dialog.show();
+
+        konfetti.build()
+                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                .setDirection(0.0, 0.359)
+                .setSpeed(1f, 5f)
+                .setFadeOutEnabled(true)
+                .setTimeToLive(10000L)
+                .addShapes(Shape.RECT, Shape.CIRCLE)
+                .addSizes(new Size(12,5f))
+                .setPosition(-50f, konfetti.getWidth() + 50f, -50f, -50f)
+                .stream(300, 10000L);
     }
 }
 
