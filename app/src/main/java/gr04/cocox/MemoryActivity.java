@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,24 +22,29 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public ImageButton selected;
 
-    int[] set_1 = {
+    int[] set = {
             R.id.mem1,
             R.id.mem2,
-            R.id.mem3
-    };
-
-    int[] set_2 = {
+            R.id.mem3,
             R.id.mem4,
             R.id.mem5,
             R.id.mem6
     };
 
-    ArrayList<ImageButton> array_1 = new ArrayList<ImageButton>(set_1.length);
-    ArrayList<ImageButton> array_2 = new ArrayList<ImageButton>(set_2.length);
+    int[] deck = {
+            R.drawable.mem1_selector,
+            R.drawable.mem2_selector,
+            R.drawable.mem3_selector
+    };
+
+    ArrayList<ImageButton> listSet = new ArrayList<ImageButton>(set.length);
+    ArrayList<Integer> listDeck = new ArrayList<Integer>(deck.length);
 
     int i0;
-    int i1;
-    int i2;
+    int tag1;
+    int tag2;
+    int index1;
+    int index2;
     int flipCount;
     int matchCount;
     int winningNbr;
@@ -64,14 +71,15 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
         System.out.println("INITIAL SETUP");
 
-        i1 = set_1.length+1;
+        tag1 = 0;
         isSet_i1 = false;
-        i2 = set_1.length+1;
+        tag2 = 0;
         isSet_i2 = false;
         flipCount = 0;
         matchCount = 0;
-        winningNbr = set_1.length;
+        winningNbr = deck.length;
 
+        shuffle();
         setCards();
     }
 
@@ -90,50 +98,63 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public void setCards(){
         System.out.println("setCards ");
-        for (int id : set_1) {
+
+        int i = 0;
+        for (int id : set){
             ImageButton card = findViewById(id);
             card.setOnClickListener(this);
-            array_1.add(card);
-            //card.setLayoutParams(new LayoutParams(GridLayout.spec(0),GridLayout.spec(rand.nextInt(2))));
-            System.out.println("ADDED -> card nr: " + array_1.indexOf(card) + " in set 1");
+
+            card.setImageResource(listDeck.get(i));
+            card.setTag(listDeck.get(i));
+
+            listSet.add(card);
+
+            i = i + 1;
+            System.out.println("ADDED -> card tag: " + card.getTag() + " on index " + i);
         }
-        for (int id : set_2) {
-            ImageButton card = findViewById(id);
-            card.setOnClickListener(this);
-            array_2.add(card);
-            //card.setLayoutParams(new LayoutParams(GridLayout.spec(1),GridLayout.spec(rand.nextInt(2))));
-            System.out.println("ADDED -> card nr: " + array_2.indexOf(card) + " in set 2");
+    }
+
+    public void shuffle() {
+        for (int i = 0; i < 2; i++) {
+            for (int id : deck) {
+                listDeck.add(id);
+            }
         }
+        System.out.println("Deck size is: " + listDeck.size());
+        Collections.shuffle(listDeck);
     }
 
     public void game (View view){
         System.out.println("view id: " + view.getId());
 
         selected = findViewById(view.getId());
+        int i = (int) selected.getTag();
+        int j = listSet.indexOf(selected);
+        System.out.println("tag: " + i);
 
         switch (view.getId()) {
             case R.id.mem1:
-                logic(index(selected));
+                logic(i,j);
                 break;
 
             case R.id.mem2:
-                logic(index(selected));
+                logic(i,j);
                 break;
 
             case R.id.mem3:
-                logic(index(selected));
+                logic(i,j);
                 break;
 
             case R.id.mem4:
-                logic(index(selected));
+                logic(i,j);
                 break;
 
             case R.id.mem5:
-                logic(index(selected));
+                logic(i,j);
                 break;
 
             case R.id.mem6:
-                logic(index(selected));
+                logic(i,j);
                 break;
         }
 
@@ -143,55 +164,49 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public int index(ImageButton ib) {
-        System.out.println("INDEX -> ");
-        if (array_1.contains(ib)) {
-            i0 = array_1.indexOf(ib);
-            System.out.println("is " + i0 + " in array 1");
-        }
-        else if (array_2.contains(ib)) {
-            i0 = array_2.indexOf(ib);
-            System.out.println("is " + i0 + " in array 2");
-        }
-        return i0;
-    }
-
-    public void logic(int i) {
+    public void logic(int tag, int index) {
         System.out.println("LOGIC -> ");
         System.out.println("flip nr: " + flipCount);
+
         if (!selected.isSelected()) {
             flipCount = flipCount + 1;
             selected.setSelected(true);
             if (!isSet_i1) {
-                i1 = i;
+                tag1 = tag;
+                index1 = index;
                 isSet_i1 = true;
-                System.out.println("i1 ");
+                System.out.println("tag1 " + tag1 + "index " + index1);
             } else if (!isSet_i2) {
-                i2 = i;
+                tag2 = tag;
+                index2 = index;
                 isSet_i2 = true;
-                System.out.println("i2 ");
+                System.out.println("tag2 " + tag2 + "index " + index2);
             }
-            check(i1, i2);
+            check(tag1, tag2, index1, index2);
         }
         else { System.out.println("is selected"); }
     }
 
-    public void check(int i, int j) {
-        System.out.println("CHECK -> " +
-                "\n array size: " + array_1.size() + " & " + array_2.size());
+    public void check(int tag1, int tag2, int index1, int index2) {
+        System.out.println("CHECK -> ");
 
         if (isSet_i1 && isSet_i2) {
-            System.out.println("index: " + i  + " & " + j);
-            if (i == j) {
+            System.out.println("id: " + tag1  + " & " + tag2);
+            if (tag1 == tag2) {
                 matchCount = matchCount + 1;
                 System.out.println("MATCH nr " + matchCount + " found");
+                Toast.makeText(this, R.string.found_match,
+                        Toast.LENGTH_LONG).show();
 
-                array_1.get(i).setBackgroundColor(Color.GRAY);
-                array_1.remove(i);
-                System.out.println("REMOVE -> card nr: " + i + " in array 1");
-                array_2.get(i).setBackgroundColor(Color.GRAY);
-                array_2.remove(j);
-                System.out.println("REMOVE -> card nr: " + j + " in array 2");
+                for (int id : set) {
+                    ImageButton card = findViewById(id);
+                    int i = (int) card.getTag();
+                    if(tag1 == i){
+                        card.setBackgroundColor(Color.GRAY);
+                        listSet.remove(listSet.indexOf(card));
+                        System.out.println("REMOVE -> card  with id: " + tag1);
+                    }
+                }
 
                 update();
 
@@ -203,16 +218,13 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     public void update() {
         System.out.println("UPDATE -> ");
 
-        for (int i = 0; i < array_1.size(); i++) {
-            array_1.get(i).setSelected(false);
-        }
-        for (int i = 0; i < array_2.size(); i++) {
-            array_2.get(i).setSelected(false);
+        for (int i = 0; i < listSet.size(); i++) {
+            listSet.get(i).setSelected(false);
         }
 
-        i1 = set_1.length+1;
+        tag1 = 0;
         isSet_i1 = false;
-        i2 = set_1.length+1;
+        tag2 = 0;
         isSet_i2 = false;
         flipCount = 0;
     }

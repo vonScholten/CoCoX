@@ -90,6 +90,7 @@
     <string name="select_input">Vælg input metode</string>
     <string name="input_touch">Touch</string>
     <string name="input_head">Hovedestyring</string>
+    <string name="found_match">Juhuu! Du fandt et sæt!</string>
     <!--settings-->
 
 </resources>

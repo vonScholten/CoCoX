@@ -79,7 +79,6 @@
 
     <string name="keyboard_hint">Write your message here</string>
 
-    <!--settings-->
     <string name="reset_btn">"Are you sure you want to reset all settings</string>
     <string name="select_lang">Select language</string>
     <string name="select_sound">Select call sound</string>
@@ -90,6 +89,8 @@
     <string name="select_input">Select input method</string>
     <string name="input_touch">Touch</string>
     <string name="input_head">Head-controlled</string>
-    <!--settings-->
+
+    <string name="found_match">Yea! You found a match!</string>
+
 
 </resources>

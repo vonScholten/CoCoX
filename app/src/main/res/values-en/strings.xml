@@ -90,6 +90,7 @@
     <string name="select_input">Select input method</string>
     <string name="input_touch">Touch</string>
     <string name="input_head">Head-controlled</string>
+    <string name="found_match">Yea! You found a match!</string>
     <!--settings-->
 
 </resources>
