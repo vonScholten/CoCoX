@@ -68,7 +68,7 @@
     <string name="input">Input</string>
     <string name="reset">Reset</string>
     <string name="language">Sprog</string>
-    <string name="font">Tekststørrelse</string>
+    <string name="evaluation">Evaluering</string>
     <string name="sound">Lyd</string>
 
     <string name="games">Spil</string>
@@ -95,6 +95,7 @@
     <string name="game_won_message">Yea! Du fandt dem alle! Vil du spille igen?</string>
     <string name="paintext" >Hvor gør det ondt?</string>
     <string name="memorytext">Tryk på kortene for at finde et sæt!</string>
+
     />
     <!--settings-->
 

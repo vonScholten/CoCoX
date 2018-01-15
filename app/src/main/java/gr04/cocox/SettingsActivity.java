@@ -31,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     Button language;
     Button reset;
     Button sound;
-    Button font;
+    Button evaluation;
     Button input;
 
     SharedPreferences sharedPreferences;
@@ -69,8 +69,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         sound = findViewById(R.id.sound);
         sound.setOnClickListener(this);
 
-        font = findViewById(R.id.font);
-        font.setOnClickListener(this);
+        evaluation = findViewById(R.id.evaluation);
+        evaluation.setOnClickListener(this);
 
         input = findViewById(R.id.input);
         input.setOnClickListener(this);
@@ -124,8 +124,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 //startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 selectSound();
                 break;
-            case R.id.font:
-                selectFont();
+            case R.id.evaluation:
+                selectEvaluation();
                 break;
             case R.id.input:
                 selectInput();
@@ -274,14 +274,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         s2.stop();
     }
 
-    /** Font
+    /** Evaluation
      * Some methods is missing
      */
 
-    public void selectFont(){
+    public void selectEvaluation(){
         selectSize = new AlertDialog.Builder(this).create();
         selectSize.setCancelable(true);
-        selectSize.setTitle(getString(R.string.select_font));
+        selectSize.setTitle(getString(R.string.select_evaluation));
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -318,7 +318,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-                //TODO: make some methode to font
+                //TODO: make some methode to evaluation
                 selectSize.dismiss();
             }
         });

@@ -68,7 +68,7 @@
     <string name="input">Input</string>
     <string name="reset">Reset</string>
     <string name="language">Language</string>
-    <string name="font">Font size</string>
+    <string name="evaluation">Evaluation</string>
     <string name="sound">Sound</string>
 
     <string name="games">Games</string>
@@ -82,7 +82,7 @@
     <string name="reset_btn">"Are you sure you want to reset all settings</string>
     <string name="select_lang">Select language</string>
     <string name="select_sound">Select call sound</string>
-    <string name="select_font">Select font</string>
+    <string name="select_evaluation">Select evaluation</string>
     <string name="size_small">Small</string>
     <string name="size_default">Default</string>
     <string name="size_large">Large</string>
@@ -95,6 +95,7 @@
     <string name="game_won_message">Yea! You found them all! Do you want to play again?</string>
     <string name="paintext" >where does it hurt?</string>
     <string name="memorytext">Tap the cards to find a match!</string>
+
     />
 
 
