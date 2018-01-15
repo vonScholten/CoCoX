@@ -34,7 +34,8 @@
         <activity
             android:name=".CallActivity"
             android:theme="@style/CallTheme" />
-        <activity android:name=".PuzzleActivity"></activity>
+        <activity android:name=".PuzzleActivity" />
+        <activity android:name=".WinnerActivity"></activity>
     </application>
 
 </manifest>
