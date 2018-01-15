@@ -366,7 +366,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-                //TODO: make some methode to font
+                //TODO: make some methode to Evaluation
                 selectInput.dismiss();
             }
         });
