@@ -125,7 +125,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 selectSound();
                 break;
             case R.id.evaluation:
-                selectEvaluation();
+
                 break;
             case R.id.input:
                 selectInput();
@@ -272,56 +272,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         defualt.stop();
         s1.stop();
         s2.stop();
-    }
-
-    /** Evaluation
-     * Some methods is missing
-     */
-
-    public void selectEvaluation(){
-        selectSize = new AlertDialog.Builder(this).create();
-        selectSize.setCancelable(true);
-        selectSize.setTitle(getString(R.string.select_evaluation));
-
-        LinearLayout layout = new LinearLayout(this);
-        layout.setOrientation(LinearLayout.VERTICAL);
-
-        ListView listView = new ListView(this);
-
-        //The array containing strings of available sizes for ui (full name)
-        final String[] size = {
-                getString(R.string.size_small),
-                getString(R.string.size_default),
-                getString(R.string.size_large)
-        };
-
-        //Uses ints as id
-        final int[] sizeId = {
-                1,
-                2,
-                3
-        };
-
-        final ArrayList<Integer> listSound = new ArrayList<Integer>();
-        for (int id : sizeId) { listSound.add(id); }
-
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, size);
-        listView.setAdapter(adapter);
-
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-
-        layout.addView(listView);
-        selectSize.setView(layout);
-        selectSize.show();
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-                //TODO: make some methode to evaluation
-                selectSize.dismiss();
-            }
-        });
     }
 
     /** Input
