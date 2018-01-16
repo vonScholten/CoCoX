@@ -11,6 +11,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton retur;
     ImageButton home;
     Button mememoryGame;
+    Button pop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         home.setOnClickListener(this);
         mememoryGame = (Button) findViewById(R.id.memory);
         mememoryGame.setOnClickListener(this);
+        pop = (Button) findViewById(R.id.balloon);
+        pop.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +39,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (view == mememoryGame){
             startActivity(new Intent(this,MemoryActivity.class));
+        }
+        else if(view == pop){
+            startActivity(new Intent(this, PopActivity.class));
         }
 
     }

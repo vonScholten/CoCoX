@@ -27,9 +27,9 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
         menu = findViewById(R.id.btn_menu);
         retur = findViewById(R.id.retur);
         home = findViewById(R.id.home);
+        kv = findViewById(R.id.konfettiView);
 
         menu.setOnClickListener(this);
-
 
         kv.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
