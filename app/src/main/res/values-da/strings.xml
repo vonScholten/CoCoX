@@ -95,7 +95,7 @@
     <string name="game_won_message">Yea! Du fandt dem alle! Vil du spille igen?</string>
     <string name="paintext" >Hvor gør det ondt?</string>
     <string name="memorytext">Tryk på kortene for at finde et sæt!</string>
-    <string name="gamesmenu">Spilmenu</string>
+    <string name="replay">Genstart spil</string>
     <string name="won">Tillykke! Du har vundet!</string>
 
     <string name="puzzletext">Klik først på en boks, derefter et billede</string>

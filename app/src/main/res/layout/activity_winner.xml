@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_menu"
+        android:id="@+id/btn_replay"
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_marginBottom="8dp"
@@ -84,7 +84,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/games"
-        android:text="@string/gamesmenu"
+        android:text="@string/replay"
         android:textColor="@color/activeSolid"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/call"

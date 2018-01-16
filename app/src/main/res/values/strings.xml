@@ -79,6 +79,7 @@
 
     <string name="keyboard_hint">Write your message here</string>
 
+    <!--settings-->
     <string name="reset_btn">"Are you sure you want to reset all settings</string>
     <string name="select_lang">Select language</string>
     <string name="select_sound">Select call sound</string>
@@ -89,14 +90,16 @@
     <string name="select_input">Select input method</string>
     <string name="input_touch">Touch</string>
     <string name="input_head">Head-controlled</string>
-
     <string name="found_match">Yea! You found a match!</string>
     <string name="game_won">Game won!</string>
     <string name="game_won_message">Yea! You found them all! Do you want to play again?</string>
-    <string name="paintext">where does it hurt?</string>
+    <string name="paintext" >Where does it hurt?</string>
     <string name="memorytext">Tap the cards to find a match!</string>
+    <string name="replay">Replay game</string>
+    <string name="won">Conratulations! You won!</string>
 
+    <string name="puzzletext">Click on a box, then a picture</string>
     />
-
+    <!--settings-->
 
 </resources>

@@ -15,7 +15,7 @@ import nl.dionsegijn.konfetti.models.Size;
 public class WinnerActivity extends AppCompatActivity implements View.OnClickListener{
 
     public KonfettiView kv;
-    public Button menu;
+    public Button replay;
     public ImageButton retur;
     public ImageButton home;
 
@@ -24,8 +24,8 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner);
 
-        menu = findViewById(R.id.btn_menu);
-        menu.setOnClickListener(this);
+        replay = findViewById(R.id.btn_replay);
+        replay.setOnClickListener(this);
 
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
@@ -52,9 +52,9 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        if(view==menu) {
-            Intent won = new Intent(WinnerActivity.this, GameActivity.class);
-            this.startActivity(won); }
+        if(view==replay) {
+            Intent replay = new Intent(WinnerActivity.this, PopActivity.class);
+            this.startActivity(replay); }
         else if (view==home){
             Intent home = new Intent(WinnerActivity.this, MainActivity.class);
             this.startActivity(home); }
