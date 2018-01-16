@@ -26,9 +26,6 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
     int index;
     boolean check;
 
-
-
-
     int[] image_ID = {
             R.id.puzzle1,
             R.id.puzzle2,
@@ -56,7 +53,6 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             R.drawable.puzzlecat6
     };
 
-
     int[] grid_ID = {
             R.id.puzzle7,
             R.id.puzzle8,
@@ -68,8 +64,6 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
     ArrayList<ImageView> empty = new ArrayList<>(grid_ID.length);
     ArrayList<ImageView> pieces = new ArrayList<>(image_ID.length);
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,20 +90,16 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             iv.setTag(id);
             empty.add(iv);
         }
-
     }
 
     @Override
     public void onClick(View view) {
 
-        if(view == retur) {
-            finish();
-        }
+        if(view == retur) {finish();}
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
-
         else if(view==call){
             startActivity(new Intent(this, CallActivity.class));
         }
@@ -146,36 +136,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    public void update(View view){
-        for (int id : grid_ID){
-
-        }
-    }
-
-
     public void checkGridArray(View view){
-      /*  for(int i =0; i<empty.size(); i++){
-
-            if (view.getId() == empty.get(i).getId()) {
-
-
-                for(int i2 =0; i2<empty.size(); i2++){
-
-                    if (bool[i2]) {
-
-                    }
-                    else{
-                        ImageView temp1 = findViewById(empty.get(i2).getId());
-                        temp1.setImageResource(R.drawable.puzzleborder);
-                    }
-                }
-                ImageView temp2;
-                temp2 = findViewById(empty.get(i).getId());
-                temp2.setImageResource(R.drawable.puzzlemarked);
-                index = i;
-                check = true;
-            }
-        }*/
 
       for(int i =0; i<empty.size(); i++)
         if (view.getId() == empty.get(i).getId())  index = i;
@@ -193,10 +154,8 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
           v.setImageResource(R.drawable.puzzlemarked);
       }
       check = true;
-      //bool[index] =true;
-
-
     }
+
     public void checkPiecesArray(View view){
         for (int i = 0; i < pieces.size(); i++){
             ImageView temp1 = findViewById(empty.get(index).getId());
@@ -209,9 +168,6 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
                 else if ((view.getId() == pieces.get(i).getId()) && check && bool[index] == true) {
                         bool[index] = false;
                     }
-
-                //empty.remove(index);
-
             }
         }
 

@@ -84,12 +84,10 @@
     <string name="select_lang">Vælg sprog</string>
     <string name="select_sound">Vælg kald lyd</string>
     <string name="select_evaluation">Vælg evaluering</string>
-    <string name="size_small">Lille</string>
-    <string name="size_default">Standard</string>
-    <string name="size_large">Stor</string>
     <string name="select_input">Vælg input metode</string>
     <string name="input_touch">Touch</string>
     <string name="input_head">Hovedestyring</string>
+
     <string name="found_match">Juhuu! Du fandt et sæt!</string>
     <string name="game_won">Du vandt!</string>
     <string name="game_won_message">Yea! Du fandt dem alle! Vil du spille igen?</string>
@@ -98,8 +96,9 @@
     <string name="replay">Genstart spil</string>
     <string name="won">Tillykke! Du har vundet!</string>
 
-    <string name="puzzletext">Klik først på en boks, derefter et billede</string>
-    <string name="poptext">Tryk på ballonerne for at poppe dem!</string>
+    <string name="puzzletext">Klik først på en boks\nderefter et billede</string>
+
+    <string name="hint">Hint</string>
 
     />
     <!--settings-->
