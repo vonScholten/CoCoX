@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -14,6 +15,8 @@ import java.util.Collections;
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
 
     public GridLayout grid;
+
+    Button call;
 
     public ImageButton backHome;
     public ImageButton back;
@@ -58,13 +61,16 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         System.out.println("----------------------|MemoryGame|---------------------- \n started");
 
 
-        grid = (GridLayout) findViewById(R.id.board);
+        grid = findViewById(R.id.board);
 
-        back = (ImageButton) findViewById(R.id.memory_home);
+        back = findViewById(R.id.memory_back);
         back.setOnClickListener(this);
 
-        backHome = (ImageButton) findViewById(R.id.memory_back);
+        backHome = findViewById(R.id.memory_home);
         backHome.setOnClickListener(this);
+
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
 
         System.out.println("INITIAL SETUP");
 
@@ -89,6 +95,10 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         else if (view == backHome) {
             this.startActivity(new Intent(this,MainActivity.class));
             finish();
+        }
+
+        else if(view==call){
+            startActivity(new Intent(this, CallActivity.class));
         }
         else { game(view); }
     }
