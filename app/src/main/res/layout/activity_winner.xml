@@ -62,7 +62,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="293dp"
+        android:layout_width="311dp"
         android:layout_height="121dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -77,20 +77,22 @@
 
     <Button
         android:id="@+id/btn_replay"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/games"
+        android:background="@drawable/button_games_shadow"
         android:text="@string/replay"
         android:textColor="@color/activeSolid"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/call"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/call"
+        app:layout_constraintVertical_bias="0.515" />
+
 
     <nl.dionsegijn.konfetti.KonfettiView
         android:id="@+id/konfettiView"
