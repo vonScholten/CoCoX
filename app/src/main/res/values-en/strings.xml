@@ -96,7 +96,7 @@
     <string name="replay">Replay game</string>
     <string name="won">Conratulations! You won!</string>
 
-    <string name="puzzletext">Click on a box\nthen a picture</string>
+    <string name="puzzletext">Tap on a box\nthen a picture\nto play!</string>
 
     <string name="hint">Hint</string>
     <string name="poptext">Tap the balloons to pop!</string>

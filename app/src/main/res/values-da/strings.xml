@@ -96,7 +96,7 @@
     <string name="replay">Genstart spil</string>
     <string name="won">Tillykke! Du har vundet!</string>
 
-    <string name="puzzletext">Klik først på en boks\nderefter et billede</string>
+    <string name="puzzletext">Tryk først på en boks\nderefter et billede for\nat spille!</string>
 
     <string name="hint">Hint</string>
     <string name="poptext">Tryk på ballonerne for at poppe dem!</string>
