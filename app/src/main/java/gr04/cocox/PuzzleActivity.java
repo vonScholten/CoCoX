@@ -1,26 +1,33 @@
 package gr04.cocox;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
 public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button hint;
-    int index;
-    boolean check;
+    Button call;
     ImageButton retur;
     ImageButton home;
-    Button call;
+    int index;
+    boolean check;
 
-    //TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs);
+
+
 
     int[] image_ID = {
             R.id.puzzle1,
@@ -74,6 +81,8 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
         home.setOnClickListener(this);
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
+        hint = findViewById(R.id.hint);
+        hint.setOnClickListener(this);
 
         for (int id : image_ID){
             ImageView iv = findViewById(id);
@@ -99,17 +108,17 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
         }
 
         else if(view==call){
             startActivity(new Intent(this, CallActivity.class));
-
+        }
+        else if(view==hint){
+            showImage();
         }
 
         switch (view.getId()){
             case R.id.puzzle1 : checkPiecesArray(view);
-            //System.out.println(imgs);
                 break;
             case R.id.puzzle2 : checkPiecesArray(view);
                 break;
@@ -205,5 +214,25 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
             }
         }
+
+    public void showImage() {
+        Dialog builder = new Dialog(this);
+        builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        builder.getWindow().setBackgroundDrawable(
+                new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                //nothing;
+            }
+        });
+
+        ImageView imageView = new ImageView(this);
+        imageView.setImageResource(R.drawable.puzzlecat);
+        builder.addContentView(imageView, new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT));
+        builder.show();
+    }
     }
 

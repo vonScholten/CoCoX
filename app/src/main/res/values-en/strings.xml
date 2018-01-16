@@ -97,6 +97,8 @@
     <string name="memorytext">Tap the cards to find a match!</string>
     <string name="gamesmenu">Games menu</string>
     <string name="won">Conratulations! You won!</string>
+
+    <string name="puzzletext">Click on a box, then a picture</string>
     />
     <!--settings-->
 

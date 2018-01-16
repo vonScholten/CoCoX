@@ -98,6 +98,8 @@
     <string name="gamesmenu">Spilmenu</string>
     <string name="won">Tillykke! Du har vundet!</string>
 
+    <string name="puzzletext">Klik først på en boks, derefter et billede</string>
+
     />
     <!--settings-->
 
