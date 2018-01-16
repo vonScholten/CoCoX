@@ -20,6 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -117,15 +119,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 builder.show();
                 break;
             case R.id.language:
-                //startActivity(new Intent(this, LanguageActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 selectLocal();
                 break;
             case R.id.sound:
-                //startActivity(new Intent(this, SoundActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 selectSound();
                 break;
             case R.id.evaluation:
-
                 break;
             case R.id.input:
                 selectInput();
@@ -252,6 +251,28 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
 
+                if(defualt.isPlaying()){defualt.stop();
+                    try {
+                        defualt.prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if (s1.isPlaying()){s1.stop();
+                    try {
+                        s1.prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if (s2.isPlaying()) {s2.stop();
+                    try {
+                        s2.prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
                 if(pos == 0) {defualt.start(); }
                 else if(pos == 1) {s1.start(); }
                 else if(pos == 2) {s2.start(); }
@@ -259,6 +280,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 saveSound(listSound.get(pos));
             }
         });
+
+
     }
 
     public void saveSound(int cs){
