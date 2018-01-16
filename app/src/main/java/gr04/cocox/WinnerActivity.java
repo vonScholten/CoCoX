@@ -24,9 +24,9 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner);
 
-        menu = (Button) findViewById(R.id.btn_menu);
-        retur = (ImageButton) findViewById(R.id.retur);
-        home = (ImageButton) findViewById(R.id.home);
+        menu = findViewById(R.id.btn_menu);
+        retur = findViewById(R.id.retur);
+        home = findViewById(R.id.home);
 
         menu.setOnClickListener(this);
 

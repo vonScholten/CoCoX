@@ -23,11 +23,11 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialogue);
-        retur = (ImageButton) findViewById(R.id.retur);
+        retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
-        home = (ImageButton) findViewById(R.id.home);
+        home = findViewById(R.id.home);
         home.setOnClickListener(this);
-        answers = (Button) findViewById(R.id.answer);
+        answers = findViewById(R.id.answer);
         answers.setOnClickListener(this);
         keyboard = findViewById(R.id.keyboard);
         keyboard.setOnClickListener(this);
@@ -77,6 +77,6 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
 
         if (view == call)
             startActivity(new Intent(this, CallActivity.class));
-        
+
     }
 }

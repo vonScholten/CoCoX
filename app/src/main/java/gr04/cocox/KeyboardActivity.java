@@ -16,9 +16,9 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_keyboard);
 
-        back = (ImageButton) findViewById(R.id.keyboard_back);
+        back = findViewById(R.id.keyboard_back);
         back.setOnClickListener(this);
-        home = (ImageButton) findViewById(R.id.keyboard_home);
+        home = findViewById(R.id.keyboard_home);
         home.setOnClickListener(this);
 
 

@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeLang(loadLocale()); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_main);
 
-        games = (Button) findViewById(R.id.games);
+        games = findViewById(R.id.games);
         games.setOnClickListener(this);
-        dialogue = (Button) findViewById(R.id.dialogue);
+        dialogue = findViewById(R.id.dialogue);
         dialogue.setOnClickListener(this);
-        settings = (ImageButton) findViewById(R.id.settings);
+        settings = findViewById(R.id.settings);
         settings.setOnClickListener(this);
-        call = (Button) findViewById(R.id.call);
+        call = findViewById(R.id.call);
         call.setOnClickListener(this);
     }
 
