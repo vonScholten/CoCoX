@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import java.util.ArrayList;
@@ -20,19 +21,23 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
     public ImageButton home;
     public ImageButton retur;
     public ImageButton clicked;
+    Button call;
     public Random rand = new Random();
     public int counter = 0;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
-        home = (ImageButton) findViewById(R.id.pop_home);
-        retur = (ImageButton) findViewById(R.id.pop_back);
 
+        home = findViewById(R.id.pop_home);
         home.setOnClickListener(this);
+        retur = findViewById(R.id.pop_back);
         retur.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
 
         popGrid = (GridLayout) findViewById(R.id.popGrid);
         ArrayList <ImageButton> items = new ArrayList<ImageButton>();
@@ -77,12 +82,15 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
         else if(view==retur){
             finish();
         }
+        else if(view==call){
+        startActivity(new Intent(this, CallActivity.class));
+        }
+
         else{
             clicked = (ImageButton) view;
             clicked.setSelected(true);
             counter++;
             check();
-
 
         }
     }

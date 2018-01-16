@@ -25,12 +25,19 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_winner);
 
         menu = findViewById(R.id.btn_menu);
-        retur = findViewById(R.id.retur);
-        home = findViewById(R.id.home);
-        kv = findViewById(R.id.konfettiView);
-
         menu.setOnClickListener(this);
 
+        retur = findViewById(R.id.retur);
+        retur.setOnClickListener(this);
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(this);
+
+        kv = findViewById(R.id.konfettiView);
+
+
+
+        int width = getResources().getDisplayMetrics().widthPixels;
         kv.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
                 .setDirection(0.0, 359.0)
@@ -39,7 +46,7 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
                 .setTimeToLive(2000L)
                 .addShapes(Shape.RECT, Shape.CIRCLE)
                 .addSizes(new Size(12,5f))
-                .setPosition(-50f, kv.getWidth() + 50f, -50f, -50f)
+                .setPosition(-50f, width + 50f, -50f, -50f)
                 .stream(300, 5000L);
     }
 
