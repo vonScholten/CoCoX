@@ -18,6 +18,7 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
     public Button replay;
     public ImageButton retur;
     public ImageButton home;
+    Button call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,10 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
 
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
+
         kv = findViewById(R.id.konfettiView);
-
-
 
         int width = getResources().getDisplayMetrics().widthPixels;
         kv.build()
@@ -53,17 +55,17 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if(view==replay) {
-            Intent replay = new Intent(WinnerActivity.this, PopActivity.class);
-            this.startActivity(replay); }
+            Intent replay = new Intent(WinnerActivity.this, GameActivity.class);
+            this.startActivity(replay); } //<- skal fikses så den replayer til sidste spil
         else if (view==home){
             Intent home = new Intent(WinnerActivity.this, MainActivity.class);
             this.startActivity(home); }
+        else if(view==call){
+            startActivity(new Intent(this, CallActivity.class));
+        }
         else if (view==retur) {
             finish();
             }
-
-
-
     }
 }
 
