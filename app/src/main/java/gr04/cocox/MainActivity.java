@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.settings:
                 startActivity(new Intent(this, SettingsActivity.class));
         }
+
+        if(view==call){
+        startActivity(new Intent(this, CallActivity.class));
+
+        }
     }
 
     public String loadLocale() {

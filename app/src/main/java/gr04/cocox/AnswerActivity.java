@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class AnswerActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton retur;
     ImageButton home;
+    Button call;
 
     Button selected;
     Button refresh;
@@ -38,6 +39,8 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
 
         for (int id : btn_ID) {
             Button button = findViewById(id);
@@ -48,12 +51,22 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
+
         if (view == retur) {
             finish();
-        } else if (view == home) {
+        }
+
+        else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
-        } else {
+        }
+
+        else if(view==call){
+        startActivity(new Intent(this, CallActivity.class));
+
+        }
+
+        else {
             System.out.println("[1] DEBUG: button id: " + view.getId());
             for (int id : btn_ID) {
 

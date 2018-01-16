@@ -17,6 +17,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView bodyback;
     ImageButton retur;
     ImageButton home;
+    Button call;
 
 
     int[]btn_id = {
@@ -69,6 +70,8 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
         retur.setOnClickListener(this);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
     }
 
     public void addListenerOnButton() {
@@ -92,7 +95,16 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
-        else { pain(view); } }
+
+        else if(view==call) {
+            startActivity(new Intent(this, CallActivity.class));
+
+        }
+
+        else { pain(view);
+
+        }
+    }
 
     public void pain(View view) {
         switch (view.getId()) {

@@ -17,6 +17,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
     Button selected;
     Button refresh;
+    Button call;
 
     int activeIndex;
 
@@ -42,10 +43,12 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
-        retur = (ImageButton) findViewById(R.id.retur);
+        retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
-        home = (ImageButton) findViewById(R.id.home);
+        home = findViewById(R.id.home);
         home.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
 
         for (int id : btn_ID){
             Button button = findViewById(id);
@@ -62,6 +65,11 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
+        }
+
+        else if(view==call) {
+            startActivity(new Intent(this, CallActivity.class));
 
         }
 

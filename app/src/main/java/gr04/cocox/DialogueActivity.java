@@ -17,6 +17,7 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
     Button mood;
     Button questions;
     Button aktivitet;
+    Button call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,32 +39,44 @@ public class DialogueActivity extends AppCompatActivity implements View.OnClickL
         questions.setOnClickListener(this);
         aktivitet = findViewById(R.id.activity);
         aktivitet.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()){
-            case R.id.retur: finish();
+        switch (view.getId()) {
+            case R.id.retur:
+                finish();
                 break;
-            case R.id.home: finish();
+            case R.id.home:
+                finish();
                 startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 break;
-            case R.id.answer: startActivity(new Intent(this, AnswerActivity.class));
+            case R.id.answer:
+                startActivity(new Intent(this, AnswerActivity.class));
                 break;
-            case R.id.keyboard: startActivity(new Intent(this, KeyboardActivity.class));
+            case R.id.keyboard:
+                startActivity(new Intent(this, KeyboardActivity.class));
                 break;
-            case R.id.pain: startActivity(new Intent(this, PainActivity.class));
+            case R.id.pain:
+                startActivity(new Intent(this, PainActivity.class));
                 break;
-            case R.id.mood: startActivity(new Intent(this, MoodActivity.class));
+            case R.id.mood:
+                startActivity(new Intent(this, MoodActivity.class));
                 break;
-            case R.id.questions: startActivity(new Intent(this, QuestionsActivity.class));
+            case R.id.questions:
+                startActivity(new Intent(this, QuestionsActivity.class));
                 break;
-            case R.id.activity: startActivity(new Intent(this, ActActivity.class));
+            case R.id.activity:
+                startActivity(new Intent(this, ActActivity.class));
                 break;
 
         }
 
-
+        if (view == call)
+            startActivity(new Intent(this, CallActivity.class));
+        
     }
 }

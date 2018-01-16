@@ -11,12 +11,13 @@ import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
-public class MoodActivity extends AppCompatActivity implements View.OnClickListener{
+public class MoodActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton retur;
     ImageButton home;
 
     Button selected;
     Button refresh;
+    Button call;
 
     int activeIndex;
 
@@ -41,12 +42,14 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
-        retur = (ImageButton) findViewById(R.id.retur);
+        retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
-        home = (ImageButton) findViewById(R.id.home);
+        home = findViewById(R.id.home);
         home.setOnClickListener(this);
+        call = findViewById(R.id.call);
+        call.setOnClickListener(this);
 
-        for (int id : btn_ID){
+        for (int id : btn_ID) {
             Button button = findViewById(id);
             button.setOnClickListener(this);
             inactive.add(button);
@@ -56,8 +59,9 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if(view == retur) {
+        if (view == retur) {
             finish();
+
         }
 
         else if (view == home) {
@@ -65,19 +69,24 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        else {
-            System.out.println("[1] DEBUG: button id: " + view.getId());
-            for (int id : btn_ID){
+        else if(view==call) {
+        startActivity(new Intent(this, CallActivity.class));
 
-                if(id == view.getId()){
-                    inactive.add(selected);
-                    selected = findViewById(id);
-                }
-            }
-            update();
         }
 
+        else {
+        System.out.println("[1] DEBUG: button id: " + view.getId());
+        for (int id : btn_ID) {
+
+            if (id == view.getId()) {
+                inactive.add(selected);
+                selected = findViewById(id);
+            }
+        }
+        update();
     }
+}
+
 
     public void update() {
         activeIndex = inactive.indexOf(selected);
