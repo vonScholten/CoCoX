@@ -112,7 +112,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             card.setOnClickListener(this);
 
             card.setImageResource(listDeck.get(i));
-            card.setTag(listDeck.get(i));
+            card.setTag(listDeck.get(listSet.indexOf(card)));
 
             listSet.add(card);
 

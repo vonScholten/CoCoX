@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "374752859531",
+    "firebase_url": "https://cocox-3e387.firebaseio.com",
+    "project_id": "cocox-3e387",
+    "storage_bucket": "cocox-3e387.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374752859531:android:0face84b8a605e5e",
+        "android_client_info": {
+          "package_name": "gr04.cocox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374752859531-bfjjhal8l2je0m3ep2u82k6j9rv52l7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvUmd5z9ZltU5cAm6iYdbLktbv-lSr7Sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
