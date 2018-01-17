@@ -12,16 +12,14 @@ import java.util.ArrayList;
 
 public class QuestionsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton retur;
-    ImageButton home;
+    public ImageButton retur;
+    public ImageButton home;
 
-    Button selected;
-    Button refresh;
-    Button call;
+    public Button selected;
+    public Button refresh;
+    public Button call;
 
-    int activeIndex;
-
-    int[] btn_ID = {
+    private int[] btn_ID = {
             R.id.doing,
             R.id.time,
             R.id.drink,
@@ -36,7 +34,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
             R.id.stuff
     };
 
-    ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
+    private ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,18 +57,17 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
+
         if(view == retur) {
             finish();
         }
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
         }
 
         else if(view==call) {
             startActivity(new Intent(this, CallActivity.class));
-
         }
 
         else {
@@ -84,12 +81,11 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
             }
             update();
         }
-
     }
 
     public void update() {
 
-        activeIndex = inactive.indexOf(selected);
+        int activeIndex = inactive.indexOf(selected);
 
         selected.setBackground(getDrawable(R.drawable.button_active)); // set background to "activeIndex.xml"
         selected.setTextColor(ContextCompat.getColor(this, R.color.activeText)); // set text color
