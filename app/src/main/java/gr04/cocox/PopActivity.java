@@ -42,7 +42,7 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
         popGrid = (GridLayout) findViewById(R.id.popGrid);
         ArrayList <ImageButton> items = new ArrayList<ImageButton>();
 
-        for(int i=0; i<7; i++){
+        for(int i=0; i<10; i++){
             ImageButton blop = new ImageButton(this);
             GridLayout.LayoutParams para = new GridLayout.LayoutParams();
             para.setMargins(1,1,1,1);
@@ -55,7 +55,7 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
             blop.setOnClickListener(this);
             items.add(blop);
         }
-        for(int i=0;i<43;i++){
+        for(int i=0;i<40;i++){
             ImageButton empty = new ImageButton(this);
             GridLayout.LayoutParams para = new GridLayout.LayoutParams();
             para.setMargins(1,1,1,1);
@@ -95,7 +95,7 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
         }
     }
     public void check(){
-        if(counter==7){
+        if(counter==10){
             startActivity(new Intent(this, WinnerActivity.class));
             finish();
 

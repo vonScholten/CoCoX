@@ -3,7 +3,6 @@ package gr04.cocox;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +34,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             R.id.puzzle6,
     };
 
-    boolean[] bool = {
+    boolean[] filled = {
             false,
             false,
             false,
@@ -140,14 +139,14 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
       for(int i =0; i<empty.size(); i++)
         if (view.getId() == empty.get(i).getId())  index = i;
-      else if (!bool[i]){
+      else if (!filled[i]){
             ImageView temp1 = findViewById(empty.get(i).getId());
             temp1.setImageResource(R.drawable.puzzleborder);
         }
 
-      if (bool[index]) {ImageView temp1 = findViewById(empty.get(index).getId());
+      if (filled[index]) {ImageView temp1 = findViewById(empty.get(index).getId());
           temp1.setImageResource(R.drawable.puzzlemarked);
-          bool[index] = false;
+          filled[index] = false;
       }
       else{
           ImageView v = (ImageView) view;
@@ -161,12 +160,12 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             ImageView temp1 = findViewById(empty.get(index).getId());
             if ((view.getId() == pieces.get(i).getId()) && check){
                 temp1.setImageResource(draw[i]);
-                if (bool[index] == false) {
-                    bool[index] = true;
+                if (filled[index] == false) {
+                    filled[index] = true;
                 }
             }
-                else if ((view.getId() == pieces.get(i).getId()) && check && bool[index] == true) {
-                        bool[index] = false;
+                else if ((view.getId() == pieces.get(i).getId()) && check && filled[index] == true) {
+                        filled[index] = false;
                     }
             }
         }
@@ -189,6 +188,10 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
         builder.show();
+    }
+
+    public void checkIfCorrect(View view){
+
     }
     }
 

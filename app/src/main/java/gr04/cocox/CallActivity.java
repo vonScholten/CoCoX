@@ -9,7 +9,6 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
-
 public class CallActivity extends Activity implements View.OnClickListener {
 
     Button call;
@@ -17,7 +16,6 @@ public class CallActivity extends Activity implements View.OnClickListener {
     MediaPlayer alertsound1;
     MediaPlayer alertsound2;
     MediaPlayer alertsound3;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public class CallActivity extends Activity implements View.OnClickListener {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.6), (int) (height*.8));
+        getWindow().setLayout((int) (width*.47), (int) (height*.8));
 
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
@@ -51,15 +49,12 @@ public class CallActivity extends Activity implements View.OnClickListener {
 
         if (currentSound == 1){
             alertsound1.start();
-
         }
         else if (currentSound == 2){
             alertsound2.start();
-
         }
         else if (currentSound == 3){
             alertsound3.start();
-
         }
 
     }
@@ -68,15 +63,12 @@ public class CallActivity extends Activity implements View.OnClickListener {
         super.onDestroy();
         if (currentSound == 1){
             alertsound1.stop();
-
         }
         else if (currentSound == 2){
             alertsound2.stop();
-
         }
         else if (currentSound == 3){
             alertsound3.stop();
-
         }
     }
 }
