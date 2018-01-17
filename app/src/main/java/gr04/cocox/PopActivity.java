@@ -10,22 +10,19 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
-
 
 public class PopActivity extends AppCompatActivity implements View.OnClickListener{
 
     public GridLayout popGrid;
-    public int balloons = R.drawable.balloons;
-    public int explosions = R.drawable.explosion;
+
     public ImageButton home;
     public ImageButton retur;
-    public ImageButton clicked;
-    Button call;
-    public Random rand = new Random();
-    public int counter = 0;
 
+    public Button call;
 
+    private int counter = 0;
+
+    private ArrayList <ImageButton> items = new ArrayList<ImageButton>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,37 +37,42 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
         call.setOnClickListener(this);
 
         popGrid = (GridLayout) findViewById(R.id.popGrid);
-        ArrayList <ImageButton> items = new ArrayList<ImageButton>();
 
-        for(int i=0; i<10; i++){
-            ImageButton blop = new ImageButton(this);
-            GridLayout.LayoutParams para = new GridLayout.LayoutParams();
-            para.setMargins(1,1,1,1);
-            blop.setImageResource(R.drawable.pop_selector);
-            blop.setLayoutParams(para);
-            blop.setTag(1);
-            blop.setMaxWidth(40);
-            blop.setMaxHeight(40);
-            blop.setBackgroundColor(Color.TRANSPARENT);
-            blop.setOnClickListener(this);
-            items.add(blop);
-        }
-        for(int i=0;i<40;i++){
-            ImageButton empty = new ImageButton(this);
-            GridLayout.LayoutParams para = new GridLayout.LayoutParams();
-            para.setMargins(1,1,1,1);
-            empty.setLayoutParams(para);
-            empty.setTag(0);
-            empty.setMaxWidth(40);
-            empty.setMaxHeight(40);
-            empty.setBackgroundColor(Color.TRANSPARENT);
-            items.add(empty);
-            }
+        createBalloon();
+        createEmpty();
 
         Collections.shuffle(items);
 
         for(ImageButton ib: items){
             popGrid.addView(ib);
+        }
+    }
+
+    public void createBalloon(){
+        for(int i=0; i<10; i++){
+            ImageButton balloon = new ImageButton(this);
+            GridLayout.LayoutParams para = new GridLayout.LayoutParams();
+            para.setMargins(1,1,1,1);
+            balloon.setLayoutParams(para);
+            balloon.setImageResource(R.drawable.pop_selector);
+            balloon.setMaxWidth(40);
+            balloon.setMaxHeight(40);
+            balloon.setBackgroundColor(Color.TRANSPARENT);
+            balloon.setOnClickListener(this);
+            items.add(balloon);
+        }
+    }
+
+    public void createEmpty(){
+        for(int i=0;i<40;i++){
+            ImageButton empty = new ImageButton(this);
+            GridLayout.LayoutParams para = new GridLayout.LayoutParams();
+            para.setMargins(1,1,1,1);
+            empty.setLayoutParams(para);
+            empty.setMaxWidth(40);
+            empty.setMaxHeight(40);
+            empty.setBackgroundColor(Color.TRANSPARENT);
+            items.add(empty);
         }
     }
 
@@ -83,22 +85,19 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
             finish();
         }
         else if(view==call){
-        startActivity(new Intent(this, CallActivity.class));
+            startActivity(new Intent(this, CallActivity.class));
         }
-
         else{
-            clicked = (ImageButton) view;
-            clicked.setSelected(true);
+            view.setSelected(true);
             counter++;
             check();
-
         }
     }
+
     public void check(){
         if(counter==10){
             startActivity(new Intent(this, WinnerActivity.class));
             finish();
-
         }
     }
 }
