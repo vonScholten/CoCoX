@@ -77,7 +77,7 @@
     <string name="english">English</string>
     <string name="danish">Danish</string>
 
-    <string name="keyboard_hint">Write your message here</string>
+    <string name="keyboard_hint">Please write your message here</string>
 
     <!--settings-->
     <string name="reset_btn">"Are you sure you want to reset all settings</string>

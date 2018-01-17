@@ -77,7 +77,7 @@
     <string name="english">Engelsk</string>
     <string name="danish">Dansk</string>
 
-    <string name="keyboard_hint">Skriv din besked her</string>
+    <string name="keyboard_hint">Skriv venligst din besked her</string>
 
     <!--settings-->
     <string name="reset_btn">"Er du sikker på at du vil resette alle indstillinger?</string>
