@@ -160,14 +160,18 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
     public void checkGridArray(View view){
 
-      for(int i =0; i<empty.size(); i++)
-        if (view.getId() == empty.get(i).getId())  index = i;
-      else if (!filled[i]){
-            ImageView temp1 = findViewById(empty.get(i).getId());
-            temp1.setImageResource(R.drawable.puzzleborder);
-        }
+      for(int i =0; i<empty.size(); i++) {
+          if (view.getId() == empty.get(i).getId()) {
+              index = i;
+          }
+          else if (!filled[i]) {
+              ImageView temp1 = findViewById(empty.get(i).getId());
+              temp1.setImageResource(R.drawable.puzzleborder);
+          }
+      }
 
-      if (filled[index]) {ImageView temp1 = findViewById(empty.get(index).getId());
+      if (filled[index]) {
+          ImageView temp1 = findViewById(empty.get(index).getId());
           temp1.setImageResource(R.drawable.puzzlemarked);
           filled[index] = false;
       }
@@ -180,18 +184,21 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
     public void checkPiecesArray(View view){
         for (int i = 0; i < pieces.size(); i++){
+
             ImageView temp1 = findViewById(empty.get(index).getId());
             if ((view.getId() == pieces.get(i).getId()) && check){
+
                 temp1.setImageResource(draw[i]);
+
                 if (filled[index] == false) {
                     filled[index] = true;
                 }
             }
-                else if ((view.getId() == pieces.get(i).getId()) && check && filled[index] == true) {
+            else if ((view.getId() == pieces.get(i).getId()) && check && filled[index] == true) {
                         filled[index] = false;
-                    }
             }
         }
+    }
 
     public void showImage() {
         Dialog builder = new Dialog(this);
