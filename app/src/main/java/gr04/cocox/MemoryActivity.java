@@ -112,7 +112,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             card.setOnClickListener(this);
 
             card.setImageResource(listDeck.get(i));
-            card.setTag(listDeck.get(listSet.indexOf(card)));
+            card.setTag(listDeck.get(i));
 
             listSet.add(card);
 
@@ -138,32 +138,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
         int tag = (int) selected.getTag();
         int index = listSet.indexOf(selected);
         System.out.println("tag: " + tag);
-
-        switch (view.getId()) {
-            case R.id.mem1:
-                logic(tag,index);
-                break;
-
-            case R.id.mem2:
-                logic(tag,index);
-                break;
-
-            case R.id.mem3:
-                logic(tag,index);
-                break;
-
-            case R.id.mem4:
-                logic(tag,index);
-                break;
-
-            case R.id.mem5:
-                logic(tag,index);
-                break;
-
-            case R.id.mem6:
-                logic(tag,index);
-                break;
-        }
+        logic(tag,index);
 
         if (flipCount == 3) {
             System.out.println("update on flip nr 3");
