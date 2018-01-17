@@ -16,14 +16,15 @@ import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button games;
-    Button dialogue;
-    ImageButton settings;
-    Button call;
+    public ImageButton settings;
 
-    Locale myLocale;
+    public Button games;
+    public Button dialogue;
+    public Button call;
 
-    SharedPreferences sharedPreferences;
+    public Locale myLocale;
+
+    public SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,30 +37,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         games = findViewById(R.id.games);
         games.setOnClickListener(this);
+
         dialogue = findViewById(R.id.dialogue);
         dialogue.setOnClickListener(this);
+
         settings = findViewById(R.id.settings);
         settings.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.games:
-                startActivity(new Intent(this, GameActivity.class));
-                break;
-            case R.id.dialogue:
-                startActivity(new Intent(this, DialogueActivity.class));
-                break;
-            case R.id.settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-        }
 
         if(view==call){
-        startActivity(new Intent(this, CallActivity.class));
-
+            startActivity(new Intent(this, CallActivity.class));
+        }
+        else {
+            switch (view.getId()) {
+                case R.id.games:
+                    startActivity(new Intent(this, GameActivity.class));
+                    break;
+                case R.id.dialogue:
+                    startActivity(new Intent(this, DialogueActivity.class));
+                    break;
+                case R.id.settings:
+                    startActivity(new Intent(this, SettingsActivity.class));
+            }
         }
     }
 

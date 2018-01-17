@@ -8,8 +8,8 @@ import android.widget.ImageButton;
 
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton back;
-    ImageButton home;
+    public ImageButton back;
+    public ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +18,9 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
 
         back = findViewById(R.id.keyboard_back);
         back.setOnClickListener(this);
+
         home = findViewById(R.id.keyboard_home);
         home.setOnClickListener(this);
-
-
     }
 
     @Override

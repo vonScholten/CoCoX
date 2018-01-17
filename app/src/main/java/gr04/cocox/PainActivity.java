@@ -13,14 +13,15 @@ import java.util.ArrayList;
 
 public class PainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView bodyfront;
-    ImageView bodyback;
-    ImageButton retur;
-    ImageButton home;
-    Button call;
+    public ImageView bodyfront;
+    public ImageView bodyback;
 
+    public ImageButton retur;
+    public ImageButton home;
 
-    int[]btn_id = {
+    public Button call;
+
+    private int[]btn_id = {
             R.id.leftfoot,
             R.id.leftlowerleg,
             R.id.leftupperleg,
@@ -57,7 +58,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.buttocks
     };
 
-    ArrayList<Button> buttons = new ArrayList<>(btn_id.length);
+    private ArrayList<Button> buttons = new ArrayList<>(btn_id.length);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,8 +69,10 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
 
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
     }
@@ -89,24 +92,26 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
         if(view == retur) {
             finish();
         }
+
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
 
         else if(view==call) {
             startActivity(new Intent(this, CallActivity.class));
-
         }
 
-        else { pain(view);
-
+        else {
+            pain(view);
         }
     }
 
     public void pain(View view) {
+
         switch (view.getId()) {
             case R.id.leftfoot:
                 bodyfront.setImageResource(R.drawable.leftfoot);

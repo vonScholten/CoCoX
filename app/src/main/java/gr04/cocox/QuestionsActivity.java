@@ -72,6 +72,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
         else {
             System.out.println("[1] DEBUG: button id: " + view.getId());
+
             for (int id : btn_ID){
 
                 if(id == view.getId()){

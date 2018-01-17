@@ -11,16 +11,16 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 
 public class AnswerActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageButton retur;
-    ImageButton home;
-    Button call;
 
-    Button selected;
-    Button refresh;
+    public ImageButton retur;
+    public ImageButton home;
 
-    int activeIndex;
+    public Button call;
 
-    int[] btn_ID = {
+    public Button selected;
+    public Button refresh;
+
+    private int[] btn_ID = {
             R.id.yes,
             R.id.no,
             R.id.dontknow,
@@ -29,16 +29,19 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
             R.id.maybe
     };
 
-    ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
+    private ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
 
@@ -58,18 +61,16 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
         }
 
         else if(view==call){
         startActivity(new Intent(this, CallActivity.class));
-
         }
 
         else {
             System.out.println("[1] DEBUG: button id: " + view.getId());
-            for (int id : btn_ID) {
 
+            for (int id : btn_ID) {
                 if (id == view.getId()) {
                     inactive.add(selected);
                     selected = findViewById(id);
@@ -80,7 +81,8 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void update() {
-        activeIndex = inactive.indexOf(selected);
+
+        int activeIndex = inactive.indexOf(selected);
 
         selected.setBackground(getDrawable(R.drawable.button_active)); // set background to "activeIndex.xml"
         selected.setTextColor(ContextCompat.getColor(this, R.color.activeText)); // set text color

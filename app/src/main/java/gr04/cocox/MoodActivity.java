@@ -12,16 +12,15 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 
 public class MoodActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageButton retur;
-    ImageButton home;
 
-    Button selected;
-    Button refresh;
-    Button call;
+    public ImageButton retur;
+    public ImageButton home;
 
-    int activeIndex;
+    public Button selected;
+    public Button refresh;
+    public Button call;
 
-    int[] btn_ID = {
+    private int[] btn_ID = {
             R.id.content,
             R.id.happy,
             R.id.bored,
@@ -36,16 +35,19 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
             R.id.sore
     };
 
-    ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
+    private ArrayList<Button> inactive = new ArrayList<>(btn_ID.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
+
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
 
@@ -61,35 +63,33 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
 
         if (view == retur) {
             finish();
-
         }
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
         }
 
-        else if(view==call) {
-        startActivity(new Intent(this, CallActivity.class));
-
+        else if (view == call) {
+            startActivity(new Intent(this, CallActivity.class));
         }
 
         else {
-        System.out.println("[1] DEBUG: button id: " + view.getId());
-        for (int id : btn_ID) {
+            System.out.println("[1] DEBUG: button id: " + view.getId());
+            for (int id : btn_ID) {
 
-            if (id == view.getId()) {
-                inactive.add(selected);
-                selected = findViewById(id);
+                if (id == view.getId()) {
+                    inactive.add(selected);
+                    selected = findViewById(id);
+                }
             }
+            update();
         }
-        update();
     }
-}
 
 
     public void update() {
-        activeIndex = inactive.indexOf(selected);
+
+        int activeIndex = inactive.indexOf(selected);
 
         selected.setBackground(getDrawable(R.drawable.button_active)); // set background to "activeIndex.xml"
         selected.setTextColor(ContextCompat.getColor(this, R.color.activeText)); // set text color

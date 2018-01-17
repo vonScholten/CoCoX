@@ -31,8 +31,10 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
 
         home = findViewById(R.id.pop_home);
         home.setOnClickListener(this);
+
         retur = findViewById(R.id.pop_back);
         retur.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
 

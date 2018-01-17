@@ -27,27 +27,27 @@ import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton retur;
-    ImageButton home;
+    public ImageButton retur;
+    public ImageButton home;
 
-    Button language;
-    Button reset;
-    Button sound;
-    Button evaluation;
-    Button input;
+    public Button language;
+    public Button reset;
+    public Button sound;
+    public Button evaluation;
+    public Button input;
 
-    SharedPreferences sharedPreferences;
+    public SharedPreferences sharedPreferences;
 
-    AlertDialog selectLocal;
-    AlertDialog selectSound;
-    AlertDialog selectSize;
-    AlertDialog selectInput;
+    public AlertDialog selectLocal;
+    public AlertDialog selectSound;
+    public AlertDialog selectSize;
+    public AlertDialog selectInput;
 
-    Locale myLocale;
+    public Locale myLocale;
 
-    MediaPlayer defualt;
-    MediaPlayer s1;
-    MediaPlayer s2;
+    public MediaPlayer defualt;
+    public MediaPlayer s1;
+    public MediaPlayer s2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

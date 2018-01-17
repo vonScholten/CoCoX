@@ -8,12 +8,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageButton retur;
-    ImageButton home;
-    Button mememoryGame;
-    Button pop;
-    Button puzzle;
-    Button call;
+
+    public ImageButton retur;
+    public ImageButton home;
+
+    public Button mememoryGame;
+    public Button pop;
+    public Button puzzle;
+    public Button call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +24,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         retur = (ImageButton) findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = (ImageButton) findViewById(R.id.home);
         home.setOnClickListener(this);
+
         mememoryGame = (Button) findViewById(R.id.memory);
         mememoryGame.setOnClickListener(this);
+
         pop = (Button) findViewById(R.id.balloon);
         pop.setOnClickListener(this);
+
         puzzle = findViewById(R.id.puzzle);
         puzzle.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
     }

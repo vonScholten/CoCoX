@@ -11,11 +11,11 @@ import android.widget.Button;
 
 public class CallActivity extends Activity implements View.OnClickListener {
 
-    Button call;
-    int currentSound;
-    MediaPlayer alertsound1;
-    MediaPlayer alertsound2;
-    MediaPlayer alertsound3;
+    public Button call;
+    private int currentSound;
+    public MediaPlayer alertsound1;
+    public MediaPlayer alertsound2;
+    public MediaPlayer alertsound3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,6 @@ public class CallActivity extends Activity implements View.OnClickListener {
         else if (currentSound == 3){
             alertsound3.start();
         }
-
     }
 
     public void onDestroy() {

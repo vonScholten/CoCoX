@@ -18,14 +18,16 @@ import java.util.ArrayList;
 
 public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button hint;
-    Button call;
-    ImageButton retur;
-    ImageButton home;
-    int index;
-    boolean check;
+    public Button hint;
+    public Button call;
 
-    int[] image_ID = {
+    public ImageButton retur;
+    public ImageButton home;
+
+    private int index;
+    private boolean check;
+
+    private int[] image_ID = {
             R.id.puzzle1,
             R.id.puzzle2,
             R.id.puzzle3,
@@ -34,7 +36,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             R.id.puzzle6,
     };
 
-    boolean[] filled = {
+    private boolean[] filled = {
             false,
             false,
             false,
@@ -43,7 +45,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             false
     };
 
-    int[] draw = {
+    private int[] draw = {
             R.drawable.puzzlecat1,
             R.drawable.puzzlecat2,
             R.drawable.puzzlecat3,
@@ -52,7 +54,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             R.drawable.puzzlecat6
     };
 
-    int[] grid_ID = {
+    private int[] grid_ID = {
             R.id.puzzle7,
             R.id.puzzle8,
             R.id.puzzle9,
@@ -61,19 +63,23 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             R.id.puzzle12
     };
 
-    ArrayList<ImageView> empty = new ArrayList<>(grid_ID.length);
-    ArrayList<ImageView> pieces = new ArrayList<>(image_ID.length);
+    private ArrayList<ImageView> empty = new ArrayList<>(grid_ID.length);
+    private ArrayList<ImageView> pieces = new ArrayList<>(image_ID.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle);
+
         retur = findViewById(R.id.retur);
         retur.setOnClickListener(this);
+
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
+
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
+
         hint = findViewById(R.id.hint);
         hint.setOnClickListener(this);
 
@@ -94,45 +100,62 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
-        if(view == retur) {finish();}
+        if(view == retur) {
+            finish();
+        }
 
         else if (view == home) {
             startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
+
         else if(view==call){
             startActivity(new Intent(this, CallActivity.class));
         }
+
         else if(view==hint){
             showImage();
         }
 
-        switch (view.getId()){
-            case R.id.puzzle1 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle2 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle3 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle4 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle5 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle6 : checkPiecesArray(view);
-                break;
-            case R.id.puzzle7 : checkGridArray(view);
-                break;
-            case R.id.puzzle8 : checkGridArray(view);
-                break;
-            case R.id.puzzle9 : checkGridArray(view);
-                break;
-            case R.id.puzzle10 : checkGridArray(view);
-                break;
-            case R.id.puzzle11 : checkGridArray(view);
-                break;
-            case R.id.puzzle12 : checkGridArray(view);
-                break;
+        else {
+            switch (view.getId()) {
+                case R.id.puzzle1:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle2:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle3:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle4:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle5:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle6:
+                    checkPiecesArray(view);
+                    break;
+                case R.id.puzzle7:
+                    checkGridArray(view);
+                    break;
+                case R.id.puzzle8:
+                    checkGridArray(view);
+                    break;
+                case R.id.puzzle9:
+                    checkGridArray(view);
+                    break;
+                case R.id.puzzle10:
+                    checkGridArray(view);
+                    break;
+                case R.id.puzzle11:
+                    checkGridArray(view);
+                    break;
+                case R.id.puzzle12:
+                    checkGridArray(view);
+                    break;
+            }
         }
-
     }
 
     public void checkGridArray(View view){

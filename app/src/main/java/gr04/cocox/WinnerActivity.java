@@ -15,10 +15,12 @@ import nl.dionsegijn.konfetti.models.Size;
 public class WinnerActivity extends AppCompatActivity implements View.OnClickListener{
 
     public KonfettiView kv;
-    public Button replay;
+
     public ImageButton retur;
     public ImageButton home;
-    Button call;
+
+    public Button call;
+    public Button replay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,18 +56,24 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        if(view==replay) {
+
+        if(view==replay) { //<- skal fikses så den replayer til sidste spil
             Intent replay = new Intent(WinnerActivity.this, GameActivity.class);
-            this.startActivity(replay); } //<- skal fikses så den replayer til sidste spil
+            this.startActivity(replay);
+        }
+
         else if (view==home){
             Intent home = new Intent(WinnerActivity.this, MainActivity.class);
-            this.startActivity(home); }
+            this.startActivity(home);
+        }
+
         else if(view==call){
             startActivity(new Intent(this, CallActivity.class));
         }
+
         else if (view==retur) {
             finish();
-            }
+        }
     }
 }
 
