@@ -244,8 +244,6 @@
             android:layout_marginStart="3dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/puzzleborder"/>
-
-
     </GridLayout>
 
     <TextView
