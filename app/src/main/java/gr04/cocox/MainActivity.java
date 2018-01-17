@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import com.crashlytics.android.Crashlytics;
 
+import org.intellij.lang.annotations.Language;
+
 import java.util.Locale;
 
 import io.fabric.sdk.android.Fabric;
@@ -26,13 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public SharedPreferences sharedPreferences;
 
+    public LocalLanguage lang = new LocalLanguage();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        changeLang(loadLocale()); //change language from sharedPreferences BEFORE setContentView!
+        lang.setLangauge(this);
+        //setLocale(loadLocale()); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_main);
 
         games = findViewById(R.id.games);
@@ -68,13 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /*
     public String loadLocale() {
         String lang = sharedPreferences.getString("lang", "da");
         System.out.println("lang: " + lang + " loaded");
         return lang;
     }
 
-    public void changeLang(String lang) {
+    public void setLocale(String lang) {
         if (lang.equalsIgnoreCase(""))
             return;
         myLocale = new Locale(lang);
@@ -84,4 +90,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 
     }
+    */
 }
