@@ -11,16 +11,18 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class PopActivity extends AppCompatActivity implements View.OnClickListener{
 
     public GridLayout popGrid;
+
     public ImageButton home;
     public ImageButton retur;
-    Button call;
-    public int counter = 0;
 
-    ArrayList <ImageButton> items = new ArrayList<ImageButton>();
+    public Button call;
+
+    private int counter = 0;
+
+    private ArrayList <ImageButton> items = new ArrayList<ImageButton>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,14 +91,13 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
             view.setSelected(true);
             counter++;
             check();
-
         }
     }
+
     public void check(){
         if(counter==10){
             startActivity(new Intent(this, WinnerActivity.class));
             finish();
-
         }
     }
 }

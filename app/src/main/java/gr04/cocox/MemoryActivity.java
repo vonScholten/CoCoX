@@ -16,14 +16,14 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
 
     public GridLayout grid;
 
-    Button call;
+    public Button call;
 
     public ImageButton backHome;
     public ImageButton back;
 
     public ImageButton selected;
 
-    int[] set = {
+    private int[] set = {
             R.id.mem1,
             R.id.mem2,
             R.id.mem3,
@@ -32,26 +32,25 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
             R.id.mem6
     };
 
-    int[] deck = {
+    private int[] deck = {
             R.drawable.mem1_selector,
             R.drawable.mem2_selector,
             R.drawable.mem3_selector
     };
 
-    ArrayList<ImageButton> listSet = new ArrayList<ImageButton>(set.length);
-    ArrayList<Integer> listDeck = new ArrayList<Integer>(deck.length);
+    private ArrayList<ImageButton> listSet = new ArrayList<ImageButton>(set.length);
+    private ArrayList<Integer> listDeck = new ArrayList<Integer>(deck.length);
 
-    int i0;
-    int tag1;
-    int tag2;
-    int index1;
-    int index2;
-    int flipCount;
-    int matchCount;
-    int winningNbr;
+    private int tag1;
+    private int tag2;
+    private int index1;
+    private int index2;
+    private int flipCount;
+    private int matchCount;
+    private int winningNbr;
 
-    boolean isSet_i1;
-    boolean isSet_i2;
+    private boolean isSet_i1;
+    private boolean isSet_i2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
