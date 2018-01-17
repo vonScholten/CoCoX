@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public Button hint;
     public Button call;
 
@@ -69,6 +71,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_puzzle);
 
         retur = findViewById(R.id.retur);

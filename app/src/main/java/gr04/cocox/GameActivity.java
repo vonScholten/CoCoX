@@ -9,6 +9,8 @@ import android.widget.ImageButton;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton retur;
     public ImageButton home;
 
@@ -20,6 +22,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_game);
 
         retur = (ImageButton) findViewById(R.id.retur);

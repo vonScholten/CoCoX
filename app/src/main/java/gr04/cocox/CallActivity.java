@@ -11,8 +11,12 @@ import android.widget.Button;
 
 public class CallActivity extends Activity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public Button call;
+
     private int currentSound;
+
     public MediaPlayer alertsound1;
     public MediaPlayer alertsound2;
     public MediaPlayer alertsound3;
@@ -20,6 +24,7 @@ public class CallActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_call);
 
         DisplayMetrics dm = new DisplayMetrics();

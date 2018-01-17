@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class QuestionsActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton retur;
     public ImageButton home;
 
@@ -39,6 +41,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_questions);
 
         retur = findViewById(R.id.retur);

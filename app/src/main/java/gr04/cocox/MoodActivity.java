@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class MoodActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton retur;
     public ImageButton home;
 
@@ -40,6 +42,7 @@ public class MoodActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_mood);
 
         retur = findViewById(R.id.retur);

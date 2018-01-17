@@ -18,6 +18,8 @@ import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton settings;
 
     public Button games;
@@ -28,16 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public SharedPreferences sharedPreferences;
 
-    public LocalLanguage lang = new LocalLanguage();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        lang.setLangauge(this);
-        //setLocale(loadLocale()); //change language from sharedPreferences BEFORE setContentView!
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
+        //setLocale(loadLocale());
         setContentView(R.layout.activity_main);
 
         games = findViewById(R.id.games);

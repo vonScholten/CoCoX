@@ -14,6 +14,8 @@ import java.util.Collections;
 
 public class MemoryActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public GridLayout grid;
 
     public Button call;
@@ -55,6 +57,7 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_memory);
 
         System.out.println("----------------------|MemoryGame|---------------------- \n started");

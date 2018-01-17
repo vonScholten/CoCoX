@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class PainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageView bodyfront;
     public ImageView bodyback;
 
@@ -63,6 +65,7 @@ public class PainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_pain);
 
         addListenerOnButton();

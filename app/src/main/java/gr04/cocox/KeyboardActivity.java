@@ -8,12 +8,15 @@ import android.widget.ImageButton;
 
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton back;
     public ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_keyboard);
 
         back = findViewById(R.id.keyboard_back);

@@ -14,6 +14,8 @@ import nl.dionsegijn.konfetti.models.Size;
 
 public class WinnerActivity extends AppCompatActivity implements View.OnClickListener{
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public KonfettiView kv;
 
     public ImageButton retur;
@@ -27,6 +29,7 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_winner);
 
         replay = findViewById(R.id.btn_replay);

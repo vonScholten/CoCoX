@@ -27,6 +27,8 @@ import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public ImageButton retur;
     public ImageButton home;
 
@@ -52,6 +54,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_settings);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);

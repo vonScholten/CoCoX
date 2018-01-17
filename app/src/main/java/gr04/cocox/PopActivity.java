@@ -13,6 +13,8 @@ import java.util.Collections;
 
 public class PopActivity extends AppCompatActivity implements View.OnClickListener{
 
+    public LocalLanguage lang = new LocalLanguage();
+
     public GridLayout popGrid;
 
     public ImageButton home;
@@ -27,6 +29,7 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
         setContentView(R.layout.activity_pop);
 
         home = findViewById(R.id.pop_home);
