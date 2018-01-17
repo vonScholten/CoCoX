@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "374752859531-uv8lfaehiufttomejsc2kiv8tbn2t7oq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gr04.cocox",
+            "certificate_hash": "befc18e7aa6f6ca5945d057cc88d3985147fa77f"
+          }
+        },
+        {
           "client_id": "374752859531-bfjjhal8l2je0m3ep2u82k6j9rv52l7g.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374752859531-bfjjhal8l2je0m3ep2u82k6j9rv52l7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
