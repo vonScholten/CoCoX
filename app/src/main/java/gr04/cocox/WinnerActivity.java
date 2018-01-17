@@ -22,6 +22,8 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
     public Button call;
     public Button replay;
 
+    private String lastReplay;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,13 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
 
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
+
+        Bundle replayData = getIntent().getExtras(); //get bundle
+
+        if (replayData != null) { //if the bundle is not empty
+            lastReplay = replayData.getString("replay");
+            System.out.println(replay);
+        }
 
         kv = findViewById(R.id.konfettiView);
 
@@ -57,9 +66,27 @@ public class WinnerActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
-        if(view==replay) { //<- skal fikses så den replayer til sidste spil
-            Intent replay = new Intent(WinnerActivity.this, GameActivity.class);
-            this.startActivity(replay);
+        if(view==replay) {
+            switch (lastReplay) {
+                case "pop": {
+                    Intent replay = new Intent(WinnerActivity.this, PopActivity.class);
+                    this.startActivity(replay);
+                    finish();
+                    break;
+                }
+                case "memo": {
+                    Intent replay = new Intent(WinnerActivity.this, MemoryActivity.class);
+                    this.startActivity(replay);
+                    finish();
+                    break;
+                }
+                default: {
+                    Intent replay = new Intent(WinnerActivity.this, GameActivity.class);
+                    this.startActivity(replay);
+                    finish();
+                    break;
+                }
+            }
         }
 
         else if (view==home){

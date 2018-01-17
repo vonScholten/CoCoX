@@ -212,7 +212,9 @@ public class MemoryActivity extends AppCompatActivity implements View.OnClickLis
     public void gameWon() {
         System.out.println("GAME WON \n ----------------------|MemoryGame|----------------------");
 
-        startActivity(new Intent(this, WinnerActivity.class));
+        Intent won = new Intent(this,WinnerActivity.class);
+        won.putExtra("replay","memo");
+        this.startActivity(won);
         finish();
     }
 }

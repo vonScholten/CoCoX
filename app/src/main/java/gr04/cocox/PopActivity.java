@@ -98,7 +98,9 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
 
     public void check(){
         if(counter==10){
-            startActivity(new Intent(this, WinnerActivity.class));
+            Intent won = new Intent(this,WinnerActivity.class);
+            won.putExtra("replay","pop");
+            this.startActivity(won);
             finish();
         }
     }
