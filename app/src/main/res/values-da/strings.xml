@@ -5,7 +5,7 @@
     <string name="home">Hjem</string>
     <string name="call">Kald</string>
 
-    <string name="callmessage">Tryk igen for kald</string>
+    <string name="callmessage">Tryk igen\nfor kald</string>
 
     <string name="answer">Svar</string>
     <string name="activities">Aktiviteter</string>

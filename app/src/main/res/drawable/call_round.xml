@@ -19,8 +19,8 @@
         android:radius="360dp"
         />
     <size
-        android:width="600dp"
-        android:height="600dp"
+        android:width="470dp"
+        android:height="470dp"
         />
 
 </shape>
