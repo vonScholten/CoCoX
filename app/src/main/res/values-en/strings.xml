@@ -92,7 +92,7 @@
     <string name="game_won">Game won!</string>
     <string name="game_won_message">Yea! You found them all! Do you want to play again?</string>
     <string name="paintext" >Where does it hurt?</string>
-    <string name="memorytext">Tap the cards to find a match!</string>
+    <string name="memorytext">Tap the cards\nto find a match!</string>
     <string name="replay">Replay game</string>
     <string name="won">Conratulations! You won!</string>
 
@@ -100,6 +100,8 @@
 
     <string name="hint">Hint</string>
     <string name="poptext">Tap the balloons to pop!</string>
+
+    <string name="incomplete">Under construction </string>
     />
     <!--settings-->
 

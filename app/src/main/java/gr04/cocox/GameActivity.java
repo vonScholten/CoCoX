@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -18,6 +19,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public Button pop;
     public Button puzzle;
     public Button call;
+    public Button quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         call = findViewById(R.id.call);
         call.setOnClickListener(this);
+
+        quiz = findViewById(R.id.quiz);
+        quiz.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +69,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (view == call){
             startActivity(new Intent(this,CallActivity.class));
+        }
+        else if (view == quiz){
+            Toast toast = Toast.makeText(GameActivity.this,"WIP", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 }

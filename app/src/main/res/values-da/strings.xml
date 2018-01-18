@@ -92,14 +92,16 @@
     <string name="game_won">Du vandt!</string>
     <string name="game_won_message">Yea! Du fandt dem alle! Vil du spille igen?</string>
     <string name="paintext" >Hvor gør det ondt?</string>
-    <string name="memorytext">Tryk på kortene for at finde et sæt!</string>
+    <string name="memorytext">Tryk på kortene\nfor at finde et sæt!</string>
     <string name="replay">Genstart spil</string>
     <string name="won">Tillykke! Du har vundet!</string>
 
     <string name="puzzletext">Tryk først på en boks\nderefter et billede for\nat spille!</string>
 
     <string name="hint">Hint</string>
-    <string name="poptext">Tryk på ballonerne for at poppe dem!</string>
+    <string name="poptext">Tryk på ballonerne\nfor at poppe dem!</string>
+
+    <string name="incomplete">Under konstruktion </string>
 
     />
     <!--settings-->

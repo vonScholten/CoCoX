@@ -25,6 +25,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import javax.xml.datatype.Duration;
+
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     public LocalLanguage lang = new LocalLanguage();
@@ -127,7 +129,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             case R.id.sound:
                 selectSound();
                 break;
-            case R.id.evaluation:
+            case R.id.evaluation: Toast toast = Toast.makeText(SettingsActivity.this,"WIP", Toast.LENGTH_SHORT);
+                toast.show();
                 break;
             case R.id.input:
                 selectInput();
@@ -343,6 +346,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
                 //TODO: make some methode to Evaluation
+                Toast toast = Toast.makeText(SettingsActivity.this,"WIP", Toast.LENGTH_SHORT);
+                toast.show();
                 selectInput.dismiss();
             }
         });
