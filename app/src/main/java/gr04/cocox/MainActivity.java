@@ -26,18 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button dialogue;
     public Button call;
 
-    public Locale myLocale;
-
-    public SharedPreferences sharedPreferences;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         lang.setLangauge(this); //change language from sharedPreferences BEFORE setContentView!
-        //setLocale(loadLocale());
         setContentView(R.layout.activity_main);
 
         games = findViewById(R.id.games);
@@ -59,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view==call){
             startActivity(new Intent(this, CallActivity.class));
         }
+
         else {
             switch (view.getId()) {
                 case R.id.games:
@@ -72,23 +67,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-
-    /*
-    public String loadLocale() {
-        String lang = sharedPreferences.getString("lang", "da");
-        System.out.println("lang: " + lang + " loaded");
-        return lang;
-    }
-
-    public void setLocale(String lang) {
-        if (lang.equalsIgnoreCase(""))
-            return;
-        myLocale = new Locale(lang);
-        Locale.setDefault(myLocale);
-        android.content.res.Configuration config = new android.content.res.Configuration();
-        config.locale = myLocale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
-    }
-    */
 }
