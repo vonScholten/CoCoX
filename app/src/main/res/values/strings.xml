@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CoCoX</string>
+    <string name="app_name">Gr04 CoCoX</string>
 
     <string name="retur">Back</string>
     <string name="home">Home</string>
@@ -102,7 +102,6 @@
     <string name="poptext">Tap the balloons to pop!</string>
 
     <string name="incomplete">Under construction </string>
-    />
     <!--settings-->
 
 </resources>
